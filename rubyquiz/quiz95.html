@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Code to S-Exp (#95)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121193858cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121193858cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz95.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz95.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121193858" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110827074600/http://www.rubyquiz.com/quiz95.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:38:58 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070905/http://www.rubyquiz.com/quiz95.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110827074600/http://www.rubyquiz.com/quiz95.html" title="7:46:00 Aug 27, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:38:58 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070905/http://www.rubyquiz.com/quiz95.html" title="7:09:05 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175549/http://rubyquiz.com/quiz95.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:38:58 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052228/http://rubyquiz.com/quiz95.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121193858*/http://rubyquiz.com/quiz95.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>30 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Oct 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000100_2007:-1:000100100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:1001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Code to S-Exp (#95)</span>
+			<p>by Ken Bloom</p>
+			<p>S-expressions are a useful way of representing functional expressions in many aspects of computing. Lisp's syntax is based heavily on s-expressions, and the fact that Lisp uses them to represent both code and data allows many interesting libraries (such as CLSQL: http://clsql.b9.com/) which do things with functions besides simply evaluating them. While working on building a SQL generation library, I found that it would be nice to be able to generate s-expressions programmatically with Ruby.</p>
+			<p>An s-expression is a nested list structure where the first element of each list is the name of the function to be called, and the remaining elements of the list are the arguments to that function. (Binary operators are converted to prefix notation). For example the s-expression (in LISP syntax)</p>
+			<p class="example">(max (count field))</p>
+			<p>would correspond to</p>
+			<p class="example">max(count(field))</p>
+			<p>in ordinary functional notation. Likewise,</p>
+			<p class="example">(roots x (+ (+ (* x x) x) 1 ))</p>
+			<p>would correspond to</p>
+			<p class="example">roots(x, ((x*x) + x) + 1)</p>
+			<p>since we treat binary operators by converting them to prefix notation.</p>
+			<p>Your mission: Create a function named sxp() that can take a block (not a string), and create an s-expression representing the code in the block.</p>
+			<p>Since my goal is to post-process the s-expressions to create SQL code, there is some special behavior that I will allow to make this easier. If your code evaluates (rather than parsing) purely numerical expressions that don't contain functions or field names (represented by Symbols here), then this is satisfactory behavior since it shouldn't matter whether Ruby evaluates them or the SQL database evaluates them. This means, for example, that sxp{3+5} can give you 8 as an s-expression, but for extra credit, try to eliminate this behavior as well and return [:+, 3, 5].</p>
+			<p>It is very important to avoid breaking the normal semantics of Ruby when used outside of a code block being passed to sxp.</p>
+			<p>Here are some examples and their expected result:</p>
+			<p class="example">sxp{max(count(:name))}   =&gt; [:max, [:count, :name]]<br />sxp{count(3+7)}          =&gt; [:count, 10] or [:count, [:+, 3, 7]]<br />sxp{3+:symbol}           =&gt; [:+, 3, :symbol]<br />sxp{3+count(:field)}     =&gt; [:+, 3, [:count, :field]]<br />sxp{7/:field}            =&gt; [:/, 7, :field]<br />sxp{:field &gt; 5}          =&gt; [:&gt;, :field, 5]<br />sxp{8}                   =&gt; 8<br />sxp{:field1 == :field2}  =&gt; [:==, :field1, :field2]<br />7/:field                 =&gt; throws TypeError<br />7+count(:field)          =&gt; throws NoMethodError<br />5+6                      =&gt; 11<br />:field &gt; 5               =&gt; throws NoMethodError</p>
+			<p>(In code for this concept, I returned my s-expression as an object which had inspect() modified to appear as an array. You may return any convenient object representation of an s-expression.)</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This quiz is a little more challenging than it looks.  The real trick is to satisfy the quiz conditions without breaking the Ruby interpreter in the process.  Let me show you what I mean.</p>
+			<p>It's easy enough to get the first few quiz tests passing, with code like my own submission:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> SXP<br />      instance_methods.each <span class="keyword">do</span> |meth|<br />        undef_method(meth) <span class="keyword">unless</span> meth =~ <span class="string">/\A__/</span> <span class="keyword">or</span> meth == <span class="string">"instance_eval"</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> initialize(&amp;block)<br />        <span class="variable">@code</span> = block<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> method_missing(meth, *args, &amp;block)<br />        <span class="keyword">if</span> args.any? { |e| e.is_a? Array }<br />          [meth, args.inject(Array.new) { |arr, a| arr.push(*a) }]<br />        <span class="keyword">else</span><br />          [meth, *args]<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> result<br />        instance_eval(&amp;<span class="variable">@code</span>)<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">def</span> sxp(&amp;block)<br />      SXP.new(&amp;block).result<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This works by creating a new class and stripping it of as many methods as possible, so method_missing() can catch just about any message received.  The code block passed to initialize() is tucked away for later use in the result() method, which triggers the block and returns the Array built-up by the calls to method_missing().  Finally, you can see the trivial method used to wrap this class and support the quiz interface.</p>
+			<p>Then what though?</p>
+			<p>Some of the quiz test don't directly call methods we can field with my magic object, instead relying on behaviors of the Fixnum and Symbol classes:</p>
+			<p class="example">sxp{3+:symbol}           =&gt; [:+, 3, :symbol]<br />sxp{3+count(:field)}     =&gt; [:+, 3, [:count, :field]]<br />sxp{7/:field}            =&gt; [:/, 7, :field]<br />sxp{:field &gt; 5}          =&gt; [:&gt;, :field, 5]<br />sxp{:field1 == :field2}  =&gt; [:==, :field1, :field2]</p>
+			<p>If we want to support these with pure Ruby, we need to start ripping up and rebuilding Ruby's core classes.  A few of solutions did just that.  Here's Robin Stocker's code as an example:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> SxpGenerator<br /><br />      <span class="keyword">def</span> method_missing(meth, *args)<br />        [meth, *args]<br />      <span class="keyword">end</span><br /><br />      BINARY_METHODS = [:+, :-, :*, :/, :<span class="string">%, :**,</span> :^, :&lt;, :&gt;, :&lt;=, :&gt;=, :==]<br /><br />      <span class="keyword">def</span> <span class="keyword">self</span>.overwrite_methods(mod)<br />        BINARY_METHODS.each <span class="keyword">do</span> |method|<br />          mod.module_eval <span class="keyword">do</span><br />            <span class="keyword">if</span> method_defined? method<br />              alias_method <span class="string">"__orig_#{method}__"</span>, method<br />            <span class="keyword">end</span><br />            define_method method <span class="keyword">do</span> |arg|<br />              [method, <span class="keyword">self</span>, arg]<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> <span class="keyword">self</span>.restore_methods(mod)<br />        BINARY_METHODS.each <span class="keyword">do</span> |method|<br />          mod.module_eval <span class="keyword">do</span><br />            orig_method = <span class="string">"__orig_#{method}__"</span><br />            <span class="keyword">if</span> method_defined? orig_method<br />              alias_method method, orig_method<br />              remove_method orig_method<br />            <span class="keyword">else</span><br />              remove_method method<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />    <span class="keyword">end</span><br /><br /><br />    <span class="keyword">def</span> sxp(&amp;block)<br />      klasses = [Fixnum, Bignum, Symbol, Array, Float, String]<br />      klasses.each <span class="keyword">do</span> |klass|<br />        SxpGenerator.overwrite_methods(klass)<br />      <span class="keyword">end</span><br />      <span class="keyword">begin</span><br />        result = SxpGenerator.new.instance_eval &amp;block<br />      <span class="keyword">rescue</span> Exception<br />        result = <span class="keyword">nil</span><br />      <span class="keyword">end</span><br />      klasses.each <span class="keyword">do</span> |klass|<br />        SxpGenerator.restore_methods(klass)<br />      <span class="keyword">end</span><br />      result<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Robin's solution is a similar pattern to my own, with two additional steps:  methods for core classes like Fixnum and Symbol are modified just before the instance_eval() and restored after.  The modification is done using alias_method(), which makes a duplicate of the code, to save the old functionality and define_method() to replace the default.  Afterwards the old methods are just copied back or removed, if they never existed to begin with.</p>
+			<p>This gets all of the quiz tests passing, but Boris Prinz summed up my opinion of doing something like this when he said of his own similar solution, "I wouldn't use this code in a production environment, because methods of built-in classes are redefined."  Don't get me wrong, both Boris and Robin did an impressive job, but this kind of wholesale hacking of the core just seems too risky to rely on.</p>
+			<p>A lot can go wrong when you change Ruby's behaviors.  What if some external libraries, counting on core functionality, are loaded when you make the change?  The first reaction is probably to assume they won't be running while we are evaluating the expression, but can we be sure of that?  What if they are running in background Threads?  I guess we could set Thread.critical before we make the change, but this is quickly getting to be an ugly problem.</p>
+			<p>Here's another point to consider:  why use a block at all?  The primary point of methods that take blocks is to allow user code access to the power of Ruby at the time of the call.  Well, if we have to change Ruby to make the call work, that idea goes out the window.  If the method took a String instead, we could parse the expression ourselves or even hand it off to a forked copy of the Ruby interpreter that modifies itself, evaluates, and sends us back the result.</p>
+			<p>Ross Bamford used this safe hand-off strategy by calling on Why the Lucky Stiff's Sandbox extension.  Let's see how that turns out:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'sandbox'</span><br /><br />    <span class="keyword">module</span> Sxp<br />      <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span><br />        <span class="keyword">def</span> sxp(&amp;blk)<br />          sb = Sandbox.new<br />          sb.main.instance_variable_set(:<span class="variable">@blk</span>,<br />                                  blk || raise(LocalJumpError, <span class="string">"No block given"</span>))<br />          sb.load(<span class="string">"#{File.dirname(__FILE__)}/sandboxed.rb"</span>)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Here you can see that Ross creates a new Sandbox, passes the provided block into it by setting an instance variable inside the Sandbox, and triggers the execution of another file.  Here's that second file:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Object ; <span class="keyword">alias</span> :__instance_eval :instance_eval ; <span class="keyword">end</span><br />    <span class="keyword">class</span> Array  ; <span class="keyword">alias</span> :__each :each ; <span class="keyword">end</span><br /><br />    [Object, Kernel, Symbol, Fixnum, Bignum, Float, NilClass, FalseClass,<br />                             TrueClass, Hash, Array, String].__each <span class="keyword">do</span> |clz|<br />      clz.class_eval <span class="keyword">do</span><br />        instance_methods.__each <span class="keyword">do</span> |m|<br />          undef_method m <span class="keyword">unless</span> <span class="string">/^__|^inspect$|^to_(s(?:tr)?|a(?:ry)?)$/</span>.match(m)<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> method_missing(sym, *args); [sym, <span class="keyword">self</span>, *args]; <span class="keyword">end</span><br />        <span class="keyword">def</span> to_ary; [<span class="keyword">self</span>]; <span class="keyword">end</span>     <span class="comment"># needed by every class in this world</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># A special method_missing on the main object handles 'function' calls</span><br />    <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span>;  <span class="keyword">def</span> method_missing(sym, *args); [sym, *args]; <span class="keyword">end</span>; <span class="keyword">end</span><br /><br />    __instance_eval &amp;<span class="variable">@blk</span><br /><br /></div></div>
+			<p>This is another version of core class modification, but this one is brutal.  Most of the methods of the core classes are just outright eliminated by undef_method() calls.  Pretty much everything is replaced with the now-familiar method_missing() trick.  On the last line, you can see the block invoked in this new not-really-Ruby interpreter.</p>
+			<p>What makes this solution different is that all of the damage was done only to the Sandbox.  All of the core classes are alive and well in the original Ruby interpreter.  This makes the code safer to rely on, in my opinion.</p>
+			<p>Definitely take some time to look through the solutions from Ryan Davis and Dominik Bathon as well.  They make use of ParseTree (a library for Ruby to s-expression conversion!) and RubyNode to transform the Ruby code into an s-expression.  These are very effective and don't need to modify the core so heavily, if at all.</p>
+			<p>My thanks to all Ruby/Lisp hackers who gave this problem a shot.  You really showed off a wide range of possibilities.</p>
+			<p>Tomorrow, we will return to weaving tall tales, but this time take a different approach from Markov Chains...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121193858im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216176">Ryan Davis</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216282">Dominik Bathon</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216291">Sander Land</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216295">James Edward Gray II</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216349">Boris Prinz</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216352">Ken Bloom</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216368">Robin Stocker</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216499">Ross Bamford</a></li>
+				<li><a href="/web/20120121193858/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/216779">Dominik Bathon (2)</a></li>
+			</ol>
+			<p><a href="/web/20120121193858/http://rubyquiz.com/quiz95_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121193858/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:38:58 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:23 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Getting to 100 (#119)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120120004047cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120120004047cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz119.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz119.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120120004047" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175630/http://rubyquiz.com/quiz119.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:40:47 Jan 20, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418092104/http://www.rubyquiz.com/quiz119.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103143357/http://www.rubyquiz.com/quiz119.html" title="14:33:57 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:40:47 Jan 20, 2012">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418092104/http://www.rubyquiz.com/quiz119.html" title="9:21:04 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175630/http://rubyquiz.com/quiz119.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:40:47 Jan 20, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052225/http://rubyquiz.com/quiz119.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120120004047*/http://rubyquiz.com/quiz119.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>29 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Apr 07 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000100000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000000000_2012:0:2001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Getting to 100 (#119)</span>
+			<p>by Gavin Kistner</p>
+			<p>The NPR show "Car Talk" has regular quizzes that they call <a href="/web/20120120004047/http://www.cartalk.com/content/puzzler/2007.html">"Puzzlers"</a>. The one listed on their web site for March 12th is titled <a href="/web/20120120004047/http://www.cartalk.com/content/puzzler/transcripts/200711/index.html">"Getting to 100"</a>. In the quiz, you are supposed to write down the digits 1-9 in order, followed by " = 100", and then insert between them two minus symbols and one plus symbol (in any order) to make the formula correct. You aren't allowed to re-arrange digits, or do some toothpick math like combine two minus signs to make a plus. You must use every digit, and all three operators. For example, here's one incorrect solution:</p>
+			<p class="example">123 + 45 - 67 - 89 = 100  (This is an incorrect formula; it totals 12)</p>
+			<p>The quiz, then, is to solve this problem without thinking, instead letting the computer think for you. Your program should output every possible equation that can be formed, and the actual result of that equation. The equation that results in 100 should have stars around it. At the end, you should print out the number of formulae that were possible. Here's an excerpt of some example output:</p>
+			<p class="example">...<br />12 - 34 - 567 + 89 = -500<br />12 - 34 + 567 - 89 = 456<br />12 + 34 - 567 - 89 = -610<br />************************<br />123 - 45 - 67 + 89 = 100<br />************************<br />123456 - 7 - 8 + 9 = 123450<br />123456 - 7 + 8 - 9 = 123448<br />123456 + 7 - 8 - 9 = 123446<br />...<br />168 possible equations tested</p>
+			<p>You should not print the same equation more than once. ("1 - 2 - 3 + 456789" is the same as "1 - 2 - 3 + 456789", even if the computer thinks that the two minus symbols come in a different order.)</p>
+			<p>Extra Credit: Write your program to accept an arbitrary number and ordering of digits, an arbitrary set of operators (but allowing the same operator more than once), and an arbitrary target number that the equation is supposed to evaluate to.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This was a popular problem and we saw many different ways to go about solving it.  The discussion on the mailing list was also very good, with many ideas shared and explained.</p>
+			<p>I'm going to go through a few solutions today, because they are not overly long and I think we can learn something from each of them.  Let's begin with some code by Dennis Frommknecht.  Here's the entire solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/env ruby -W</span><br /><br />    <span class="comment"># This solution uses 3 nested loops to divide the </span><br />    <span class="comment"># numbers into 4 groups (using regular expressions). </span><br />    <span class="comment"># Then the 3 allowed combinations of plus and minus</span><br />    <span class="comment"># are inserted between the groups.</span><br />    <span class="comment"># Finally the result is calculated using eval</span><br /><br />    NUMBERS = <span class="string">"123456789"</span><br />    CORRECT_RES = 100<br />    OPS = [[<span class="string">'+'</span>, <span class="string">'-'</span>, <span class="string">'-'</span>],<br />           [<span class="string">'-'</span>, <span class="string">'+'</span>, <span class="string">'-'</span>],<br />           [<span class="string">'-'</span>, <span class="string">'-'</span>, <span class="string">'+'</span>]]<br /><br />    num_of_ops = OPS[0].length<br />    equ_counter = 0<br /><br />    1.upto(NUMBERS.length - num_of_ops) <span class="keyword">do</span> |i|<br />    1.upto(NUMBERS.length - num_of_ops - i + 1) <span class="keyword">do</span> |j|<br />    1.upto(NUMBERS.length - num_of_ops - i + 1 - j + 1) <span class="keyword">do</span> |k|<br />      <span class="keyword">if</span> NUMBERS.match(<span class="string">/(\d{#{i}})(\d{#{j}})(\d{#{k}})(\d+)/</span>) <span class="keyword">then</span><br />        OPS.each <span class="keyword">do</span> |o|<br />          command = <span class="string">"#{$1} #{o[0]} #{$2} #{o[1]} #{$3} #{o[2]} #{$4}"</span><br />          res = eval command<br />          equ_counter += 1<br />          puts <span class="string">"*"</span> * 15 <span class="keyword">if</span> res == CORRECT_RES<br />          puts <span class="string">"#{command} = #{res}"</span><br />          puts <span class="string">"*"</span> * 15 <span class="keyword">if</span> res == CORRECT_RES<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br />    <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    puts <span class="string">"#{equ_counter} possible equations tested"</span><br /><br /></div></div>
+			<p>There are really two aspects to solving the base quiz.  First, you need to find the possible permutation of the operators.  There are really only three orders they can come up in and Dennis chose to just hardcode those in the OPS constant.</p>
+			<p>The other problem is about partitioning.  You need to divide the digits into four groupings that you can insert the three operators between.  Again, Dennis pretty much hardcoded the logic for this using three nested iterators.  The interesting side of this solution though is how they work.</p>
+			<p>Basically, Dennis just counts off some number of digits from the front of the line.  Then he counts of some number of digits after that.  A third count is made for some number of digits after that, ensuring we leave at least one at the end.  This gives us three lengths, which one Regexp turns into four groups.  From there, the expression is constructed, eval()ed to get an answer, and finally printed.</p>
+			<p>This solution does a good job of showing the process, but there are some shortcuts to be found.  For example, if you move from considering just the ordering of the three operators to the actual positioning of the three operators, you can drop the partitioning step altogether.</p>
+			<p>Let me use Paul's code to show you what I mean:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> String<br />      <span class="keyword">def</span> unique_permutations<br />        <span class="comment"># modified to get unique permutations from</span><br />        <span class="comment"># http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/139858</span><br />        <span class="comment"># which says it was inspired by a RubyQuiz! :)</span><br />        <span class="keyword">return</span> [<span class="keyword">self</span>] <span class="keyword">if</span> <span class="keyword">self</span>.length &lt; 2<br />        perms = Hash.new<br /><br />        0.upto(<span class="keyword">self</span>.length - 1) <span class="keyword">do</span> |n|<br />          rest = <span class="keyword">self</span>.split(<span class="string">//</span>u)            <span class="comment"># for UTF-8 encoded strings</span><br />          picked = rest.delete_at(n)<br />          rest.join.unique_permutations.each { |x| perms[picked + x] = <span class="keyword">nil</span> }<br />        <span class="keyword">end</span><br /><br />        perms.keys<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    digits = ARGV[0]<br />    ops = ARGV[1]<br />    target = ARGV[2].to_i<br /><br />    <span class="comment"># pad ops list with spaces to match the number of slots between the digits</span><br />    ops = ops + <span class="string">" "</span> * (digits.size - ops.size - 1)<br /><br />    <span class="comment"># build a format string with slots between the digits</span><br />    digits = digits.split(<span class="string">""</span>).join(<span class="string">"%s"</span>)<br /><br /><br />    operator_perms = ops.unique_permutations<br />    operator_perms.each <span class="keyword">do</span> |p|<br />      <span class="comment"># build expression by inserting the ops into the format string,</span><br />      <span class="comment"># after converting spaces to empty strings</span><br />      exp = digits % p.split(<span class="string">""</span>).map{|x|x.chomp(<span class="string">" "</span>)}<br />      val = eval(exp)<br />      puts <span class="string">"*******************"</span> <span class="keyword">if</span> val==target<br />      puts exp + <span class="string">" = "</span> + val.to_s<br />      puts <span class="string">"*******************"</span> <span class="keyword">if</span> val==target<br />    <span class="keyword">end</span><br />    puts<br />    puts <span class="string">"%d possible equations tested"</span> % operator_perms.size<br /><br /></div></div>
+			<p>Paul's permutation code is the first new element that jumps out at us here.  It works by recursively combining smaller and smaller permutations until it has generated all possible combinations.  The permutations are stored in Hash keys so duplicates will automatically be eliminated.</p>
+			<p>Next we see that Paul nails pretty much all of the extra credit by importing the digits, operators, and target from command-line parameters.  This means that he can't hardcode any logic, because he can't count on what will be passed to his script.</p>
+			<p>The next two lines are the interesting part.  Paul counts the number of spaces between all the digits.  These are the positions in which operators need to be placed.  Paul pads the operator list to include extra spaces, so it will match the position count.  Then the digit list is transformed into a printf() style pattern that will insert an operator, or extra space, between each number.</p>
+			<p>From there it just takes one call to the unique_permutations() method to walk the choices.  Paul's output code is very similar to the code we saw from Dennis earlier.</p>
+			<p>Going one step further, let's examine how Christian Neukirchen walked the same position list:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    (00000000..<span class="string">'22222222'</span>.to_i(3)).map { |x| x.to_s(3).rjust(8, <span class="string">"0"</span>).<br />                                                       tr(<span class="string">'012'</span>, <span class="string">'-+ '</span>) }.<br />      find_all { |x| x.count(<span class="string">"-"</span>) == 2 <span class="keyword">and</span> x.count(<span class="string">"+"</span>) == 1 }.<br />      map { |x|<br />        t = <span class="string">"1"</span> + x.split(<span class="string">//</span>).zip((2..9).to_a).join.delete(<span class="string">" "</span>)<br />        [eval(t), t]<br />      }.sort.each { |s, x|<br />        puts <span class="string">"*****************"</span> <span class="keyword">if</span> s == 100<br />        puts <span class="string">"#{x}: #{s}"</span><br />        puts <span class="string">"*****************"</span> <span class="keyword">if</span> s == 100<br />      }<br /><br /></div></div>
+			<p>This code does the same permutation of positions Paul's code did, using simple counting.  You see, counting from 00000000 (a pretty way to show 0 with eight positions) to whatever number '22222222'.to_i(3) is, in base 3, will yield all possible combinations of 0s, 1s, and 2s.  Christian then culls the list for the proper mixes of operators and transliterates those digits to operators or spaces.  The rest of the code we have seen before.</p>
+			<p>Together these solutions show quite a few options for handling permutations in Ruby.  Another common option from the submissions I didn't show was to load an external library that handles permutations.  This is a great option in practice, because you get road-tested code, but I wanted to show how you might handle such a thing for this summary.</p>
+			<p>My thanks to all the people who sent in permutations of Ruby code to solve this permutations problem.  They are great stuff.</p>
+			<p>Tomorrow's problem is something you can handle on your fingers...</p>
+		</div>
+		<div id="logo"><img src="/web/20120120004047im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247133">Rick DeNatale</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247134">Marcel Ward</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247135">James Koppel</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247138">Kyle Schmitt</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247139">Ryan Leavengood</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247146">Ken Bloom</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247153">Christian Neukirchen</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247160">John Browning</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247164">Robert Dober</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247188">Ryan Leavengood (2)</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247191">Carl Porth</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247197">Harrison Reiser</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247209">Dennis Frommknecht</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247210">Sergey Volkov</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247214">Matt Hulse</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247216">Gavin Stark</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247280">Paul</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247348">Ruben Medellin</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247362">Rene Koning</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247393">Wolfgang Seeberg</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247388">David Tran</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247400">David Tran (2)</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247423">Gareth Adams</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/247430">Erwin Abbott</a></li>
+				<li><a href="/web/20120120004047/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/248071">Jesse Merriman</a></li>
+			</ol>
+			<p><a href="/web/20120120004047/http://rubyquiz.com/quiz119_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120120004047/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:40:47 Jan 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:43 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

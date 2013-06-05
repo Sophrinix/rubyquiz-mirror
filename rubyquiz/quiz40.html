@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Drawing Trees (#40)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121194446cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121194446cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz40.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz40.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121194446" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110824082652/http://www.rubyquiz.com/quiz40.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:44:46 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418044728/http://www.rubyquiz.com/quiz40.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110824082652/http://www.rubyquiz.com/quiz40.html" title="8:26:52 Aug 24, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:44:46 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418044728/http://www.rubyquiz.com/quiz40.html" title="4:47:28 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173122/http://rubyquiz.com/quiz40.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:44:46 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052627/http://rubyquiz.com/quiz40.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121194446*/http://rubyquiz.com/quiz40.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">16 May 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010000100_2007:-1:000000010000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:1001a000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Drawing Trees (#40)</span>
+			<p>A common implementation of Heap data structures involves storing their tree in a single Array.  If you add one extra element at the beginning (creating a base 1 Array), you can use easy math to find child nodes. This doesn't generally bother the user, because you don't usually access a Heap by index.</p>
+			<p>Using that system and given any index i, 2 * i is the left child node and 2 * i + 1 is the right child node. So the root of the tree is i = 1 and it has a child node at i = 2 and another at i = 3.  Then the i = 2 node has child nodes at i = 4 and i = 5.  Reversing the traversal, i / 2 (assuming integer division) will bring you to a parent node.</p>
+			<p>Now take a deep breath and relax because I'm not going to ask you to write a Heap.  In fact, here's a basic pure Ruby implementation (not exhaustively tested) using the system I just described:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Heap<br />        <span class="keyword">def</span> initialize( *elements, &amp;comp )<br />            <span class="variable">@heap</span> = [<span class="keyword">nil</span>]<br />            <span class="variable">@comp</span> = comp || lambda { |p, c| p &lt;=&gt; c }<br /><br />            insert(*elements)<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> clear(  )<br />            <span class="variable">@heap</span> = [<span class="keyword">nil</span>]<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> extract(  )<br />            extracted = <span class="variable">@heap</span>[1]<br />            <span class="variable">@heap</span>[1] = <span class="variable">@heap</span>.pop <span class="keyword">unless</span> <span class="variable">@heap</span>.size.zero?<br />            sift_down<br />            extracted<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> insert( *elements )<br />            elements.each <span class="keyword">do</span> |element|<br />                <span class="variable">@heap</span> &lt;&lt; element<br />                sift_up<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> size(  )<br />            <span class="variable">@heap</span>.size - 1<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> inspect(  )<br />            <span class="variable">@heap</span>[1..-1].inspect<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> to_s(  )<br />            <span class="comment"># Write this!</span><br />        <span class="keyword">end</span><br /><br />        private<br /><br />        <span class="keyword">def</span> sift_down(  )<br />            i = 1<br />            loop <span class="keyword">do</span><br />                c = 2 * i<br />                <span class="keyword">break</span> <span class="keyword">if</span> c &gt;= <span class="variable">@heap</span>.size<br /><br />                c += 1 <span class="keyword">if</span> c + 1 &lt; <span class="variable">@heap</span>.size <span class="keyword">and</span> <span class="variable">@heap</span>[c + 1] &lt; <span class="variable">@heap</span>[c]<br />                <span class="keyword">break</span> <span class="keyword">if</span> <span class="variable">@comp</span>[<span class="variable">@heap</span>[i], <span class="variable">@heap</span>[c]] &lt;= 0<br /><br />                <span class="variable">@heap</span>[c], <span class="variable">@heap</span>[i] = <span class="variable">@heap</span>[i], <span class="variable">@heap</span>[c]<br />                i = c<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> sift_up(  )<br />            i = <span class="variable">@heap</span>.size - 1<br />            <span class="keyword">until</span> i == 1<br />                p = i / 2<br />                <span class="keyword">break</span> <span class="keyword">if</span> <span class="variable">@comp</span>[<span class="variable">@heap</span>[p], <span class="variable">@heap</span>[i]] &lt;= 0<br /><br />                <span class="variable">@heap</span>[p], <span class="variable">@heap</span>[i] = <span class="variable">@heap</span>[i], <span class="variable">@heap</span>[p]<br />                i = p<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    priority_queue = Heap.new<br />    priority_queue.insert(12, 20, 15, 29, 23, 17, 22, 35, 40, 26, 51, 19)<br />    puts priority_queue<br /><br />    priority_queue.insert(13)<br />    puts priority_queue<br /><br />    priority_queue.extract<br />    puts priority_queue<br />    <span class="comment"></div></div>
+			<p>If you read that real closely, you saw the blank Heap.to_s() method.  Implementing a Heap as an Array is one thing and it's easy to show like that (see Heap.inspect() above).  However, we generally envision a Heap as a tree, not an Array.  Wouldn't it be nice if Heap.to_s() would show it to us that way?  I think so too.</p>
+			<p>This week's Ruby Quiz is to write Heap.to_s() so that it returns an ASCII art representation of a Heap as a tree.  For example, here's what the first tree printed by the above code might look like:</p>
+			<p class="example">              12<br />               |<br />       +-------+-------+<br />       |               |<br />      20              15<br />       |               |<br />   +---+---+       +---+---+<br />   |       |       |       |<br />  29      23      17      22<br />   |       |       |<br /> +-+-+   +-+-+   +-+<br /> |   |   |   |   |<br />35  40  26  51  19</p>
+			<p>Your tree doesn't have to look like that.  Maybe you would prefer to draw it horizontally.  Maybe you make better looking ASCII art than me.  Whatever.  Anything that gives a feel of the structure is fine.</p>
+			<p>Heaps don't have to hold two-digit Integers of course, any Comparable should work...</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Did you spot the errors in my Heap class?  Dominik Bathon did, so let's fix those up before we go any further.</p>
+			<p>To start with, the extract() method would not remove the last item from the heap, because it would pop() it off but then reassign it to @heap[1].  Here's my fix:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> extract(  )<br />        <span class="keyword">case</span> size<br />        <span class="keyword">when</span> 0<br />            <span class="keyword">nil</span><br />        <span class="keyword">when</span> 1<br />            <span class="variable">@heap</span>.pop<br />        <span class="keyword">else</span><br />            extracted = <span class="variable">@heap</span>[1]<br />            <span class="variable">@heap</span>[1]  = <span class="variable">@heap</span>.pop<br />            sift_down<br />            extracted<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>That handles the edge cases with a little more care.</p>
+			<p>The other issue was that I originally developed Heap using the normal comparison operators, but later decided to add the @comp block to allow customized ordering for any Heap you create.  I thought I updated all of the comparisons, but the truth is that I missed one in sift_down().  Here's the corrected (by Dominik) method:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> sift_down(  )<br />        i = 1<br />        loop <span class="keyword">do</span><br />            c = 2 * i<br />            <span class="keyword">break</span> <span class="keyword">if</span> c &gt;= <span class="variable">@heap</span>.size<br /><br />            c += 1 <span class="keyword">if</span> c + 1 &lt; <span class="variable">@heap</span>.size <span class="keyword">and</span> <span class="variable">@comp</span>[<span class="variable">@heap</span>[c + 1], <span class="variable">@heap</span>[c]] &lt; 0<br />            <span class="keyword">break</span> <span class="keyword">if</span> <span class="variable">@comp</span>[<span class="variable">@heap</span>[i], <span class="variable">@heap</span>[c]] &lt;= 0<br /><br />            <span class="variable">@heap</span>[c], <span class="variable">@heap</span>[i] = <span class="variable">@heap</span>[i], <span class="variable">@heap</span>[c]<br />            i = c<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Enough about James's buggy code, let's talk trees.  How do they look?  Let's compare:</p>
+			<p class="example">Brian Schroeder<br />===============<br />          12           <br />     .----' `----.     <br />    20          15     <br />  .-' `-.     .-' `-.  <br /> 29    23    17    22  <br />/  \  /  \  /          <br />35 40 26 51 19<br /><br />Dave Burt<br />=========<br />12-15-22-  <br /> |  |  `-  <br /> |  `-17-  <br /> |     `-19<br /> `-20-23-51<br />    |  `-26<br />    `-29-40<br />       `-35<br /><br />Dominik Bathon<br />==============<br />       12        <br />        |        <br />     +--+-----+  <br />     |        |  <br />    20       15  <br />     |        |  <br />  +--+--+   +-++ <br />  |     |   |  | <br /> 29    23   17 22<br />  |     |   | <br />+-++  +-++  + <br />|  |  |  |  | <br />35 40 26 51 19<br /><br />Florian Frank<br />=============<br />12<br />+---20<br />|   +---29<br />|   |   +---35<br />|   |   `---40<br />|   `---23<br />|       +---26<br />|       `---51<br />`---15<br />    +---17<br />    |   `---19<br />    `---22<br /><br />David Tran<br />==========<br />   +-o 22<br />   |<br /> +-o 15<br /> | |<br /> | +-o 17<br /> |   |<br /> |   +-o 19<br /> |<br />-o 12<br /> |<br /> |   +-o 51<br /> |   |<br /> | +-o 23<br /> | | |<br /> | | +-o 26<br /> | |<br /> +-o 20<br />   |<br />   | +-o 40<br />   | |<br />   +-o 29<br />     |<br />     +-o 35</p>
+			<p>There's some interesting variety in there.  Which display you prefer is probably a matter taste, but hopefully there's something in there for everyone.</p>
+			<p>It may be interesting to note that this quiz grew out of an actual problem I was working with.  I dove into the problem fully expecting to spend ten minutes on it and was surprised when I kept running into complication after complication.  I had to restart twice as I realized that I was attacking it from the wrong angle.</p>
+			<p>Given that, I was looking through the solutions with an eye for elegance and simplicity.  I found a couple of things I liked, but really I thought David Tran's solution is what I was searching for.  Let's take a look at that code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> to_s( )<br />      <span class="keyword">return</span> <span class="string">"[empty heap]"</span> <span class="keyword">if</span> <span class="variable">@heap</span>.size &lt;= 1<br />      result = <span class="string">''</span><br />      root = 1<br /><br />      <span class="keyword">if</span> has_right?(root)<br />        print_node(result, <span class="string">' '</span>, <span class="keyword">true</span>, right_index(root))<br />        result &lt;&lt; <span class="string">" |\n"</span><br />      <span class="keyword">end</span><br /><br />      result &lt;&lt; <span class="string">"-o #{@heap[root]}\n"</span><br /><br />      <span class="keyword">if</span> has_left?(root)<br />        result &lt;&lt; <span class="string">" |\n"</span><br />        print_node(result, <span class="string">' '</span>, <span class="keyword">false</span>, left_index(root))<br />      <span class="keyword">end</span><br /><br />      result<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Clearly that relies on a few helper methods we'll meet shortly, but it's surprisingly straight forward.  The code checks for the special case of an empty heap, then initializes a String to hold the result and a root node for the tree.</p>
+			<p>From there, the method checks to see if the root has a right child node, and passes some information down to print_node() if it does.  Note that an extra line containing "|\n" is added if after the call.</p>
+			<p>After that, the root node is added to the result and the left child node is forwarded to print_node(), if needed.  This time though the "|\n" line is added before the call.</p>
+			<p>Finally, the completed result is returned.</p>
+			<p>You can see the the right side is handled first, then the node itself, and finally left.  Put another way, the "right" side will be on top, the node in the middle, then the "left" is placed on the bottom.  That may seem odd, but you need to remember that this tree is on its side.  If you rotate it 90% clockwise in your mind's eye, everything should snap into place.</p>
+			<p>Here's the work we've seen so far:</p>
+			<p class="example">print_node(..., right_index(root))<br />|<br />-o root<br />|<br />print_node(..., left_index(root))</p>
+			<p>The four index methods should be pretty obviously.  They're the node jumping math right out of the quiz.  Here they are:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    private<br /><br />    <span class="keyword">def</span> left_index( index )  ; index * 2     ; <span class="keyword">end</span><br />    <span class="keyword">def</span> right_index( index ) ; index * 2 + 1 ; <span class="keyword">end</span><br />    <span class="keyword">def</span> has_left?( index )  ; left_index(index)  &lt; <span class="variable">@heap</span>.size ; <span class="keyword">end</span><br />    <span class="keyword">def</span> has_right?( index ) ; right_index(index) &lt; <span class="variable">@heap</span>.size ; <span class="keyword">end</span><br /><br /></div></div>
+			<p>I think pulling those out into methods is one of the things that kept this code so clean and approachable.</p>
+			<p>The last piece of this puzzle is the mysterious print_node() method.  Let's dig inside that now:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> print_node( result, line, right, index )<br />      <span class="keyword">if</span> has_right?(index)<br />        print_node(result, line + (right ? <span class="string">'  '</span> : <span class="string">'| '</span>), <span class="keyword">true</span>,<br />                   right_index(index))<br />        result &lt;&lt; <span class="string">"#{line}#{right ? ' ' : '|'} |\n"</span><br />      <span class="keyword">end</span><br /><br />      result &lt;&lt; <span class="string">"#{line}+-o #{@heap[index]}\n"</span><br /><br />      <span class="keyword">if</span> has_left?(index)<br />        result &lt;&lt; <span class="string">"#{line}#{right ? '|' : ' '} |\n"</span><br />        print_node(result, line + (right ? <span class="string">'| '</span> : <span class="string">'  '</span>), <span class="keyword">false</span>,<br />                   left_index(index))<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>We can see that this method takes four parameters.  The first is the result String we are building up, which it appends to.  The second is the line up to this branch of the tree, used in indenting new lines.  The third parameter is true or false, depending if we're on the right side of the tree (true) or left (false).  Finally, the method receives the index of the node to use as the root of the branch.</p>
+			<p>The rest of the method is very similar to the original to_s(), even in its recursive calls to itself to drill down into the tree.  The output lines are slightly different, mainly to account for the line variable that must be prepended and also to deal with which way the pipe characters are flowing.</p>
+			<p>The only minus here is the near duplication of code between to_s() and print_node().  If we want, we can remove it though.  The following code is my adaptation of David's methods to remove the duplication but produce identical results:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> to_s( )<br />      <span class="keyword">return</span> <span class="string">"[empty heap]"</span> <span class="keyword">if</span> <span class="variable">@heap</span>.size &lt;= 1<br />      print_node(<span class="string">""</span>, <span class="string">""</span>, <span class="keyword">true</span>, <span class="keyword">true</span>, 1).gsub!(<span class="string">/^[+ ]/</span>, <span class="string">""</span>)<br />    <span class="keyword">end</span><br /><br />    private<br /><br />    <span class="keyword">def</span> left_index( index )  ; index * 2     ; <span class="keyword">end</span><br />    <span class="keyword">def</span> right_index( index ) ; index * 2 + 1 ; <span class="keyword">end</span><br />    <span class="keyword">def</span> has_left?( index )  ; left_index(index)  &lt; <span class="variable">@heap</span>.size ; <span class="keyword">end</span><br />    <span class="keyword">def</span> has_right?( index ) ; right_index(index) &lt; <span class="variable">@heap</span>.size ; <span class="keyword">end</span><br /><br />    <span class="keyword">def</span> print_node( result, line, right, left, index )<br />      <span class="keyword">if</span> has_right?(index)<br />        print_node( result, line + (right ? <span class="string">'  '</span> : <span class="string">'| '</span>), <span class="keyword">true</span>, <span class="keyword">false</span>,<br />                    right_index(index) )<br />        result &lt;&lt; <span class="string">"#{line}#{right ? ' ' : '|'} |\n"</span><br />      <span class="keyword">end</span><br /><br />      result &lt;&lt; <span class="string">"#{line}+-o #{@heap[index]}\n"</span><br /><br />      <span class="keyword">if</span> has_left?(index)<br />        result &lt;&lt; <span class="string">"#{line}#{left ? ' ' : '|'} |\n"</span><br />        print_node( result, line + (left ? <span class="string">'  '</span> : <span class="string">'| '</span>), <span class="keyword">false</span>, <span class="keyword">true</span>,<br />                    left_index(index) )<br />      <span class="keyword">end</span><br /><br />      result<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The resulting tree may be a little unusual with it's hanging nodes, but shifting all data to the right freed the code of the tedious need to account for data width at each point.  Florian Frank capitalized on the same trick using a slightly different tree format and that code is also pretty straight forward.  It's amazing what a little rethinking of the problem can do.</p>
+			<p>My usual thanks to all the solvers.  You again taught me (and hopefully others) new things about how code should be designed.</p>
+			<p>Ruby Quiz will take a one week break starting tomorrow, so I can enjoy a little summer vacation with my family.  As always, I hope to return to an inbox full of new quiz material.  Send those ideas along!  The Quiz will return with a task to show how Ruby can help you cash in on the stock market.  Stay tuned...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121194446im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149409">Florian Frank</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149411">Brian Schr&ouml;der</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149412">Brian Schr&ouml;der (2)</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149569">Dave Burt</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149571">Dominik Bathon</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/149701">David Tran</a></li>
+				<li><a href="/web/20120121194446/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/150076">David Brady</a></li>
+			</ol>
+			<p><a href="/web/20120121194446/http://rubyquiz.com/quiz40_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121194446/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:44:46 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:37 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

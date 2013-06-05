@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Dungeon Generation (#80)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121205917cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121205917cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz80.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz80.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121205917" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175415/http://rubyquiz.com/quiz80.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:59:17 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418144559/http://www.rubyquiz.com/quiz80.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145257/http://www.rubyquiz.com/quiz80.html" title="14:52:57 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:59:17 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418144559/http://www.rubyquiz.com/quiz80.html" title="14:45:59 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175415/http://rubyquiz.com/quiz80.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:59:17 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052756/http://rubyquiz.com/quiz80.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121205917*/http://rubyquiz.com/quiz80.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>29 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Oct 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000100_2007:-1:000101100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:20017000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Dungeon Generation (#80)</span>
+			<p>by Kev Jackson</p>
+			<p>This week's task is a dark and dangerous one.  Since the late 1970's, a particular type of game has appealed to a particular type of person.  Games?  From the 70's?  Yep, there can only be one type of (computer) game with that lineage that's still going strong (ish) after all these years - the Rogue-like game!</p>
+			<p>For those not in the know, a typical Rogue-like game uses ascii characters (and sometimes extra/non-ascii characters) to represent the (Tolkienish) game world.  The object of each of the games is subtly different, some require you to retrieve the Amulet of Yendor, some require you to kill the Serpent of Chaos.  In common, they all require you to descend into a (randomly generated) dungeon.</p>
+			<p>Here's the task for this week.  To write a dungeon creation program that will generate and display a typical Rogue-like dungeon</p>
+			<p>A sample of which could look something like:</p>
+			<p class="example">depth 50ft (lvl 1) (pretty much the most trivial dungeon possible)<br />stairs back to surface ( &lt; ) and stairs down to 100 ft/lvl 2 ( &gt; )<br /><br />##########<br />#   &lt;   &gt;#<br />##########<br /><br />depth 100ft (lvl2)<br />stairs back up to 50ft and stairs down to 150 ft<br /><br />             ###<br />########     #&gt;#<br />#      #     # #<br />#####  ##    # #<br />   # &lt;####### #<br />   #          #<br />   ##+#+#######<br /><br />depth 150ft (lvl3) (example of an 'arena' style level, includes a  <br />                    'vault' style room)<br />stairs back up to 100 ft and down to 200ft<br /><br />#################################<br />#                               #<br />#                               #<br />#   #####         #######       #<br />#   #   +         # # #&gt;#       #<br />#########         ## # ##       #<br />#       #         # # # #       #<br />#       #         ###+###       #<br />#       #                       #<br /># &lt;     +                       #<br />#################################</p>
+			<p>Each ascii character represents terrain, an object (dungeon furniture) or a monster.</p>
+			<p>Each dungeon must have an &lt; (up stairs) and one &gt; (down stairs) and they must be connected in some way (ie the player must be able to move from the &lt; (start) to the &gt; (down to the next level). The simplest dungeon is simply a single room with both an up stairs and a down stairs.</p>
+			<p class="example">~ = liquid (water =&gt; blue, lava =&gt; red, acid =&gt; green)<br /># = wall<br />+ = door<br />&lt; = up stairs (back to the town)<br />&gt; = down stairs (deeper into the dungeon)</p>
+			<p>To actually create an entire game would take far far too long (some of these games have been in development for years), but feel free to add as much or as little of the Rogue-like attributes as you feel like, for instance:</p>
+			<p class="example">% = vegetation<br />[a-zA-Z0-9] = monsters (ie =&gt; o = Orc, U = Demon, d = little dragon,  <br />                        D = Greater Hell Wyrm)<br />@ = player<br />, = slime mold (yummy)<br />^ = trap<br />* = gold (found in walls, ie ##*##)</p>
+			<p>For those that can parse C source, the source files from Zangband (my personal favourite Rogue-like) are freely available (you have to extract them from a tar.gz bundle):</p>
+			<p><a href="/web/20120121205917/http://www.zangband.org/">Zangband</a></p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This is a fun problem, probably hindered by the holiday weekend.  Luckily, we did get a great solution from Benjohn Barnes.  (We got another great one from Elliot Temple after I wrote this.  Sorry Elliot!)  Let's dig into how that works.</p>
+			<p>First, it's good to see what we are building.  When you execute Benjohn's program you get one level of a dungeon.  Here's a small section of one of the levels it generated:</p>
+			<p class="example">###########               ######## ##################################<br />###########               ######## ##################################<br />###################### ########### ##################################<br />###################### ########### ##################################<br />###################### #####            #############################<br />###################### #####            #############################<br />##############     ### #####            #############################<br />##########     ### ##                   #############################<br />##########     ### ##                   #############################<br />##########                              #############################<br />##########     ######                       #########################<br />##########     #####                        #########################<br />##########     #####                        #########################<br />##########     #####                        #########################<br />##########     #####                        #########################<br />##########     #####                        #########################<br />##########     #####                          #######################<br />##########     ##                       #####       #################<br />##########     #  ##                    ########### #################<br />##########     # ###      &gt;            ############ #################<br />##########     # ###                   ############ #################<br />##########       #####                 ############ #################<br />########### ##  ######                 ############ #################<br />########### #  #                       ############ #################<br />########### # ##               #################### #################<br />###########   ##               #################### #################<br />#####                          ################     #################<br />#####                          ################     #################<br />#####                          ################     #################<br />#####                          ################     #################<br />#####                          ################     #################<br />###############                ################     #################<br />###############    #### # #####################    ##################<br />################## #### #  ####################    ##################<br />################## #### ##      ###############    ##################<br />################## #### #######  #############     ##################<br />################## ####   ######        ######     ##################<br />################## ###### #######       ######     ##################</p>
+			<p>I love the "catacombey" feel of this.  Let's see how it comes together.  Here's the main executable:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'walker.rb'</span><br />    require <span class="string">'arena.rb'</span><br /><br />    <span class="keyword">def</span> create_dungeon( arena, walk_length, have_stairs = <span class="keyword">true</span>,<br />                                            walker = Walker.new )<br />      <span class="keyword">while</span>(walk_length&gt;0)<br />        walk_length -=1<br /><br />        <span class="comment"># Cut out a bit of tunnel where I am.</span><br />        arena[*walker.position] = <span class="string">' '</span><br />        walker.wander<br /><br />        <span class="comment"># Bosh down a room occasionally.</span><br />        <span class="keyword">if</span>(walk_length%80==0)<br />          create_room(arena, walker)<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Spawn off a child now and then. Split the remaining walk_length</span><br />        <span class="comment"># with it. Only one of us gets the stairs though.</span><br />        <span class="keyword">if</span>(walk_length%40==0)<br />          child_walk_length = rand(walk_length)<br />          walk_length -= child_walk_length<br />          <span class="keyword">if</span> child_walk_length &gt; walk_length<br />            create_dungeon( arena, child_walk_length, have_stairs,<br />                                                      walker.create_child )<br />            have_stairs = <span class="keyword">false</span><br />          <span class="keyword">else</span><br />            create_dungeon( arena, child_walk_length, <span class="keyword">false</span>,<br />                                                      walker.create_child )<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Put in the down stairs, if I have them.</span><br />      <span class="keyword">if</span>(have_stairs)<br />        arena[*(walker.position)] = <span class="string">'&gt;'</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">def</span> create_room(arena, walker)<br />      max = 10<br />      width = -rand(max)..rand(max)<br />      height = -rand(max)..rand(max)<br />      height.each <span class="keyword">do</span> |y|<br />        width.each <span class="keyword">do</span> |x|<br />          arena[x+walker.x, y+walker.y] = <span class="string">' '</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># Create an arena, and set of a walker in it.</span><br />    arena = Arena.new<br />    create_dungeon(arena, 400)<br /><br />    <span class="comment"># Put in the up stairs.</span><br />    arena[0,0] = <span class="string">'&lt;'</span><br /><br />    <span class="comment"># Show the dungeon.</span><br />    puts arena<br /><br /></div></div>
+			<p>The application code at the end is trivial enough, except, of course, that we don't yet know what an Arena or a Walker are.  We can see the primary work method that gets triggered here though and thus we know where to look next.</p>
+			<p>The create_dungeon() method is where all the action is.  The parameters it takes are an Arena, a walk length and Walker, and a boolean involving stairs.  We saw the Arena get printed in the application code, so it's probably safe to assume it is the canvas we intend to paint a dungeon onto at this point.</p>
+			<p>Ignoring the stair parameter for now, it's clear we need to know more about this Walker and what it does.  If you browse through this method reading the comments and noticing calls like walker.position and walker.wander, you should get the idea pretty quickly.</p>
+			<p>Benjohn just turns a digital spelunker loose in the dungeon and carves out tunnels where ever it walks.  Every so often, the code even carves out a room right around where our explorer is standing.  That's what create_room() does.  Because these rooms can overlap, the end result doesn't end up being all rectangles, which gives us the nice dungeon feel we saw earlier.</p>
+			<p>You can also see that the Walker sometimes splits and goes forward in two directions (via recursion).  This is what the stairs parameter is for.  Only one Walker is allowed to have them and the one that does will drop them just before the method exits.</p>
+			<p>Now that we have an idea of the process, we need to see the other pieces.  Here's the Arena object:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Arena<br />      attr_reader :left, :right, :top, :bottom<br />      <span class="keyword">def</span> initialize<br />        <span class="variable">@arena</span> = Hash.new {|h,k| h[k]=Hash.new(<span class="string">'#'</span>)}<br />        <span class="variable">@left</span> = <span class="variable">@right</span> = <span class="variable">@top</span> = <span class="variable">@bottom</span> = 0<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> [](x,y)<br />        <span class="variable">@arena</span>[y][x]<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> []=(x,y,v)<br />        <span class="comment"># I originally worked out the width and height at the end by scanning</span><br />        <span class="comment"># the map. I was also using a single map, rather than the 'map in a</span><br />        <span class="comment"># map' now used. I found that dungeon creation  was slow, but almost</span><br />        <span class="comment"># all of it was the final rendering stage, so switched over to the </span><br />        <span class="comment"># current approach.</span><br />        <span class="variable">@arena</span>[y][x]=v<br />        <span class="variable">@left</span> = [<span class="variable">@left</span>, x].min<br />        <span class="variable">@right</span> = [<span class="variable">@right</span>, x].max<br />        <span class="variable">@top</span> = [<span class="variable">@top</span>, y].min<br />        <span class="variable">@bottom</span> = [<span class="variable">@bottom</span>, y].max<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> to_s<br />        to_array.collect {|row| row.join}.join(<span class="string">"\n"</span>)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> to_array<br />        (top-1..bottom+1).collect <span class="keyword">do</span> |y|<br />          (left-1..right+1).collect <span class="keyword">do</span> |x|<br />            <span class="keyword">self</span>[x,y]<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This is just what we expected.  A Hash of Hashes (indexed by x and y coordinates) is used to hold the final rendering.  A Hash is used here, instead of an Array, so the Walker can literally wander() anywhere he chooses, expanding the world as he goes.  The code tracks the boundaries of the map as the Walker moves and sets new areas and those boundaries are used to print the end result.  Anything not set by the dungeon creation code is a wall.</p>
+			<p>One more piece left.  Time to examine the Walker:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># This class basically implements a random walk. I remember</span><br />    <span class="comment"># my direction, and it's this that I randomly adjust, rather</span><br />    <span class="comment"># than simply jittering my position.</span><br />    <span class="keyword">class</span> Walker<br />      attr_accessor :x, :y, :direction<br /><br />      <span class="keyword">def</span> initialize(x=0, y=0, direction=0)<br />        <span class="variable">@x</span>, <span class="variable">@y</span>, <span class="variable">@direction</span> = x, y, direction<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Handy for testing.</span><br />      <span class="keyword">def</span> position<br />        [x,y]<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Adjust direction, and walk once.</span><br />      <span class="keyword">def</span> wander<br />        perturb_direction<br />        walk<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Make the child pointing of 90 degrees away from me.</span><br />      <span class="keyword">def</span> create_child<br />        Walker.new(x, y, direction + 2*rand(2) - 1)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> perturb_direction<br />        <span class="variable">@direction</span> += rand*wiggle_max - (wiggle_max/2)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> walk(d = direction_with_smoothing_fuzz)<br />        <span class="comment"># Ensure that the direction is correctly wrapped around.</span><br />        d = (d.round)%4<br />        <span class="variable">@x</span> += [1,0,-1,0][d]<br />        <span class="variable">@y</span> += [0,1,0,-1][d]<br />        <span class="keyword">self</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Adding some noise on to the direction "stocastically" samples</span><br />      <span class="comment"># it, smoothing off turns, and making it more catacombey.</span><br />      <span class="keyword">def</span> direction_with_smoothing_fuzz<br />        <span class="variable">@direction</span> + rand*smoothing - smoothing/2<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># How wiggley are the dungeons? Bigger numbers are more wiggly</span><br />      <span class="comment"># and compact.</span><br />      <span class="keyword">def</span> wiggle_max<br />        0.5<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># How smooth are tunnels? Larger numbers give smoother more</span><br />      <span class="comment"># 'catacombe' like tunnels (and smaller dungeons). Smaller</span><br />      <span class="comment"># numbers give more cartesian &amp; straight tunnels.</span><br />      <span class="keyword">def</span> smoothing<br />        0.9<br />      <span class="keyword">end</span><br /><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Though that looks long, they are all very trivial methods and the comments are plenty and good.  The short story is in the comment right at the beginning.  I can't explain it any better than that.</p>
+			<p>Do look at the methods at the end of the Walker.  You can get a feel from the comments here how this code was tuned into its current form as Benjohn tested it.  Speaking of tests, did I mention the solution included test cases for Arena and Walker?  I won't show them here since this is already lengthy, but they are good stuff and I recommend looking them over.</p>
+			<p>My thanks to Benjohn and Elliot for finding the time when the rest of us were too busy.</p>
+			<p>Tomorrow we have a trivial challenge, but one we've probably all thought about...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121205917im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121205917/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/195014">Benjohn Barnes</a></li>
+				<li><a href="/web/20120121205917/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/195385">Elliot Temple</a></li>
+			</ol>
+			<p><a href="/web/20120121205917/http://rubyquiz.com/quiz80_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121205917/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:59:17 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:11 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

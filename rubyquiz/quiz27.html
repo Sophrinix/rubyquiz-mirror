@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Knight's Travails (#27)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121192238cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121192238cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz27.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz27.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121192238" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110824083008/http://www.rubyquiz.com/quiz27.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:22:38 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070550/http://www.rubyquiz.com/quiz27.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110824083008/http://www.rubyquiz.com/quiz27.html" title="8:30:08 Aug 24, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:22:38 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070550/http://www.rubyquiz.com/quiz27.html" title="7:05:50 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127171748/http://rubyquiz.com/quiz27.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:22:38 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052419/http://rubyquiz.com/quiz27.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121192238*/http://rubyquiz.com/quiz27.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000210000100_2007:-1:000000110000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:10017000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Knight's Travails (#27)</span>
+			<p>by Jason Bailey</p>
+			<p>Given a standard 8 x 8 chessboard where each position is indicated in algebraic notation (with the lower left corner being a1), design a script that accepts two or more arguments.</p>
+			<p>The first argument indicates the starting position of the knight.  The second argument indicates the ending position of the knight.  Any additional arguments indicate positions that are forbidden to the knight.</p>
+			<p>Return an array indicating the shortest path that the knight must travel to get to the end position without landing on one of the forbidden squares. If there is no valid path to the destination return nil.</p>
+			<p class="example">example 1:<br />a8, b7, b6<br /><br />could return<br />[ c7 , b5 , d6 , b7 ]<br /><br />Example 2:<br />a8 , g6 , b6 , c7<br /><br />would return<br />nil</p>
+			<p>Note: That in the majority of cases it would be possible to have more then one valid path.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>One neat aspect of doing a simple problem now and then is checking out the elegant solutions people apply to it.  With Ruby, that usually means some pretty code, at least in my mind.</p>
+			<p>I enjoyed all of the solutions, as usual, but I really thought Matthew D Moss wrote some code that showed off how pretty and clever Ruby can be.  His solution is overflowing with cool idioms, so let's dive right in.  Here's a "helper class" from the code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># Helper class</span><br />    <span class="keyword">class</span> Tile<br />        attr_reader :x, :y<br />        protected   :x, :y<br /><br />        <span class="keyword">def</span> initialize(x, y)<br />            <span class="variable">@x</span>, <span class="variable">@y</span> = x, y<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> Tile.named(s)<br />            Tile.new(s.downcase[0] - <span class="string">'a'</span>[0], s.downcase[1] - <span class="string">'1'</span>[0])<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> valid?<br />            (0...8) === <span class="variable">@x</span> <span class="keyword">and</span> (0...8) === <span class="variable">@y</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> to_s<br />            to_str<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> to_str<br />            <span class="string">%w(a b c d e f g h)</span>[<span class="variable">@x</span>] + <span class="string">%w(1 2 3 4 5 6 7 8)</span>[<span class="variable">@y</span>] <span class="keyword">if</span> valid?<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> ==(c)<br />            <span class="variable">@x</span> == c.x <span class="keyword">and</span> <span class="variable">@y</span> == c.y<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> adjacent?(c)<br />            dx = (<span class="variable">@x</span> - c.x).abs<br />            dy = (<span class="variable">@y</span> - c.y).abs<br />            valid? <span class="keyword">and</span> c.valid? <span class="keyword">and</span> (dx == 1 &amp;&amp; dy == 2 <span class="keyword">or</span> dx == 2 &amp;&amp; dy == 1)<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>I couldn't decide if I thought this class was named correctly.  It represents a square or "tile" of the chess board, but when I think of a square it's as a container for a piece.  That's not what we're dealing with here.  This class holds x and y coordinates for the square on the board, nothing more.  Once you grasp that, the code is easy to follow.  You can see this setup right at the top of the class with the x and y readers and initialize() storing the values.  From there though, the work gets interesting.</p>
+			<p>The Tile.named() method is another constructor.  Instead of building a Tile from x and y coordinates ranged from 0 to 7, it builds them from traditional chess strings naming a square like "a4".  As you can see, it really just does the conversion and calls the other constructor.  The first step is to convert the leading letter to an index, which is done by normalizing case and subtracting the character value of "a" from the character value of the square's letter.  The 'a'[0] construct is a little unusual and I'm not sure why it's used here.  Most Ruby gurus just use ?a, which means the exact same thing.  The second conversion works the same way.  I think the goal here was consistency, but obviously the downcase() call isn't needed for the number.</p>
+			<p>The next method is valid?() and its only job is to say if this is a legal square on a real chess board.  That translates to needing x and y in the Range (0..7).  Note that these Ranges are actually built with the ... operator, which excludes the last number.  The === check is used in clauses for case statements, but you're welcome to call it yourself, as you can see.  It's an alias for Range.member?(), which just checks that the second argument is in the Range.</p>
+			<p>Both to_s and to_str allow the object to behave as a String, as long as it's a valid?() Tile.  Here again, we have a unique conversion.  %w(...) builds an Array of Strings from the "words" inside the parentheses.  In this case, they're just individual letters and numbers.  Those Arrays are indexed by x and y, and the results concatenated with simple String addition (+).</p>
+			<p>The == method can quickly determine if two Tile objects represent the same square just by comparing both x and y values for each object.  If they both match, the objects are equal.</p>
+			<p>Finally, adjacent?() checks to see if the passed Tile is near the current Tile.  Both "adjacent" and "near" are tricky explanations though; the method actually verifies that the Tiles are within a Knight's jump of each other.  Like the other methods of this class, the process is clever.  First, dx and dy are filled with deltas for the two x and y values of each object.  If both Tiles are valid?() and one delta is 1 while the other is 2, they are a Knight's jump apart.</p>
+			<p>The next section of code puts those Tiles to work:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> knights_trip(start, finish, *forbidden)<br />        <span class="comment"># First, build big bucket o' tiles.</span><br />        board = (0...64).collect { |n| Tile.new(n % 8, n / 8) }<br /><br />        <span class="comment"># Second, pull out forbidden tiles.</span><br />        board.reject! { |t| forbidden.include?(t) }<br /><br />        <span class="comment"># Third, prepare a hash, where layer 0 is just the start.</span><br />        <span class="comment"># Remove start from the board.</span><br />        x = 0<br />        flood = { x =&gt; [start] }<br />        board.delete(start)<br /><br />        <span class="comment"># Fourth, perform a "flood fill" step, finding all board tiles</span><br />        <span class="comment"># adjacent to the previous step.</span><br />        <span class="keyword">until</span> flood[x].empty? <span class="keyword">or</span> flood[x].include?(finish) <span class="keyword">do</span><br />            x += 1<br />            flood[x] = flood[x-1].inject([]) <span class="keyword">do</span> |mem, obj|<br />                mem.concat(board.find_all { |t| t.adjacent?(obj) })<br />            <span class="keyword">end</span><br /><br />            <span class="comment"># Remove those found from the board.</span><br />            board.reject! { |t| flood[x].include?(t) }<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Finally, determine if we found a way to the finish and, if so,</span><br />        <span class="comment"># build a path.</span><br />        <span class="keyword">if</span> <span class="keyword">not</span> flood[x].empty?<br />            <span class="comment"># We found a way. Time to build the path. This is built</span><br />            <span class="comment"># backwards, so finish goes in first.</span><br />            path = [finish]<br /><br />            <span class="comment"># Since we got to finish in X steps, we know there must be</span><br />            <span class="comment"># at least one adjancent to finish at X-1 steps, and so on.</span><br />            <span class="keyword">until</span> x == 0<br />                x -= 1<br /><br />                <span class="comment"># Find in flood[x] a tile adjacent to the head of our</span><br />                <span class="comment"># path. Doesn't matter which one. Make it the new head</span><br />                <span class="comment"># of our path.</span><br />                jumps = flood[x].find_all { |t| t.adjacent?(path.first) }<br />                path[0,0] = jumps.sort_by { rand }.first<br />            <span class="keyword">end</span><br /><br />            <span class="comment"># Tada!</span><br />            path<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The knights_trip() method does all the grunt work for this solution.  You pass it the start, finish, and forbidden Tiles.  It will return a path, if one can be found.</p>
+			<p>The method starts by building a Tile for every board square.  After that, any forbidden Tiles are removed, so they won't be considered.</p>
+			<p>Next comes the heart of the algorithm.  A Hash is created with pairs of search depth keys and value Arrays that represent all the Tiles at that depth.  (Note that an Array could be used in place of the Hash, since the keys are ordered numerical indexes.)  The until loop fills in the Hash by searching each successive depth until running out of illegal moves or locating the finish Tile.  Each depth is built in the call to inject(), which just adds all the adjacent?() Tiles from the previous depth to an empty Array.  Tiles are always removed from the board as they are added to the depth Hash to keep them from coming up as adjecent?() to later Tile searches.  The final if statement builds the path by working backwards through the depth search Hash one ply at a time, looking for adjacent?() Tiles.</p>
+			<p>It only takes a little more code to finish the solution off:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># main</span><br />    args = ARGV.collect { |arg| Tile.named(arg) }<br />    <span class="keyword">if</span> args.any? { |c| <span class="keyword">not</span> c.valid? }<br />        puts <span class="string">"Invalid argument(s)!"</span><br />    <span class="keyword">else</span><br />        trip = knights_trip(*args)<br />        <span class="keyword">if</span> trip<br />            puts <span class="string">"Knight's trip: "</span> + trip.join(<span class="string">", "</span>)<br />        <span class="keyword">else</span><br />            puts <span class="string">"No route available!"</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This snippet just puts the above methods to use.  ARGV is translated into Tile objects and all those Tiles, if valid?(), are fed to knights_trip().  If a path is returned, it's printed.  Otherwise, a route is not available and a message relates this.</p>
+			<p>My thanks go out to all Knights who made the leap this week.  As always, they provided a bunch of interesting code to examine and I recommend you do so.</p>
+			<p>Tomorrow's quiz is a simple but fun little challenge that may bring back childhood memories for some...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121192238im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137666">Carlos</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137682">Timothy Byrd</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137687">Dominik Bathon</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137688">linus sellberg</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137696">Ghislain Mary</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137705">Matthew D Moss</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137708">Kero</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137693">linus sellberg (2)</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137968">Timothy Byrd (2)</a></li>
+				<li><a href="/web/20120121192238/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/141984">Brian Schr&ouml;der</a></li>
+			</ol>
+			<p><a href="/web/20120121192238/http://rubyquiz.com/quiz27_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121192238/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:22:38 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:22 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

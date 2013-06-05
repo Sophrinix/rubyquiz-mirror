@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Huffman Encoder (#123)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121201706cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121201706cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz123.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz123.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121201706" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175924/http://rubyquiz.com/quiz123.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:17:06 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418143424/http://www.rubyquiz.com/quiz123.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145219/http://www.rubyquiz.com/quiz123.html" title="14:52:19 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:17:06 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418143424/http://www.rubyquiz.com/quiz123.html" title="14:34:24 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175924/http://rubyquiz.com/quiz123.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:17:06 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052231/http://rubyquiz.com/quiz123.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121201706*/http://rubyquiz.com/quiz123.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>30 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Apr 07 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000100100000_2008:-1:000000010000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:2001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Huffman Encoder (#123)</span>
+			<p>by Harlan</p>
+			<p>Huffman Coding is a common form of data compression where none of the original data gets lost.  It begins by analyzing a string of data to determine which pieces occur with the highest frequencies.  These frequencies and pieces are used to construct a binary tree.  It is the “path” from root node to the leaf with this data that forms its encoding.  The following example should explain things:</p>
+			<p class="example">Data:  ABRRKBAARAA (11 bytes)<br /><br />Frequency counts:<br />A  5<br />R  3<br />B  2<br />K  1<br /><br />In Huffman Tree form, with frequency weights in parentheses:<br />     ARBK (11)<br />    /    \  <br />   0      1<br />  /        \<br />A (5)      RBK (6)<br />          /   \<br />         0     1<br />        /       \<br />      R (3)     BK (3)<br />                / \<br />               0   1<br />              /     \<br />            B (2)   K (1)<br /><br />The encoding for each character is simply the path to that character:<br />A    0<br />R   10<br />B  110<br />K  111<br /><br />Here is the original data encoded:<br />01101010 11111000 1000 (fits in 3 bytes)</p>
+			<p>We have compressed the original information by 80%!</p>
+			<p>A key point to note is that every character encoding has a unique prefix, corresponding to the unique path to that character within the tree.  If this were not so, then decoding would be impossible due to ambiguity.</p>
+			<p>The quiz this time is to write a program to implement a compression program using Huffman encoding.</p>
+			<p class="example">Extra Credit:<br />Perform the actual encoding using your tree.  You may encounter one issue<br />during the decompression/decoding phase.  Your encoded string may not be a<br />multiple of 8.  This means that when you compress your encoding into a<br />binary number, padding 0’s get added.  Then, upon decompression, you may<br />see extra characters.  To counter this, one solution is to add your own<br />padding of 1 extra character every time.  And then simply strip it off<br />once you have decoded.<br /><br />You may also wish to provide a way to serialize the Huffman Tree so it<br />can be shared among copies of your program.<br /><br />./huffman_encode.rb I want this message to get encoded!<br /><br />Encoded:<br />11111111 11111110 11111111 11101111 10111111<br />01100110 11111111 11110111 11111111 11011100<br />11111111 11010111 01110111 11011110 10011011<br />11111100 11110101 10010111 11101111 11111011<br />11111101 11111101 01111111 01111111 11111110<br />Encoded Bytes:<br />25<br /><br />Original:<br />I want this message to get encoded!<br />Original Bytes:<br />35<br /><br />Compressed:  28%</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>With the extra credits, this problem is a little involved and some people did write a lot of code for it.  Building the tree was our main interest in this problem though.</p>
+			<p>The quiz didn't detail that process too much, but several submitters found write-ups like the one at Wikipedia.  The trick is generally to use two queues.  The first starts with all of the letters queued lowest frequency to the highest and the second starts empty.  While there is more than one node in the combined queues, you dequeue the two with the lowest weights, build a new node with them as children and a combined weight, then enqueue that in the second queue.  When you get down to just one node, you are finished.  That single node is the root of the tree.</p>
+			<p>A variation on this strategy is to use a single priority queue.  When working this way you can always just pull the two lowest entries, since the queue will keep them coming in the proper order.</p>
+			<p>Drew Olson has some pretty easy to follow code using the priority queue approach, so let's look into that now.  First, Drew had to build a priority queue since one doesn't ship with Ruby:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># priority queue for nodes</span><br />    <span class="keyword">class</span> NodeQueue<br />      <span class="keyword">def</span> initialize<br />        <span class="variable">@queue</span> = []<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> enqueue node<br />        <span class="variable">@queue</span> &lt;&lt; node<br />        <span class="variable">@queue</span> = <span class="variable">@queue</span>.sort_by{|x|[-x.weight,x.val.size]}<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> dequeue<br />        <span class="variable">@queue</span>.pop<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> size<br />        <span class="variable">@queue</span>.size<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This is a trivial implementation that just resorts the queue after each new entry.  Note that the sort is on the opposite of the weights to put the lowest entries at the front.</p>
+			<p>This is not ideal, of course, but likely to be reasonably quick if you are just encoding simple text.  That's because the sort is largely in C.  For a better priority queue, have a peek at Daniel Martin's code.</p>
+			<p>Drew also used a trivial class to represent nodes in the tree:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># class to hold nodes in the huffman tree</span><br />    <span class="keyword">class</span> Node<br />      attr_accessor :val,:weight,:left,:right<br /><br />      <span class="keyword">def</span> initialize(val=<span class="string">""</span>,weight=0)<br />        <span class="variable">@val</span>,<span class="variable">@weight</span> = val,weight<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> children?<br />        <span class="keyword">return</span> <span class="variable">@left</span> || <span class="variable">@right</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>As you can see, Nodes are pretty much just a Struct for tracking value, weight, and children.  The additional method just checks to see if this node is a branch, meaning that it has at least one child node.</p>
+			<p>With those tools to build on, Drew is now ready to create a HuffmanTree:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># HuffmanTree represents the tree with which we perform</span><br />    <span class="comment"># the encoding</span><br />    <span class="keyword">class</span> HuffmanTree<br /><br />      <span class="comment"># initialize the tree based on data</span><br />      <span class="keyword">def</span> initialize data<br />        <span class="variable">@freqs</span> = build_frequencies(data)<br />        <span class="variable">@root</span> = build_tree<br />      <span class="keyword">end</span><br /><br />      <span class="comment">#encode the given data</span><br />      <span class="keyword">def</span> encode data<br />        data.downcase.split(<span class="string">//</span>).inject(<span class="string">""</span>) <span class="keyword">do</span> |code,char|<br />          code + encode_char(char)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> decode data<br />        node = <span class="variable">@root</span><br /><br />        <span class="keyword">if</span> !<span class="variable">@root</span>.children?<br />          <span class="keyword">return</span> <span class="variable">@root</span>.val<br />        <span class="keyword">end</span><br /><br />        data.split(<span class="string">//</span>).inject(<span class="string">""</span>) <span class="keyword">do</span> |phrase,digit|<br />          <span class="keyword">if</span> digit == <span class="string">"0"</span><br />            node = node.left<br />          <span class="keyword">else</span><br />            node = node.right<br />          <span class="keyword">end</span><br />          <span class="keyword">if</span> !node.children?<br />            phrase += node.val<br />            node = <span class="variable">@root</span><br />          <span class="keyword">end</span><br />          phrase<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>These three methods define the external interface for this class.  First, you create HuffmanTree objects by passing in the data a tree should be constructed from.  Frequencies are counted for the characters in the data and a tree is built from those counts.</p>
+			<p>The encode() method takes the data you wish to apply the encoding to and returns a String of ones and zeros representing the data.  This implementation just iterates over the characters, using a helper method to translate them.  Note that Drew's implementation normalizes case which results in smaller encodings, but this step needs to be removed if you want lossless compression.</p>
+			<p>The decode method is the most complex in the set, but still not too hard to grasp.  It starts at the root node and iterates over each one and zero, selecting the correct child node.  Each time it reaches a leaf node (no children), that character value is added to the translation and the search resets to the root node.</p>
+			<p>Now we just need to see the helper methods used in those methods.  This first one is the reverse of the decoder we just examined:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      private<br /><br />      <span class="comment"># this method encodes a given character based on our</span><br />      <span class="comment"># tree representation</span><br />      <span class="keyword">def</span> encode_char char<br />        node = <span class="variable">@root</span><br />        coding = <span class="string">""</span><br /><br />        <span class="comment"># encode to 0 if only one character</span><br />        <span class="keyword">if</span> !<span class="variable">@root</span>.children?<br />          <span class="keyword">return</span> <span class="string">"0"</span><br />        <span class="keyword">end</span><br /><br />        <span class="comment"># we do a binary search, building the representation</span><br />        <span class="comment"># of the character based on which branch we follow</span><br />        <span class="keyword">while</span> node.val != char<br />          <span class="keyword">if</span> node.right.val.include? char<br />            node = node.right<br />            coding += <span class="string">"1"</span><br />          <span class="keyword">else</span><br />            node = node.left<br />            coding += <span class="string">"0"</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        coding<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Again, the search begins with the root node and advances down the tree branches.  This time the search is for nodes containing the character and we can stop as soon as we reach a leaf.  The encoding is the path of one and zero branches that lead to the character.</p>
+			<p>These last two methods handle tree construction:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="comment"># get word frequencies in a given phrase</span><br />      <span class="keyword">def</span> build_frequencies phrase<br />        phrase.downcase.split(<span class="string">//</span>).inject(Hash.new(0)) <span class="keyword">do</span> |hash,item|<br />          hash[item] += 1<br />          hash<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># build huffmantree using the priority queue method</span><br />      <span class="keyword">def</span> build_tree<br />        queue = NodeQueue.new<br /><br />        <span class="comment"># build a node for each character and place in pqueue</span><br />        <span class="variable">@freqs</span>.keys.each <span class="keyword">do</span> |char|<br />          queue.enqueue(Node.new(char,<span class="variable">@freqs</span>[char]))<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">while</span> !queue.size.zero?<br /><br />          <span class="comment"># if only one node exists, it is the root. return it</span><br />          <span class="keyword">return</span> queue.dequeue <span class="keyword">if</span> queue.size == 1<br /><br />          <span class="comment"># dequeue two lightest nodes, create parent,</span><br />          <span class="comment"># add children and enqueue newly created node</span><br />          node = Node.new<br />          node.right = queue.dequeue<br />          node.left = queue.dequeue<br />          node.val = node.left.val+node.right.val<br />          node.weight = node.left.weight+node.right.weight<br />          queue.enqueue node<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The first method, build_frequencies(), is just a character counter.  The counts are returned in a Hash keyed by the character for a given count.</p>
+			<p>The main work is done in build_tree().  It begins by creating a priority queue and queuing each of the characters from the frequency count.  After that, the while loop is a direct translation of the process I described at the beginning of this summary.</p>
+			<p>The final bit of code puts the tree to work creating Drew's solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># get command lines args, build tree and encode data</span><br />    <span class="keyword">if</span> <span class="keyword">__FILE__</span> == <span class="global">$0</span><br />      require <span class="string">'enumerator'</span><br /><br />      data = ARGV.join(<span class="string">" "</span>)<br />      tree = HuffmanTree.new data<br /><br />      <span class="comment"># get encoded data and split into bits</span><br />      code = tree.encode(data)<br />      encoded_bits = code.scan(<span class="string">/\d{1,8}/</span>)<br /><br />      <span class="comment"># output</span><br />      puts<br />      puts <span class="string">"Original"</span><br />      puts data<br />      puts <span class="string">"#{data.size} bytes"</span><br />      puts<br />      puts <span class="string">"Encoded"</span><br />      encoded_bits.each_slice(5) <span class="keyword">do</span> |slice|<br />        puts slice.join(<span class="string">" "</span>)<br />      <span class="keyword">end</span><br />      puts <span class="string">"#{encoded_bits.size} bytes"</span><br />      puts<br />      puts <span class="string">"%d percent compression"</span> %<br />           (100.0 - (encoded_bits.size.to_f/data.size.to_f)*100.0)<br />      puts<br />      puts <span class="string">"Decoded"</span><br />      puts tree.decode(code)<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The first few chunks of this code just run the interface methods we have been examining.  The last big chunk is simply the output of results using some straightforward printing logic.</p>
+			<p>My thanks to all who took on this challenge.  Several of you wrote library quality solutions.  It was impressive to see.</p>
+			<p>Tomorrow we will try some magical math, as quick as we can...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121201706im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251450">Jesse Merriman</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251455">Charles Lowe</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251456">James Koppel</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251478">Ivo Dancet</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251494">Erik Veenstra</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251505">Hirotsugu Asari</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251532">Nicolas Modrzyk</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251548">Daniel Martin</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251579">Raf Coremans</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251607">Rick DeNatale</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251617">Drew Olson</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251619">Erik Veenstra (2)</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251627">Eric I.</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251747">Donald A Ball Jr</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251792">Drew Olson (2)</a></li>
+				<li><a href="/web/20120121201706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/251869">Kyle Schmitt</a></li>
+			</ol>
+			<p><a href="/web/20120121201706/http://rubyquiz.com/quiz123_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121201706/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:17:06 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:46 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

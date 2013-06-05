@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Running Coach (#82)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121185426cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121185426cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz82.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz82.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121185426" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127181146/http://rubyquiz.com/quiz82.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 18:54:26 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418085326/http://www.rubyquiz.com/quiz82.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103143217/http://www.rubyquiz.com/quiz82.html" title="14:32:17 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 18:54:26 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418085326/http://www.rubyquiz.com/quiz82.html" title="8:53:26 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127181146/http://rubyquiz.com/quiz82.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 18:54:26 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215053015/http://rubyquiz.com/quiz82.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121185426*/http://rubyquiz.com/quiz82.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>32 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Oct 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000100_2007:-1:000000100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000000000_2012:0:2001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Running Coach (#82)</span>
+			<p>by Benjohn Barnes</p>
+			<p>I've started to jog with my girlfriend. It's hell. We're following a "programme" at this web site:</p>
+			<p><a href="/web/20120121185426/http://www.coolrunning.com/engine/2/2_3/181.shtml">The Couch-to-5K Running Plan</a></p>
+			<p>The aim is to get you from being able to alternate hobbling and brisk walking, to being able to jog for 20 minutes solidly. Over eight weeks you exercise for twenty minutes, three times a week. Over the eight weeks, the ratio of jog to walk steadily increases, and the jogs get longer, while the walks become shorter.</p>
+			<p>I was explaining to a friend that it's incredibly difficult for me to look at a stop watch and work out in my head if we're supposed to be jogging or walking, how many more jogs we've got to do, and when I can stop and rest. He suggested: 'why not tape yourself giving prompts about when to start and stop'. A brilliant plan. 'Even better, record it on to your phone'. Genius! Except I'm the kind of person who's lazy enough to spend eight times as long writing a program to try to do this for me.</p>
+			<p>So, the quiz is:</p>
+			<p>Write a program to create the tracks for each of the eight weeks. Make it give helpful and enthusiastic advice like "you've got to run for another minute / 30 seconds / 15 seconds ...", "walk now for two minutes, you've got three jogs left", "you're on jog 2 of 6", or "well done, that's your last jog. Don't forget to cool down and stretch!"</p>
+			<p>I just used my Mac's speech synth, and parked my phone near to the speaker on record, in a quiet room (except for the planes every minute heading down to Heathrow). There'd be "bonus points" for actually creating the MP3 directly. Of course, you don't really need to get the computer to speak. It could just print out the messages at the appropriate time.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This quiz turns out to be a little bit of work, if you want to get some decent feedback to the user.  Adam Shelly hammered out a reasonably complete solution though, so let's have a look at it:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="global">$CheerThreshold</span> = 6   <span class="comment">#decrease to get more random encouragement</span><br />    <span class="global">$LongThreshold</span> = 120  <span class="comment">#minimum time to be considered a "long" run</span><br /><br />    <span class="keyword">class</span> Phase<br />     attr_reader :action, :seconds<br />     <span class="keyword">def</span> initialize action, time<br />       <span class="variable">@action</span> = action.downcase<br />       <span class="variable">@seconds</span> = time.to_i<br />     <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>We can see some setup work here for variables that allow users to tweak the output.  We also have the trivial Phase class definition, which is just a data class for linking actions and times.</p>
+			<p>Here's the main event loop:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Coach<br />     <span class="keyword">def</span> initialize filename<br />       File.open(filename) {|f|<br />         <span class="variable">@rawdata</span> = f.read.split(<span class="string">"\n"</span>)<br />       }<br />       <span class="variable">@duration</span> = 0<br />       <span class="variable">@runs</span> = <span class="variable">@longs</span> = <span class="variable">@walks</span> = 0<br />       <span class="variable">@encouragometer</span> = 0<br />       <span class="variable">@step</span> = [30,15,10,5,5]<br />     <span class="keyword">end</span><br /><br />     <span class="keyword">def</span> coach<br />       build_timeline<br />       say summarize(2)<br />       say start_prompt<br />       <span class="variable">@time</span> = Time.now<br />       <span class="variable">@target_time</span> = <span class="variable">@time</span><br />       <span class="keyword">while</span> (phase = <span class="variable">@phases</span>.shift)<br />         update_summary phase<br />         narrate_phase phase<br />         <span class="keyword">if</span> <span class="variable">@phases</span>.size &gt; 0<br />           say transition(<span class="variable">@phases</span>[0].action)<br />           say summarize(rand(2))<br />         <span class="keyword">end</span><br />       <span class="keyword">end</span><br />       say finish_line<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>There's nothing too interesting about initialize() which is just assigning defaults to the instance variables.  Have a look at the coach() method though.  This is the process the application runs through, and I really like how well it reads.  It builds up the timeline of events, hits user with a summary and starting prompt, then launches into Phase processing.  Each Phase is narrated to the user, and then the code transitions naturally to the next Phase.  Finally the code sends the finish line message to indicate a successful workout.</p>
+			<p>Let's see what narrating a phase involves:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> narrate_phase phase<br />       say what_to_do_for(phase)<br />       <span class="variable">@target_time</span> += phase.seconds<br />       delta = (<span class="variable">@target_time</span> - Time.now).to_i<br />       stepidx = 0<br />       <span class="keyword">while</span> (delta &gt; 0)<br />         stepidx+=1 <span class="keyword">if</span> delta &lt; <span class="variable">@step</span>[stepidx]+1<br />         wait_time = delta % <span class="variable">@step</span>[stepidx]<br />         wait_time += <span class="variable">@step</span>[stepidx] <span class="keyword">if</span> wait_time &lt;= 0<br />         wait(wait_time)<br />         delta = (<span class="variable">@target_time</span> - Time.now).to_i<br />         encourage_maybe<br />         say whats_left(phase.action,delta) <span class="keyword">if</span> delta &gt; 0<br />       <span class="keyword">end</span><br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Obviously, this method is mostly about time management.  It breaks a Phase down into smaller chunks, so that it can provide encouragement frequently and inform the user of what is left to be done.</p>
+			<p>Note the clever output messages here again that read so naturally:  what_to_do_for(), encourage_maybe(), and whats_left().</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> update_summary phase<br />       <span class="variable">@duration</span> -= phase.seconds<br />       <span class="variable">@runs</span> -= 1 <span class="keyword">if</span> phase.action == <span class="string">'run'</span><br />       <span class="variable">@longs</span> -= 1 <span class="keyword">if</span> phase.action == <span class="string">'run'</span> <span class="keyword">and</span> phase.seconds &gt;= <span class="global">$LongThreshold</span><br />       <span class="variable">@walks</span> -= 1 <span class="keyword">if</span> phase.action == <span class="string">'walk'</span><br />     <span class="keyword">end</span><br /><br />     <span class="keyword">def</span> build_timeline<br />       <span class="variable">@phases</span> = <span class="variable">@rawdata</span>.map {|command|<br />         p = Phase.new(*command.split)<br />         <span class="variable">@duration</span> += p.seconds<br />         <span class="variable">@runs</span> += 1 <span class="keyword">if</span> p.action == <span class="string">'run'</span><br />         <span class="variable">@longs</span> += 1 <span class="keyword">if</span> p.action == <span class="string">'run'</span> <span class="keyword">and</span> p.seconds &gt;= <span class="global">$LongThreshold</span><br />         <span class="variable">@walks</span> += 1 <span class="keyword">if</span> p.action == <span class="string">'walk'</span><br />         p<br />       }<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>These two methods are quite similar save that one adds and the other subtracts.  First, build_timeline() constructs the Phase objects from the import file.  As it goes through, it counts things like the total number of walks and runs a person needs to complete.  Then, update_summary() runs inside each Phase of the event loop ticking off the walks and runs the user has completed.</p>
+			<p>Here's the say() method that would eventually need to be replaced with speech programming:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> say s<br />       puts s<br />       <span class="comment">#todo: replace with speech</span><br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Now, take a look at this:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> wait n<br />         <span class="keyword">if</span> <span class="global">$DEBUG</span><br />           puts <span class="string">"...waiting #{n} seconds..."</span><br />           <span class="variable">@target_time</span> -= n<br />         <span class="keyword">else</span><br />           <span class="global">$stdout</span>.flush<br />           sleep(n)<br />         <span class="keyword">end</span><br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This is obviously the delay method and it mainly just calls sleep().  However, I like how it can be set to just explain what the pause would have been, in $DEBUG mode.  That makes testing the application much more pleasant.</p>
+			<p>Two more helper methods:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> encourage_maybe<br />       <span class="variable">@encouragometer</span> += rand(3)<br />       <span class="keyword">if</span> (<span class="variable">@encouragometer</span> &gt; <span class="global">$CheerThreshold</span>)<br />         say cheer<br />         <span class="variable">@encouragometer</span> = 0<br />       <span class="keyword">end</span><br />     <span class="keyword">end</span><br /><br />     <span class="keyword">def</span> timesay secs<br />       secs = secs.to_i<br />       s = <span class="string">""</span><br />       <span class="keyword">if</span> secs &gt; 60<br />         min = secs/60<br />         secs -= min*60<br />         s += <span class="string">"#{min} minute"</span><br />         s += <span class="string">'s'</span> <span class="keyword">if</span> min &gt; 1<br />         s += <span class="string">' and '</span> <span class="keyword">if</span> secs &gt; 0<br />       <span class="keyword">end</span><br />       <span class="keyword">if</span> secs &gt; 0<br />         s += <span class="string">"#{secs} second"</span><br />         s += <span class="string">'s'</span> <span class="keyword">if</span> secs &gt; 1<br />       <span class="keyword">end</span><br />       s<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>There's the definition for the encourage_maybe() call I pointed out earlier.  It just randomly decides if a cheer should be emitted.</p>
+			<p>The other method, timesay(), is a helper like we are use to in Rails.  It just humanizes the output of some number of seconds by breaking it into minutes and seconds.</p>
+			<p>Next the code has several output methods, of which I'll just show a couple:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     <span class="comment"># All the phrases should be below this line, not mixed up in the logic</span><br />     <span class="keyword">def</span> what_to_do_for phase<br />       s = <span class="string">"#{phase.action} for #{timesay(phase.seconds)} \n"</span><br />       s += <span class="string">"You are almost done"</span> <span class="keyword">if</span> <span class="variable">@phases</span>.size == 1<br />       s<br />     <span class="keyword">end</span><br />     <span class="keyword">def</span> whats_left act, time<br />       timestr = timesay(time)<br />       s = [<br />         <span class="string">"You have #{timestr} more to #{act}"</span>,<br />         <span class="string">"#{act} for #{timestr} more"</span>,<br />         <span class="string">"only #{timestr} left of #{act}ing"</span>,<br />         <span class="string">"You have #{timestr} more to #{act}"</span>,<br />         <span class="string">"#{timestr} left in this phase"</span>,<br />         <span class="string">"There are #{timestr} until the next activity"</span><br />       ]<br />       s[rand(s.size)]<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ... several more output routines not shown ...</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>You can see that these methods just use simple conditional logic or random picks to vary the program's output.  With several of these methods, the end result is a fairly good mix of prompts for the user.</p>
+			<p>Here's the last line that turns it into a solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    Coach.new(ARGV[0]||<span class="string">"week3.txt"</span>).coach<br /><br /></div></div>
+			<p>My thanks to those who stole the time from their busy running schedules to code up a solution.  These scripts should have us all in shape by RubyConf!</p>
+			<p>Tomorrow, we will try an extremely common computerism, but see if we can handle it a little better than the usual treatment...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121185426im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121185426/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/196965">Benjohn Barnes</a></li>
+				<li><a href="/web/20120121185426/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/197123">Adam Shelly</a></li>
+				<li><a href="/web/20120121185426/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/197244">Leslie Viljoen</a></li>
+				<li><a href="/web/20120121185426/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/197578">Adam Shelly (2)</a></li>
+				<li><a href="/web/20120121185426/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/197779">Adam Shelly (3)</a></li>
+			</ol>
+			<p><a href="/web/20120121185426/http://rubyquiz.com/quiz82_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121185426/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 18:54:26 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:12 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

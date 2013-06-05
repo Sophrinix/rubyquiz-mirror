@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - VCR Program Manager (#101)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121201327cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121201327cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz101.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz101.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121201327" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173632/http://rubyquiz.com/quiz101.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:13:27 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070441/http://www.rubyquiz.com/quiz101.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173632/http://rubyquiz.com/quiz101.html" title="17:36:32 Nov 27, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:13:27 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418070441/http://www.rubyquiz.com/quiz101.html" title="7:04:41 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173632/http://rubyquiz.com/quiz101.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:13:27 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052520/http://rubyquiz.com/quiz101.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121201327*/http://rubyquiz.com/quiz101.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>22 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">7 Jul 07 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:10016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">VCR Program Manager (#101)</span>
+			<p>by François Beausoleil</p>
+			<p>The goal of this Ruby Quiz is to make a Video Cassette Recorder program manager.  The user is responsible for saying what times to record, and then the VCR will query the program manager regularly to determine if it should be recording, and if so, on which channel.</p>
+			<p>The interesting bit in this quiz is the conflict resolution.</p>
+			<p>Normally, users specify recording schedules such as this:</p>
+			<p class="example">Monday to Friday, 3 PM to 4 PM, channel 8</p>
+			<p>Specific programs might overlap.  Assuming the above program is active, if the user added this program:</p>
+			<p class="example">Wednesday Nov 8, 3:30 PM to 5 PM, channel 12</p>
+			<p>We should record from 3 to 3:30 channel 8, then switch to channel 12, and record until 5 PM.</p>
+			<p>Another variation might be:</p>
+			<p class="example">Thursday Nov 9, 3:30 PM to 4:30 PM, channel 8</p>
+			<p>In this case, the channel didn't change, so we should just keep on recording.</p>
+			<p>Interesting, optional features: fuzzy time (start a bit before and end a bit after the specific times, to catch shows starting early / ending late) and taking care of DST.</p>
+			<p>Your program manager must implement the following interface:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># Query to determine if we should be recording at any particular</span><br />    <span class="comment"># moment.  It can be assumed that the VCR will query the program</span><br />    <span class="comment"># manager at most twice per minute, and with always increasing minutes.</span><br />    <span class="comment"># New programs may be added between two calls to #record?.</span><br />    <span class="comment">#</span><br />    <span class="comment"># This method must return either a +nil+, indicating to stop recording,</span><br />    <span class="comment"># or don't start, or an +Integer+, which is the channel number we should</span><br />    <span class="comment"># be recording.</span><br />    <span class="keyword">def</span> record?(time); <span class="keyword">end</span><br /><br />    <span class="comment"># Adds a new Program to the list of programs to record.</span><br />    <span class="keyword">def</span> add(program_details); <span class="keyword">end</span><br /><br /></div></div>
+			<p>Your task is to provide an implementation for the ProgramManager.</p>
+			<p>You can see the unit tests I used at:</p>
+			<p><a href="/web/20120121201327/http://www.rubyquiz.com/program_manager_test.rb">Program Manager Unit Tests</a></p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>When I used the term VCR in my latest book, my editor complained that it "dates me."  (Ouch.  I'm only 30!)  I'm told we all use Tivo to record our shows now.  I'm not on that bandwagon yet, so the rest of you will need to tell me if we need a Tivo Program Manager quiz or if this same code will work.</p>
+			<p>First, let's examine a super straight forward solution to the task to see what's involved.  When we've done that, I'll make note of a few variations that caught my eye.</p>
+			<p>We will begin with some code by Peter Severin.  Here's a helper method Peter added to the Time class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Time<br />        <span class="keyword">def</span> seconds<br />            (hour * 60 + min) * 60 + sec<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This just calculates the number of seconds since midnight.  That measurement is used by weekly programs in the quiz, to specify when to record on a given day.</p>
+			<p>Let's take our first steps into the Program objects now:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Program<br />        attr_reader :channel<br /><br />        <span class="keyword">def</span> initialize(program_details)<br />            <span class="variable">@program_start</span> = program_details[:start]<br />            <span class="variable">@program_end</span> = program_details[:<span class="keyword">end</span>]<br />            <span class="variable">@channel</span> = program_details[:channel]<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>I think Peter has a very clean and correct OO design in these Program classes.</p>
+			<p>Here we see the base class handling only the initialization that applies to all subclasses.  Also note that only channel() is exposed to the outside world, since that's all the ProgramManager really needs.</p>
+			<p>Here's the subclass for one-shot recording:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> SpecificProgram &lt; Program<br />        <span class="keyword">def</span> record?(time)<br />            time.between?(<span class="variable">@program_start</span>, <span class="variable">@program_end</span>)<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>All Peter adds here is the ability for the Program to determine if it is scheduled for the passed time.  This keeps the Program logic in the Program classes where it belongs.</p>
+			<p>The other subclass is for repeat programming:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> RepeatingProgram &lt; Program<br />        WEEKDAYS = <span class="string">%w(mon tue wed thu fri sat sun)</span><br /><br />        <span class="keyword">def</span> initialize(program_details)<br />            <span class="keyword">super</span><br />            <span class="variable">@days</span> = program_details[:days].map {|day| WEEKDAYS.index(day) + 1}<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> record?(time)<br />            <span class="variable">@days</span>.include?(time.wday) &amp;&amp;<br />            time.seconds.between?(<span class="variable">@program_start</span>, <span class="variable">@program_end</span>)<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Here initialization is modified to handle the :days parameter that only applies to this type of Program.  From there, another record?() method is created to examine both the day and time.</p>
+			<p>I don't see as much of this traditional OO design in solutions to the quizzes, but here I found it quite elegant.  With each Program able to answer the right questions about itself, the ProgramManager is almost trivial to construct:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> ProgramManager<br />        <span class="keyword">def</span> initialize()<br />            <span class="variable">@programs</span> = []<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> add(program_details)<br />            <span class="keyword">case</span> program_details[:start]<br />            <span class="keyword">when</span> Numeric<br />                <span class="variable">@programs</span> &lt;&lt; RepeatingProgram.new(program_details)<br />            <span class="keyword">when</span> Time<br />                <span class="variable">@programs</span>[0, 0] = SpecificProgram.new(program_details)<br />            <span class="keyword">end</span><br /><br />            <span class="keyword">self</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> record?(time)<br />            program = <span class="variable">@programs</span>.find {|program| program.record?(time)}<br />            program ? program.channel : <span class="keyword">nil</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Peter begins by constructing an Array to hold the @programs in initialize().  Conflict management was pretty easy for this quiz in that the last defined Program wins out.  You can deal with that by keeping them all in one list and making sure you order them correctly at insertion time.</p>
+			<p>The insertions are handled by the add() method.  It determines the type of Program object to create and adds it to our list of @programs.  The second addition is the tricky one, if you're not familiar with how Array.[]=() works.  Let's see what that does in IRb:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    &gt;&gt; programs = Array.new<br />    =&gt; []<br />    &gt;&gt; programs &lt;&lt; <span class="string">"repeating 1"</span> &lt;&lt; <span class="string">"repeating 2"</span><br />    =&gt; [<span class="string">"repeating 1"</span>, <span class="string">"repeating 2"</span>]<br />    &gt;&gt; programs[0, 0] = <span class="string">"specific 1"</span><br />    =&gt; <span class="string">"specific 1"</span><br />    &gt;&gt; programs<br />    =&gt; [<span class="string">"specific 1"</span>, <span class="string">"repeating 1"</span>, <span class="string">"repeating 2"</span>]<br /><br /></div></div>
+			<p>Put another way, the assignment to index zero, length zero adds the element to the front of the Array.  It's equivalent to the more common:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">          <span class="variable">@programs</span>.unshift(SpecificProgram.new(program_details))<br /><br /></div></div>
+			<p>The final method of Peter's ProgramManager, record?(), just forwards the record?() calls to the Array of Program objects via the find() iterator.  The first one to claim the time is selected and that Program's channel() is returned.</p>
+			<p>There was an interesting element in Dema's Program class that's probably worth a quick look:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Program<br /><br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> initialize(program)<br />        <span class="variable">@start</span> = program[:start]<br />        <span class="variable">@end</span> = program[:<span class="keyword">end</span>]<br />        <span class="variable">@channel</span> = program[:channel]<br />        <span class="variable">@days</span> = program[:days]<br /><br />        raise <span class="string">"Missing start or end"</span> \<br />          <span class="keyword">if</span> <span class="variable">@start</span>.nil? || <span class="variable">@end</span>.nil?<br />        raise <span class="string">"Wrong start or end types"</span> \<br />          <span class="keyword">unless</span> (<span class="variable">@start</span>.is_a?(Time)    &amp;&amp; <span class="variable">@end</span>.is_a?(Time))    ||<br />                 (<span class="variable">@start</span>.is_a?(Integer) &amp;&amp; <span class="variable">@end</span>.is_a?(Integer))<br />        raise <span class="string">"Invalid program"</span> \<br />          <span class="keyword">if</span> weekly? &amp;&amp; (<span class="variable">@start</span>.is_a?(Time) || <span class="variable">@end</span>.is_a?(Time))<br />        raise <span class="string">"End must come after Start"</span> \<br />          <span class="keyword">if</span> !weekly? &amp;&amp; <span class="variable">@start</span> &gt; <span class="variable">@end</span><br />        raise <span class="string">"Missing channel"</span> \<br />          <span class="keyword">if</span> !<span class="variable">@channel</span>.is_a?(Integer)<br />        raise <span class="string">"Invalid weekday"</span> \<br />          <span class="keyword">if</span> <span class="variable">@days</span>.is_a?(Array) &amp;&amp; <span class="variable">@days</span>.any? { |day| WEEKDAYS[day] == <span class="keyword">nil</span> }<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The only difference here is that Dema does a fair amount of error checking when Programs are constructed.  Ordinarily, I'm not a big fan of this kind of lock-down coding, but this seems like a good case where it might just be worth the effort.  Programs are going to come from users and of course users are going to make mistakes.  Isolating these at Program construction time would allow the machine to respond to those errors intelligently at the time when it matters, instead of running into trouble down the road and recording at the wrong times.</p>
+			<p>The focus of this quiz was not to implement a complete VCR, of course, and most solvers just assumed they would receive correct input.  I just thought it worth mentioning that the safeguards employed by Dema do need to be in place somewhere in the system.</p>
+			<p>I won't show the code here, but as a final point of interest I want to recommend everyone take a peek at Gordon Thiesfeld's solution.  It uses a library called Runt to handle the majority of the scheduling.  I wasn't aware of this resource and Gordon's code got me to look into it.</p>
+			<p>Runt is Temporal Expression library designed with things like recurring events and scheduling in mind.  The documentation is pretty good and the project worth a look:</p>
+			<p><a href="/web/20120121201327/http://runt.rubyforge.org/">Runt</a></p>
+			<p>My thanks to all the solvers who always manage to teach me things, even when we do these simple problems.  I love that aspect of the quiz.</p>
+			<p>Tomorrow we will take a shot at bringing Literate Programming to our fair Ruby...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121201327im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224664">Dan Weinand</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224715">Dema</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224749">Gordon Thiesfeld</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224775">Peter Severin</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224823">Dale Martenson</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224834">Francois Beausoleil</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/224874">Jamie Macey</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/225169">Jamie Macey (2)</a></li>
+				<li><a href="/web/20120121201327/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/225208">Adam Shelly</a></li>
+			</ol>
+			<p><a href="/web/20120121201327/http://rubyquiz.com/quiz101_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121201327/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:13:27 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:28 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

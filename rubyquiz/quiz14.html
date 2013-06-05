@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - LCD Numbers (#14)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121214706cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121214706cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz14.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz14.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121214706" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173150/http://rubyquiz.com/quiz14.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:47:06 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418132834/http://www.rubyquiz.com/quiz14.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103144805/http://www.rubyquiz.com/quiz14.html" title="14:48:05 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:47:06 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122031617/http://rubyquiz.com/quiz14.html" title="3:16:17 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173150/http://rubyquiz.com/quiz14.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:47:06 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052648/http://rubyquiz.com/quiz14.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121214706*/http://rubyquiz.com/quiz14.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>36 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">8 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000210000100_2007:-1:000100100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:4001a000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">LCD Numbers (#14)</span>
+			<p>This week's quiz is to write a program that displays LCD style numbers at adjustable sizes.</p>
+			<p>The digits to be displayed will be passed as an argument to the program.  Size should be controlled with the command-line option -s follow up by a positive integer.  The default value for -s is 2.</p>
+			<p>For example, if your program is called with:</p>
+			<p class="example">&gt; lcd.rb 012345</p>
+			<p>The correct display is:</p>
+			<p class="example"> --        --   --        -- <br />|  |    |    |    | |  | |   <br />|  |    |    |    | |  | |   <br />           --   --   --   -- <br />|  |    | |       |    |    |<br />|  |    | |       |    |    |<br /> --        --   --        -- </p>
+			<p>And for:</p>
+			<p class="example">&gt; lcd.rb -s 1 6789</p>
+			<p>Your program should print:</p>
+			<p class="example"> -   -   -   - <br />|     | | | | |<br /> -       -   - <br />| |   | | |   |<br /> -       -   - </p>
+			<p>Note the single column of space between digits in both examples. For other values of -s, simply lengthen the - and | bars.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Clearly this problem isn't too difficult.  As we've now seen, it can be solved in under 300 bytes.  However, this classic challenge does address topics like scaling and joining multiline data that are applicable to many areas of computer programming.  That always makes for an interesting quiz in my book.</p>
+			<p>There were three main strategies used for solving the problem.  Some used a template approach, where you have some kind of text representation of your number at a scale of one.  Two might look like this, for example:</p>
+			<p class="example">[ " - ",<br />  "  |",<br />  " - ",<br />  "|  ",<br />  " - " ]</p>
+			<p>Scaling that to any size is a two-fold process.  First, you need to stretch it horizontally.  The easy way to do that is to grab the second character of each string (a "-" or a " ") and repeat it -s times:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    digit.each { |row| row[1, 1] = row[1, 1] * scale }<br /><br /></div></div>
+			<p>After that, the digit needs to be scaled vertically.  That's pretty easy to do while printing it out, if you want.  Just print any line containing a "|" -s times:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    digit.each <span class="keyword">do</span> |row|<br />        <span class="keyword">if</span> row =~ <span class="string">/\|/</span><br />            scale.times { puts row }<br />        <span class="keyword">else</span><br />            puts row<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The second strategy used was to treat each digit as a series of segments that can be "on" or "off".  The numbers easily break down into seven positions:</p>
+			<p class="example"> 6<br />5 4<br /> 3<br />2 1<br /> 0</p>
+			<p>Using that map, we can convert the two above to a binary digit, and some did:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    0b1011101<br /><br /></div></div>
+			<p>Expansion of these representations is handled much as it was in the first strategy above.</p>
+			<p>With either method, you will need to join the scaled digits together for output.  This is basically a two dimensional join() problem.  Building a routine like that is simple using either Array.zip() or Array.transpose().  (See the submissions for numerous examples of this.)</p>
+			<p>The third strategy caught my eye, so I'll examine it here.  Let's look at the primary class of Dale Martenson's solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> LCD<br />       attr_accessor( :size, :spacing )<br /><br />       <span class="comment">#</span><br />       <span class="comment"># This hash is used to define the segment display for the</span><br />       <span class="comment"># given digit. Each entry in the array is associated with</span><br />       <span class="comment"># the following states:</span><br />       <span class="comment">#</span><br />       <span class="comment">#    HORIZONTAL</span><br />       <span class="comment">#    VERTICAL</span><br />       <span class="comment">#    HORIZONTAL</span><br />       <span class="comment">#    VERTICAL</span><br />       <span class="comment">#    HORIZONTAL</span><br />       <span class="comment">#    DONE</span><br />       <span class="comment">#</span><br />       <span class="comment"># The HORIZONTAL state produces a single horizontal line. There</span><br />       <span class="comment"># are two types:</span><br />       <span class="comment">#</span><br />       <span class="comment">#    0 - skip, no line necessary, just space fill</span><br />       <span class="comment">#    1 - line required of given size</span><br />       <span class="comment">#</span><br />       <span class="comment"># The VERTICAL state produces a either a single right side line,</span><br />       <span class="comment"># a single left side line or a both lines.</span><br />       <span class="comment">#</span><br />       <span class="comment">#    0 - skip, no line necessary, just space fill</span><br />       <span class="comment">#    1 - single right side line</span><br />       <span class="comment">#    2 - single left side line</span><br />       <span class="comment">#    3 - both lines</span><br />       <span class="comment">#</span><br />       <span class="comment"># The DONE state terminates the state machine. This is not needed</span><br />       <span class="comment"># as part of the data array.</span><br />       <span class="comment">#</span><br />       <span class="variable">@@lcdDisplayData</span> = {<br />           <span class="string">"0"</span> =&gt; [ 1, 3, 0, 3, 1 ],<br />           <span class="string">"1"</span> =&gt; [ 0, 1, 0, 1, 0 ],<br />           <span class="string">"2"</span> =&gt; [ 1, 1, 1, 2, 1 ],<br />           <span class="string">"3"</span> =&gt; [ 1, 1, 1, 1, 1 ],<br />           <span class="string">"4"</span> =&gt; [ 0, 3, 1, 1, 0 ],<br />           <span class="string">"5"</span> =&gt; [ 1, 2, 1, 1, 1 ],<br />           <span class="string">"6"</span> =&gt; [ 1, 2, 1, 3, 1 ],<br />           <span class="string">"7"</span> =&gt; [ 1, 1, 0, 1, 0 ],<br />           <span class="string">"8"</span> =&gt; [ 1, 3, 1, 3, 1 ],<br />           <span class="string">"9"</span> =&gt; [ 1, 3, 1, 1, 1 ]<br />       }<br /><br />       <span class="variable">@@lcdStates</span> = [<br />           <span class="string">"HORIZONTAL"</span>,<br />           <span class="string">"VERTICAL"</span>,<br />           <span class="string">"HORIZONTAL"</span>,<br />           <span class="string">"VERTICAL"</span>,<br />           <span class="string">"HORIZONTAL"</span>,<br />           <span class="string">"DONE"</span><br />       ]<br /><br />       <span class="keyword">def</span> initialize( size=1, spacing=1 )<br />           <span class="variable">@size</span> = size<br />           <span class="variable">@spacing</span> = spacing<br />       <span class="keyword">end</span><br /><br />       <span class="keyword">def</span> display( digits )<br />           states = <span class="variable">@@lcdStates</span>.reverse<br />           0.upto(<span class="variable">@@lcdStates</span>.length) <span class="keyword">do</span> |i|<br />               <span class="keyword">case</span> states.pop<br />               <span class="keyword">when</span> <span class="string">"HORIZONTAL"</span><br />                   line = <span class="string">""</span><br />                   digits.each_byte <span class="keyword">do</span> |b|<br />                       line += horizontal_segment(<br />                           <span class="variable">@@lcdDisplayData</span>[b.chr][i]<br />                       )<br />                   <span class="keyword">end</span><br />                   print line + <span class="string">"\n"</span><br />               <span class="keyword">when</span> <span class="string">"VERTICAL"</span><br />                   1.upto(<span class="variable">@size</span>) <span class="keyword">do</span> |j|<br />                       line = <span class="string">""</span><br />                       digits.each_byte <span class="keyword">do</span> |b|<br />                           line += vertical_segment(<br />                               <span class="variable">@@lcdDisplayData</span>[b.chr][i]<br />                           )<br />                       <span class="keyword">end</span><br />                       print line + <span class="string">"\n"</span><br />                   <span class="keyword">end</span><br />               <span class="keyword">when</span> <span class="string">"DONE"</span><br />                   <span class="keyword">break</span><br />               <span class="keyword">end</span><br />           <span class="keyword">end</span><br />       <span class="keyword">end</span><br /><br />       <span class="keyword">def</span> horizontal_segment( type )<br />           <span class="keyword">case</span> type<br />           <span class="keyword">when</span> 1<br />               <span class="keyword">return</span> <span class="string">" "</span> + (<span class="string">"-"</span> * <span class="variable">@size</span>) + <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">else</span><br />               <span class="keyword">return</span> <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@size</span>) + <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">end</span><br />       <span class="keyword">end</span><br /><br />       <span class="keyword">def</span> vertical_segment( type )<br />           <span class="keyword">case</span> type<br />           <span class="keyword">when</span> 1<br />               <span class="keyword">return</span> <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@size</span>) + <span class="string">"|"</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">when</span> 2<br />               <span class="keyword">return</span> <span class="string">"|"</span> + (<span class="string">" "</span> * <span class="variable">@size</span>) + <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">when</span> 3<br />               <span class="keyword">return</span> <span class="string">"|"</span> + (<span class="string">" "</span> * <span class="variable">@size</span>) + <span class="string">"|"</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">else</span><br />               <span class="keyword">return</span> <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@size</span>) + <span class="string">" "</span> + (<span class="string">" "</span> * <span class="variable">@spacing</span>)<br />           <span class="keyword">end</span><br />       <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The comment above gives you a nice clue to what is going on here.  The class represents a state machine.  For the needed size (set in initialize()), that class walks a series of states (defined in @@lcdStates).  At each state, horizontal and vertical segments are built as needed (with horizontal_segment() and vertical_segment()).</p>
+			<p>The process I've just described is run through display(), the primary interface method.  You pass it a string of digits, it walks each state, and generates segments as needed.</p>
+			<p>One nice aspect of this approach is that it's easy to handle output one line at a time and display() does this.  The top line of all digits, generated by the first "HORIZONTAL" state, is printed as soon as it's built, as is each state that follows.  This resource friendly system could scale well to much larger inputs.</p>
+			<p>The rest of Dale's code (not shown), is just option parsing and the single call to display().</p>
+			<p>My usual thanks to all who played with the quiz.  More thanks to the "golfers" who taught me some interesting tricks about their sport and one more thank you to why the lucky stiff who notes our playing around in his blog, RedHanded.</p>
+			<p>Tomorrow, you'll think up the quiz and your computer will solve it for you...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121214706im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125664">David Tran</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125666">Luc Heinrich</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125669">David Tran (2)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125670">Sea&amp;Gull</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125671">Florian Gross</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125677">Luc Heinrich (2)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125684">Lee Marlow</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125698">Jannis Harder</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125715">James Edward Gray II</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125720">Matthew D Moss</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125723">Jim Menard</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125734">David Tran (3)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125742">David Tran (4)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125746">Nathaniel Talbott</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125749">Jannis Harder (2)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125754">Laurent Julliard</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125761">David Tran (5)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125763">Jannis Harder (3)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125765">Jannis Harder (4)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125769">Sean Ross</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125772">Dave Burt</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125773">Sean Ross (2)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125799">David Tran (6)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125801">Vance A Heron</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125869">Dale Martenson</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125898">David Tran (7)</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/125933">Luis Miguel Louren&ccedil;o</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/126180">Glenn Parker</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/126382">Zach Dennis</a></li>
+				<li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/196513">Greg Borenstein</a></li>
+                <li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/246817">David Ongaro</a></li>
+                <li><a href="/web/20120121214706/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/342465">Vento Sola</a></li>
+			</ol>
+			<p><a href="/web/20120121214706/http://rubyquiz.com/quiz14_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121214706/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:47:06 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:10 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

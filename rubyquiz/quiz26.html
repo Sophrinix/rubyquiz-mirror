@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Code Cleaning (#26)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121214255cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121214255cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz26.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz26.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121214255" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110825020550/http://www.rubyquiz.com/quiz26.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="25 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:42:55 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418124807/http://www.rubyquiz.com/quiz26.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110825020550/http://www.rubyquiz.com/quiz26.html" title="2:05:50 Aug 25, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:42:55 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122031041/http://rubyquiz.com/quiz26.html" title="3:10:41 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127180414/http://rubyquiz.com/quiz26.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:42:55 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052920/http://rubyquiz.com/quiz26.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121214255*/http://rubyquiz.com/quiz26.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>35 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">24 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000110000100_2007:-1:000000100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:3001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Code Cleaning (#26)</span>
+			<p>I'm always very vocal about how Ruby Quiz isn't interested in golf and
+obfuscation.  It's my own private fight for clean code.</p>
+			<p>To be fair though, you can really learn a lot from practices like golf and
+obfuscation.  It'll teach you a surprising number of details about the inner
+workings of your language of choice.  Still principals are principals and if I
+bend, word will quickly get out that I've given up the fight.  Can't allow that!</p>
+			<p>Here's my compromise.</p>
+			<p>This week's challenge is to utterly clean some famous examples of compressed
+Ruby code.  Refactor the code until it's as readable as possible, whatever that
+means to you.</p>
+			<p>For those that faint at the sight of dense code, I offer a an "easier"
+challenge.  Try this code by Mauricio Fern&aacute;&Iuml;dez:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/ruby -rcgi</span><br />    H,B=<span class="string">%w'HomePage w7.cgi?n=%s'</span>;c=CGI.new<span class="string">'html4'</span>;n,d=c[<span class="string">'n'</span>]!=<span class="string">''</span>?c[<span class="string">'n'</span>]:H,c[<span class="string">'d'</span>];t=<span class="string">`<br />    cat #{n}`</span>;d!=<span class="string">''</span>&amp;&amp;<span class="string">`echo #{t=CGI.escapeHTML(d)} &gt;#{n}`</span>;c.instance_eval{out{h1{n}+<br />    a(B%H){H}+pre{t.gsub(<span class="string">/([A-Z]\w+){2}/</span>){a(B<span class="string">%$&amp;){$</span>&amp;}}}+form(<span class="string">"get"</span>){textarea(<span class="string">'d'</span>){t<br />    }+hidden(<span class="string">'n'</span>,n)+submit}}}<br /><br /></div></div>
+			<p>If you prefer a "trickier" challenge, I offer this famous code from Florian
+Gross:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/ruby</span><br />    <span class="comment"># Server: ruby p2p.rb password server public-uri private-uri merge-servers</span><br />    <span class="comment"># Sample: ruby p2p.rb foobar server druby://123.123.123.123:1337</span><br />    <span class="comment">#         druby://:1337 druby://foo.bar:1337</span><br />    <span class="comment"># Client: ruby p2p.rb password client server-uri download-pattern [list-only]</span><br />    <span class="comment"># Sample: ruby p2p.rb foobar client druby://localhost:1337 *.rb</span><br />    <span class="comment">################################################################################</span><br />    <span class="comment"># You are not allowed to use this application for anything illegal unless you</span><br />    <span class="comment"># live inside a sane place. Insane places currently include California (see</span><br />    <span class="comment"># link) and might soon include the complete USA. People using this software are</span><br />    <span class="comment"># responsible for themselves. I can't prevent them from doing illegal stuff for</span><br />    <span class="comment"># obvious reasons. So have fun and do whatever you can get away with for now.</span><br />    <span class="comment"># </span><br />    <span class="comment"># http://info.sen.ca.gov/pub/bill/sen/sb_0051-0100/sb_96_bill_20050114_introduced.html</span><br />    <span class="comment">################################################################################</span><br />    require<span class="string">'drb'</span>;F=File;<span class="keyword">def</span> c(u)DRbObject.new((),u)<span class="keyword">end</span>;<span class="keyword">def</span> x(u)[P,u].hash;<span class="keyword">end</span>;<span class="keyword">def</span> s(<br />    p)F.basename p[<span class="string">/[^|]+/</span>]<span class="keyword">end</span>;P,M,U,V,*O=<span class="global">$*</span>;M[<span class="string">"s"</span>]?(DRb.start_service V,Class.new{<br />    <span class="keyword">def</span> p(z=O)O.push(*z).uniq;<span class="keyword">end</span>;new.methods.map{|m|m[<span class="string">/_[_t]/</span>]||private(m)};<span class="keyword">def</span> y;(<br />    p(U)+p).map{|u|u!=U&amp;&amp;c(u).f(x(u),p(U))};<span class="keyword">self</span>;<span class="keyword">end</span>;<span class="keyword">def</span> f(c,a=O,t=2)x(U)==c&amp;&amp;t&lt;1?<br />    Dir[s(a)]:t&lt;2?[*open(s(a),<span class="string">"rb"</span>)]:p(a)<span class="keyword">end</span>}.new.y;sleep):c(U).f(x(U)).map{|n|c(n).<br />    f(x(n),V,0).map{|f|s f}.map{|f|O[0]?p(f):open(f,<span class="string">"wb"</span>)&lt;&lt;c(n).f(x(n),f,1)}}<br /><br /></div></div>
+			<p>This is a little different from the traditional Ruby Quiz, but I encourage all
+to play and learn.  I promise to go back to normal challenges next week...</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>No takers for this idea, eh?  We seem to like uglying up code better than cleaning it!  Well, I'm a firm believer in eating my own dog food, so...</p>
+			<p>Solving this quiz isn't really about the end result.  It's more the process involved.  Here's a stroll through my process for the first script.</p>
+			<p>Timothy Byrd asked the right first question on Ruby Talk, which basically amounts to, "What does this sucker do?"  The programs used are semi-famous and if you follow Redhanded, you probably already know:</p>
+			<p><a href="/web/20120121214255/http://redhanded.hobix.com/bits/batsmansFiveLineWiki.html">Batsman's 5-Line Wiki</a></p>
+			<p>If you didn't, the -rcgi in the first line is a really big hint.  -r is the command-line short cut for a requiring a library, in this case cgi.  From there, it's pretty easy to assume that the script is a CGI script and that told me I needed to get it behind a Web server to play with it.</p>
+			<p>I could have put it behind Apache and worked with it that way, but I chose to use Ruby's standard WEBrick server instead.  I'm glad I did too, because I ran into a few issues while getting it running that were super easy to see, by watching WEBrick's responses in my terminal.  Here's the WEBrick script I wrote to serve it up:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    require <span class="string">"webrick"</span><br /><br />    server = WEBrick::HTTPServer.new( :Port =&gt; 8080,<br />                                      :DocumentRoot =&gt; <span class="string">"cgi-bin"</span> )<br /><br />    [<span class="string">'INT'</span>, <span class="string">'TERM'</span>].each <span class="keyword">do</span> |signal|<br />        trap(signal) { server.shutdown }<br />    <span class="keyword">end</span><br />    server.start<br /><br /></div></div>
+			<p>That's super basic WEBrick in action.  Pull in the library, initialize a server with a port and document directory, set signal handlers for shutting down, and start it up.  This server can handle HTML, ERb templates, and, most importantly here, CGI.  Perfect.</p>
+			<p>I created the referenced "cgi-bin" directory right next to my server.rb script and dropped in a file with the code to test, named "wiki.rb".  I browsed over to http://localhost:8080/wiki.rb and got to watch all my clever work go up in flames.  Luckily, bug hunting was pretty easy by watching WEBrick's output:</p>
+			<p class="example">ERROR CGIHandler: /Users/james/Desktop/cgi-bin/wiki.cgi:<br />/usr/lib/ruby/1.6/cgi.rb:259:in `escapeHTML': private method `gsub'<br />called for []:Array (NameError)
+        from /Users/james/Desktop/cgi-bin/wiki.cgi:3</p>
+			<p>Okay, the error message isn't perfect, but it did get me thinking.  Wasn't CGI's handling of parameters changed somewhere around Ruby 1.8?  A quick test with the constant RUBY_VERSION did show that I was running an old version of Ruby (1.6.8).  Changing the shebang line got me back in business:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby -rcgi</span><br /><br /></div></div>
+			<p>And I was greeted by a Wiki HomePage.  Nifty.  Now that I had it running, I felt like I could start dealing with the code and see what it was doing.</p>
+			<p>The first thing I like to do with any code I can't read is to inject a lot of whitespace.  It helps me identify the sections of code.  A cool trick to get started with this in golfed/obfuscated Ruby code is a global find and replace of ";" with "\n".  Then season with space, tab and return to taste.  Here's my space-out version:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby -rcgi</span><br /><br />    H, B = <span class="string">%w'HomePage w7.cgi?n=%s'</span><br /><br />    c = CGI.new <span class="string">'html4'</span><br /><br />    n, d = c[<span class="string">'n'</span>] != <span class="string">''</span> ? c[<span class="string">'n'</span>] : H, c[<span class="string">'d'</span>]<br /><br />    t = <span class="string">`cat #{n}`</span><br /><br />    d != <span class="string">''</span> &amp;&amp; <span class="string">`echo #{t = CGI.escapeHTML(d)} &gt; #{n}`</span><br /><br />    c.instance_eval {<br />        out {<br />            h1 { n } +<br />            a(B % H) { H } +<br />            pre { t.gsub(<span class="string">/([A-Z]\w+){2}/</span>) { a(B % <span class="global">$&</span>amp;) { <span class="global">$&</span>amp; } } } +<br />            form(<span class="string">"get"</span>) {<br />                textarea(<span class="string">'d'</span>) { t } +<br />                hidden(<span class="string">'n'</span>, n) +<br />                submit<br />            }<br />        }<br />    }<br /><br /></div></div>
+			<p>Now we're getting somewhere.  I can see what's going on.  This silly little change opened my eyes to another problem immediately.  Take a look at that second line:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    H, B = <span class="string">%w'HomePage w7.cgi?n=%s'</span><br /><br /></div></div>
+			<p>I now know what the original script was called: "w7.cgi".  (The seventh Wiki?  Batsman is an animal!)  I modified the line to play nice with my version:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    H, B = <span class="string">%w'HomePage wiki.cgi?n=%s'</span><br /><br /></div></div>
+			<p>On to the next step.  Let's clean up some of the language constructs used here.  We can spell out -rcgi, make those assignments slightly more obvious, eliminate the ternary operator, clarify the use of the &amp;&amp; operator, remove the dependancy on the ugly $&amp; variable, and swap a few { ... } pairs to do ... end pairs.  I thought about removing the instance_eval() call, but to be honest I like that better than typing "c." 10 times.  Let's see how the code looks now:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    require <span class="string">'cgi'</span><br /><br />    H = <span class="string">'HomePage'</span><br />    B = <span class="string">'wiki.cgi?n=%s'</span><br /><br />    c = CGI.new <span class="string">'html4'</span><br /><br />    n = <span class="keyword">if</span> c[<span class="string">'n'</span>] == <span class="string">''</span> <span class="keyword">then</span> H <span class="keyword">else</span> c[<span class="string">'n'</span>] <span class="keyword">end</span><br />    d = c[<span class="string">'d'</span>]<br /><br />    t = <span class="string">`cat #{n}`</span><br /><br />    <span class="string">`echo #{t = CGI.escapeHTML(d)} &gt; #{n}`</span> <span class="keyword">unless</span> d == <span class="string">''</span><br /><br />    c.instance_eval <span class="keyword">do</span><br />        out <span class="keyword">do</span><br />            h1 { n } +<br />            a(B % H) { H } +<br />            pre <span class="keyword">do</span><br />                t.gsub(<span class="string">/([A-Z]\w+){2}/</span>) { |match| a(B % match) { match } }<br />            <span class="keyword">end</span> +<br />            form(<span class="string">"get"</span>) <span class="keyword">do</span><br />                textarea(<span class="string">'d'</span>) { t } +<br />                hidden(<span class="string">'n'</span>, n) +<br />                submit<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The whole time I'm working with this code, I'm running it in my WEBrick server, checking my changes and learning more about how it functions.  One thing I'm noticing is an occasional usage statement from cat:</p>
+			<p class="example">cat: HomePage: No such file or directory</p>
+			<p>Sometimes it's being called on files that don't exist, probably before we add content to a given Wiki page.  It still works (returning no content), but we can silence the warning.  In fact, we should just remove the external dependancies all together, making the code more portable in the process:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    require <span class="string">'cgi'</span><br /><br />    H = <span class="string">'HomePage'</span><br />    B = <span class="string">'wiki.cgi?n=%s'</span><br /><br />    c = CGI.new <span class="string">'html4'</span><br /><br />    n = <span class="keyword">if</span> c[<span class="string">'n'</span>] == <span class="string">''</span> <span class="keyword">then</span> H <span class="keyword">else</span> c[<span class="string">'n'</span>] <span class="keyword">end</span><br />    d = c[<span class="string">'d'</span>]<br /><br />    t = File.read(n) <span class="keyword">rescue</span> t = <span class="string">''</span><br /><br />    <span class="keyword">unless</span> d == <span class="string">''</span><br />        t = CGI.escapeHTML(d)<br />        File.open(n, <span class="string">"w"</span>) { |f| f.write t }<br />    <span class="keyword">end</span><br /><br />    c.instance_eval <span class="keyword">do</span><br />        out <span class="keyword">do</span><br />            h1 { n } +<br />            a(B % H) { H } +<br />            pre <span class="keyword">do</span><br />                t.gsub(<span class="string">/([A-Z]\w+){2}/</span>) { |match| a(B % match) { match } }<br />            <span class="keyword">end</span> +<br />            form(<span class="string">"get"</span>) <span class="keyword">do</span><br />                textarea(<span class="string">'d'</span>) { t } +<br />                hidden(<span class="string">'n'</span>, n) +<br />                submit<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>At this point, I understand the code well enough to extend the variable names and add some comments, which should make its function pretty clear to others:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    <span class="comment"># wiki.cgi</span><br /><br />    require <span class="string">'cgi'</span><br /><br />    HOME = <span class="string">'HomePage'</span><br />    LINK = <span class="string">'wiki.cgi?name=%s'</span><br /><br />    query = CGI.new <span class="string">'html4'</span><br /><br />    <span class="comment"># fetch query data</span><br />    page_name    = <span class="keyword">if</span> query[<span class="string">'name'</span>] == <span class="string">''</span> <span class="keyword">then</span> HOME <span class="keyword">else</span> query[<span class="string">'name'</span>] <span class="keyword">end</span><br />    page_changes = query[<span class="string">'changes'</span>]<br /><br />    <span class="comment"># fetch file content for this page, unless it's a new page</span><br />    content = File.read(page_name) <span class="keyword">rescue</span> content = <span class="string">''</span><br /><br />    <span class="comment"># save page changes, if needed</span><br />    <span class="keyword">unless</span> page_changes == <span class="string">''</span><br />        content = CGI.escapeHTML(page_changes)<br />        File.open(page_name, <span class="string">'w'</span>) { |f| f.write content }<br />    <span class="keyword">end</span><br /><br />    <span class="comment"># output requested page</span><br />    query.instance_eval <span class="keyword">do</span><br />        out <span class="keyword">do</span><br />            h1 { page_name } +<br />            a(LINK % HOME) { HOME } +<br />            pre <span class="keyword">do</span>            <span class="comment"># content area</span><br />                content.gsub(<span class="string">/([A-Z]\w+){2}/</span>) <span class="keyword">do</span> |match|<br />                    a(LINK % match) { match }<br />                <span class="keyword">end</span><br />            <span class="keyword">end</span> +<br />            form(<span class="string">'get'</span>) <span class="keyword">do</span>    <span class="comment"># update from</span><br />                textarea(<span class="string">'changes'</span>) { content } +<br />                hidden(<span class="string">'name'</span>, page_name) +<br />                submit<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>That's probably as far as I would take that code, without trying to make any fundamental changes.  The functionality is still pretty much the same (including limitations!), but it's much easier to follow how the code works.</p>
+			<p>I used pretty much the same process to decrypt Florian's code, so I won't bore you with a repeat.  One additional tip that did help me through the complex renamings is worth mentioning here though.  When you need to rename a much-used method or variable, just do it and try to compile.  That will often give you the exact line numbers that need updating.</p>
+			<p>One more interesting tidbit.  When I entered the International Obfuscated Ruby Code Contest, I used pretty much the opposite approach.  I wrote a clean version of my Ruby Quiz Loader, save that I tried to be a little more terse than usual.  Once I had that working, I just kept beating on it with the ugly stick until I couldn't read it any more.  For the curious, here's the original script:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/env ruby</span><br /><br />    require <span class="string">"open-uri"</span><br /><br />    puts <span class="string">"\nLoading...\n\n"</span><br /><br />    u, m, a = <span class="string">"http://www.rubyquiz.com/"</span>,<br />              { <span class="string">"nbsp"</span> =&gt; <span class="string">" "</span>, <span class="string">"lt"</span> =&gt; :&lt;, <span class="string">"gt"</span> =&gt; :&gt;, <span class="string">"amp"</span> =&gt; :&amp; },<br />              [[<span class="string">/^\s+&lt;\/div&gt;.+/</span>m, <span class="string">""</span>], [<span class="string">/^\s+/</span>, <span class="string">""</span>], [<span class="string">/\n/</span>, <span class="string">"\n\n"</span>],<br />               [<span class="string">/&lt;br \/&gt;/</span>, <span class="string">"\n"</span>], [<span class="string">/&lt;hr \/&gt;/</span>, <span class="string">"-="</span> * 40], [<span class="string">/&lt;[^&gt;]+&gt;/</span>, <span class="string">""</span>],<br />               [<span class="string">/^ruby/</span>, <span class="string">""</span>], [<span class="string">/\n{3,}/</span>, <span class="string">"\n\n"</span>]]<br /><br />    open(u) { |w|<br />        <span class="global">$F</span> = w.read.scan(<span class="string">/li&gt;.+?"([^"]+)..([^&lt;]+)/</span>)<br />    }<br /><br />    puts <span class="string">"Ruby Quiz\n\n"</span><br />    <span class="global">$F</span>.each { |e|<br />        i = e[0][<span class="string">/\d+/</span>]<br />        s = <span class="string">"%2s.  %s"</span> % [i, e[1]]<br />        i.to_i % 2 == 0 ? puts(s) : print(<span class="string">"%-38s  "</span> % s)<br />    }<br /><br />    print <span class="string">"\n?  "</span><br />    n = gets.chomp.to_i<br /><br />    puts <span class="string">"\nLoading...\n\n"</span><br /><br />    open(u + <span class="global">$F</span>[n-1][0]) { |q|<br />        <span class="global">$_</span> = q.read[<span class="string">/^\s+&lt;span.+/</span>m]<br />        a.each { |(s, r)| gsub!(s, r) }<br />        gsub!(<span class="string">/&amp;(\w+);/</span>) { |e| m.key?(<span class="global">$1</span>) ? m[<span class="global">$1</span>] : e }<br />        <span class="keyword">while</span> <span class="global">$_</span> =~ <span class="string">/([^\n]{81,})/</span><br />            s = <span class="global">$1</span>.dup<br />            r = <span class="global">$1</span>.dup<br />            r[r.rindex(<span class="string">" "</span>, 80), 1] = <span class="string">"\n"</span><br />            r.sub!(<span class="string">/\n[ \t]+/</span>, <span class="string">"\n"</span>)<br />            sub!(<span class="string">/#{Regexp.escape(s)}/</span>, r)<br />        <span class="keyword">end</span><br />    }<br /><br />    <span class="keyword">while</span> sub!(<span class="string">/^(?:[^\n]*\n){20}/</span>, <span class="string">""</span>)<br />        puts <span class="string">"#$&amp;\n--MORE--"</span><br />        g = <span class="global">$_</span><br />        gets<br />        exit <span class="keyword">if</span> <span class="global">$_</span>[0] == ?q<br />        <span class="global">$_</span> = g<br />    <span class="keyword">end</span><br />    puts <span class="global">$_</span><br /><br /></div></div>
+			<p>That became:</p>
+			<p><a href="/web/20120121214255/http://iorcc.dyndns.org/2005/entries/IORCC-2005-03-21-01004-1">Ruby Quiz Loader</a></p>
+			<p>Tomorrow, we're back to normal Ruby Quiz material, this time from Jason Bailey...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121214255im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121214255/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/136967">James Edward Gray II</a></li>
+				<li><a href="/web/20120121214255/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/137067">James Edward Gray II (2)</a></li>
+			</ol>
+			<p><a href="/web/20120121214255/http://rubyquiz.com/quiz26_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121214255/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:42:55 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:21 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

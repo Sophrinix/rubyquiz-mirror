@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Vehicle Counters (#146)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120120004318cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120120004318cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz146.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz146.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120120004318" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110824074822/http://www.rubyquiz.com/quiz146.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:43:18 Jan 20, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418093502/http://www.rubyquiz.com/quiz146.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103143505/http://www.rubyquiz.com/quiz146.html" title="14:35:05 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:43:18 Jan 20, 2012">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418093502/http://www.rubyquiz.com/quiz146.html" title="9:35:02 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127180442/http://rubyquiz.com/quiz146.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:43:18 Jan 20, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052913/http://rubyquiz.com/quiz146.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120120004318*/http://rubyquiz.com/quiz146.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>28 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Nov 10 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:2001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Vehicle Counters (#146)</span>
+			<p>by Gavin Kistner</p>
+			<p>You have been hired to work for a small city government. The city recently bought a vehicle counter, one of those kinds that uses pneumatic rubber hoses stretched across the road. The company that sells the machine also sells software to interpret the raw data. However, the city has asked you to see if you can interpret it instead, saving them some money.</p>
+			<p>The data from the machine looks like this:</p>
+			<p class="example">A268981<br />A269123<br />A604957<br />B604960<br />A605128<br />B605132<br />A1089807<br />B1089810<br />A1089948<br />B1089951</p>
+			<p>The numbers are the number of milliseconds since midnight when the mark occurred. Thus, the first line above represents a pair of tires driving by at 12:04:28am. The second line represents another pair of tires going by 142ms later (almost certainly the 2nd axle of the car).</p>
+			<p>The vehicle counter has two tubes - one stretches across both lanes of traffic, and one goes just across traffic in one direction. Each hose independently records when tires drive over it. As such, cars going in one direction (say, northbound) only record on one sensor (preceded with an 'A'), while cars going in the direction (say, southbound) are recorded on both sensors. Lines 3-6 above represent a second car going in the other direction. The first set of tires hit the 'A' sensor at 12:10:04am, and then hit the 'B' sensor 3ms later. The second set of tires then hit the 'A' sensor 171ms later, and then the 'B' sensor 4ms later.</p>
+			<p>The machine was left to run for 5 days in a row (starting on a Monday). This is obvious because the times in the data make several sudden drops:</p>
+			<p class="example">A86328771<br />B86328774<br />A86328899<br />B86328902<br />A582668<br />B582671<br />A582787<br />B582789</p>
+			<p>The city has asked you to see how many analysis features you can provide from what the manufacturer's software offers:</p>
+			<p class="example">* Total vehicle counts in each direction: morning versus evening,<br />  per hour, per half hour, per 20 minutes, and per 15 minutes.<br />* The above counts can be displayed for each day of the session,<br />  or you can see averages across all the days.<br />* Peak volume times.<br />* The (rough) speed distribution of traffic.<br />* Rough distance between cars during various periods.</p>
+			<p>Luckily for you, you know that:</p>
+			<p class="example">* The speed limit on the road where this is recorded is 40mph<br />  (that doesn't mean that everyone drives this speed, or that<br />  no one exceeds it, but it's a good starting point).<br />* The average wheelbase of cars in the city is around 100 inches<br />  between axles.<br />* Only 2-axle vehicles were allowed on this road during the<br />  recording sessions.</p>
+			<p>The full data can be found at:</p>
+			<p><a href="/web/20120120004318/http://rubyquiz.com/vehicle_counter.data.gz">Vehicle Counter Data</a></p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This is a cool little data mining problem.  Unfortunately, it is a fair bit of work to get a good solution.  Justin Ethier sent in the only full solution and even he chose to cut a few corners.  His code does produce almost 200 lines of interesting feedback when run on the sample data set though, so it's fun to play around with.  The downside is that it's close to 300 lines of code.  Because of that, I'm going to try giving a pretty high-level overview of how it works.</p>
+			<p>Let's work backwards this time and just follow the code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">if</span> ARGV.size &lt; 1<br />      puts <span class="string">"Usage: vehicle_counter.rb datafile [-avg]"</span><br />    <span class="keyword">else</span><br />      vc = VehicleCounter.new<br />      vc.process(ARGV[0], ARGV[1] != <span class="keyword">nil</span>)<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This is the code that actually gets executed when you run the program.  I always call that the application code.</p>
+			<p>Here we see a simple branch that either presents a usage message or builds a VehicleCounter and calls process() on it.  This could actually be just a module, since it doesn't maintain any state.  It may help you to think of the following code that way:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> VehicleCounter<br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> process(file, report_averages)<br />        raw_data = parse(file)<br />        <span class="keyword">for</span> sensor <span class="keyword">in</span> 0..1<br />          sensor_report = DirectionDataReport.new(raw_data[sensor])<br />          sensor_report.report(sensor, report_averages)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This defines the overall process of this program which is just two steps:  read in the data and build a report.  The parse() method manages the reading step while reporting is encapsulated in DirectionDataReport objects.  We will begin with the reading:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      Dir_A = 0<br />      Dir_B = 1<br /><br />      <span class="keyword">def</span> parse(file)<br />        times = []<br />        dirs = [[], []]<br /><br />        f = File.open(file)<br />        f.each_line <span class="keyword">do</span> |line|<br />          sensor, time = parse_record(line)<br />          times &lt;&lt; time<br /><br />          <span class="keyword">if</span> (times.size % 2) == 0<br />            <span class="keyword">if</span> (times.size == 2 <span class="keyword">and</span> sensor == Dir_A) <span class="keyword">or</span><br />               (times.size == 4 <span class="keyword">and</span> sensor == Dir_B)<br /><br />               <span class="comment"># Remove "B" records from second direction</span><br />               times = [times[0], times[2]] <span class="keyword">if</span> sensor == Dir_B<br /><br />               dirs[sensor] &lt;&lt; times<br />               times = []<br />             <span class="keyword">elsif</span> (times.size == 4 <span class="keyword">and</span> sensor != Dir_B)<br />              puts <span class="string">"Parse error"</span><br />              times = []<br />             <span class="keyword">end</span><br />          <span class="keyword">elsif</span> (times.size % 2) == 1 <span class="keyword">and</span> sensor == Dir_B<br />            puts <span class="string">"Parse error - Unexpected B record"</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        f.close<br /><br />        dirs<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> parse_record(data)<br />        unpacked = data.unpack(<span class="string">"a1a*"</span>)<br />        <span class="keyword">return</span> unpacked[0] == <span class="string">"A"</span> ? Dir_A : Dir_B, unpacked[1].to_i<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This parser is what I meant by cutting corners earlier.  The data provided is quite simple and you don't have to worry about cars going both directions at the same time when working with it.  Given that, a pair of A times is a northbound car and a set of A, B, A, B times is a southbound car.  This parse just hunts for those sets.</p>
+			<p>Both sets of times are maintained in the Array of Arrays called dirs.  The constants are used to select the right group based on the indicator found in unpack()ing the last record of the group.  These two Arrays are the ultimate results of this method.</p>
+			<p>Note that the file reading loop could be reduced to a File.foreach() call.</p>
+			<p>The rest of the code is reporting.  We saw a DirectionDataReport initialized in the process() method and then witnessed a call to report() on that object.  These two steps are the primary interface:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    MSecPerMin = 1000 * 60<br />    MSecPerHour = MSecPerMin * 60<br />    InchesPerMile = 63360<br /><br />    <span class="keyword">class</span> DirectionDataReport<br />      Verbose = <span class="keyword">false</span><br />      Sensors = <span class="string">%w(Northbound Southbound)</span><br />      Days = <span class="string">%w(Mon Tue Wed Thu Fri Sat Sun)</span><br /><br />      <span class="keyword">def</span> initialize(raw_data)<br />        <span class="variable">@raw_data</span> = raw_data<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> report(sensor, report_averages)<br />        puts <span class="string">"Direction: #{Sensors[sensor]}"</span><br />        puts <span class="string">"Total Cars: #{self.total_count}"</span><br /><br />        report_time_periods(sensor, report_averages, MSecPerHour * 12)<br />        report_time_periods(sensor, report_averages, MSecPerHour)<br />        report_time_periods(sensor, report_averages, MSecPerHour / 2)<br />        report_time_periods(sensor, report_averages, MSecPerHour / 4)<br />        puts <span class="string">""</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> total_count()<br />        <span class="variable">@raw_data</span>.size<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>You can see here that the constructor just squirrels away the data from the parse.  The report() method, on the other, hand drives the output process.  After reporting the direction and a total car count, it displays time oriented breakdowns for various scales:  12 hours, one hour, 30 minutes, and 15 minutes.</p>
+			<p>Here is the report_time_periods() method and three of the methods it relies on:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> report_time_periods(sensor, report_averages, time_period_length)<br />        days = create_time_periods(time_period_length)<br />        num_time_periods = (MSecPerHour * 24) / time_period_length<br /><br />        counts = count_per_time_period(days)<br />        avg_speeds = speed_per_time_period(days)<br />        avg_dists = dist_per_time_period(days)<br /><br />        puts(<span class="string">"\nTime Interval: #{time_period_length/MSecPerMin} Minutes"</span>)<br />        <span class="keyword">if</span> (num_time_periods &gt; 2)<br />          peaks = find_peak_times(days)<br />          puts(<span class="string">"Peak Times"</span>)<br />          <span class="keyword">for</span> i <span class="keyword">in</span> 0...peaks.size<br />            printf(<span class="string">"#{Days[i]}:"</span>)<br />            peaks[i].size.times {|p|<br />              printf(format_time_interval_index(peaks[i][p][1],<br />                                                time_period_length))<br />            }<br />            puts <span class="string">""</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        puts(<span class="string">"Statistics"</span>)<br />        printf(<span class="string">"Data    "</span>)<br />        printf(<span class="string">"\tDay"</span>) <span class="keyword">if</span> <span class="keyword">not</span> report_averages<br /><br />        num_time_periods.times{|i|<br />          printf(format_time_interval_index(i, time_period_length))<br />        }<br />        report_column_data(days, num_time_periods, report_averages, counts,<br />                           report_averages ? <span class="string">"Avg Count"</span> : <span class="string">"Count    "</span>, <span class="string">"% 5d"</span>)<br />        report_column_data(days, num_time_periods, report_averages, avg_speeds,<br />                           <span class="string">"Avg Speed"</span>, <span class="string">"%02.02f"</span>)<br />        report_column_data(days, num_time_periods, report_averages, avg_dists,<br />                           <span class="string">"Avg Dist "</span>, <span class="string">"%02.02f"</span>)<br />        puts <span class="string">""</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> create_time_periods(time_period_length = MSecPerHour)<br />        days = []<br />        time_periods = <span class="keyword">nil</span><br />        prev_start = <span class="variable">@raw_data</span>[0][0] + 1<br /><br />        <span class="keyword">for</span> data <span class="keyword">in</span> <span class="variable">@raw_data</span><br />          <span class="keyword">if</span> prev_start &gt; data[0]<br />            days &lt;&lt; time_periods <span class="keyword">if</span> time_periods != <span class="keyword">nil</span><br /><br />            cur_time_period = 0<br />            time_periods = [[]]<br /><br />            puts <span class="string">"New day: data=#{data[0]}"</span> <span class="keyword">if</span> Verbose<br />          <span class="keyword">elsif</span> data[0] &gt; ((cur_time_period + 1) * time_period_length)<br />            <span class="keyword">while</span> data[0] &gt; ((cur_time_period + 1) * time_period_length)<br />              cur_time_period += 1<br />              time_periods[cur_time_period] = []<br />            <span class="keyword">end</span><br /><br />            puts <span class="string">"New time period: data=#{data[0]}"</span> <span class="keyword">if</span> Verbose<br />          <span class="keyword">end</span><br /><br />          time_periods[cur_time_period] &lt;&lt; data<br />          prev_start = data[0]<br />        <span class="keyword">end</span><br /><br />        days &lt;&lt; time_periods<br />        days<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> format_time_interval_index(index, time_period_length)<br />        sprintf(<span class="string">"\t%02d:%02d"</span>,<br />            index * time_period_length / MSecPerHour,<br />            (index * time_period_length / MSecPerMin) % 60)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> report_column_data(days, num_time_periods, report_averages, data,<br />                             data_label, format_string)<br />        <span class="keyword">if</span> report_averages<br />          printf(<span class="string">"\n#{data_label}"</span>)<br />          <span class="keyword">for</span> time <span class="keyword">in</span> 0...num_time_periods<br />            avg = 0<br />            days.size.times {|day| avg += data[day][time] }<br />            printf(<span class="string">"\t#{format_string}"</span>, avg / days.size)<br />          <span class="keyword">end</span><br />        <span class="keyword">else</span><br />          <span class="keyword">for</span> day <span class="keyword">in</span> 0...days.size<br />            printf(<span class="string">"\n#{data_label}\t#{Days[day]}"</span>)<br />            <span class="keyword">for</span> time <span class="keyword">in</span> 0...num_time_periods<br />              printf(<span class="string">"\t#{format_string}"</span>, data[day][time])<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>There is a lot of code here obviously, but none of it is very complex.  First, report_time_periods() breaks the data down into time intervals using create_time_periods().  That method is just a partition tool for the data.  Once it's divided out, a few utility method we will examine next are used to separate the interesting information out.</p>
+			<p>After that, the entire rest of the of the method is printing code for what it found.  (The peak data section actually calculates, again using another helper, and prints for appropriate data ranges.)  Most of the print work is delegated to the bottom two methods and much or their magic is for printing columnar data.</p>
+			<p>Here are the helpers I glossed over and the helpers they rely on:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> find_peak_times(days, num_peaks=4)<br />        days.map <span class="keyword">do</span> |day|<br />          find_daily_peak_times(day, num_peaks)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> find_daily_peak_times(daily_time_periods, num_peaks)<br />        peaks = []<br />        daily_time_periods.size.times {|i|<br />          peaks &lt;&lt; [daily_time_periods[i].size, i]<br />        }<br />        peaks.sort.reverse.slice(0, num_peaks).sort {|a,b| a[1]&lt;=&gt;b[1]}<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> count_per_time_period(days)<br />        days.map <span class="keyword">do</span> |day|<br />          day.map {|time_period| time_period.size}<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> speed_per_time_period(days)<br />        days.map <span class="keyword">do</span> |day|<br />          day.map {|time_period| calc_average_speed(time_period) }<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> dist_per_time_period(days)<br />        days.map <span class="keyword">do</span> |day|<br />          day.map {|time_period| calc_average_distance(time_period) }<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> calc_average_speed(time_period)<br />        <span class="keyword">return</span> 0 <span class="keyword">if</span> time_period.size == 0<br /><br />        sum = 0<br />        <span class="keyword">for</span> time <span class="keyword">in</span> time_period<br />          sum += calc_speed(time[0], time[1])<br />        <span class="keyword">end</span><br />        sum / (time_period.size)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> calc_speed(start_time, end_time)<br />        <span class="keyword">return</span> (100.0 / (end_time - start_time)) *<br />               MSecPerHour / (InchesPerMile * 1.0)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> calc_average_distance(time_period)<br />        <span class="keyword">return</span> 0 <span class="keyword">if</span> time_period.size &lt;= 1 <span class="comment"># Need at least 2 cars</span><br />        sum = 0<br />        <span class="keyword">for</span> i <span class="keyword">in</span> 0...(time_period.size - 1)<br />          sum += calc_distance(time_period[0], time_period[1])<br />        <span class="keyword">end</span><br />        <span class="keyword">return</span> sum / (time_period.size - 1)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> calc_distance(leader_time, follower_time)<br />        follower_speed = calc_speed(follower_time[0], follower_time[1])<br /><br />        dist = follower_speed * ((follower_time[0] - leader_time[0]) /<br />               (MSecPerHour * 1.0))<br /><br />        <span class="keyword">return</span> dist<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>There are three kinds of helpers here.  The peak methods just sort the data and take so many entries off the top.  The *_per_time_period() method are wrappers that apply the calc_*() methods over periods of data.  Which means the calc_*() methods are where the action is.  They figure out car speeds, distances between cars, and the averages for both using simple math.  This is the primary data that we see in the report output.</p>
+			<p>Again it's a lot of code to cover, but Justin has produced a great end result.  I'm not going to include the output here because it too is large, but go run the program and take a look at what it builds.</p>
+			<p>My thanks to Justin for the heroic effort and Gavin for the interesting problem.</p>
+			<p>The Ruby Quiz began with an encoding problem that came out of a book and tomorrow we have another one for you...</p>
+		</div>
+		<div id="logo"><img src="/web/20120120004318im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120120004318/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/278839">Justin Ethier</a></li>
+				<li><a href="/web/20120120004318/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/278907">Phrogz</a></li>
+				<li><a href="/web/20120120004318/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/279078">Eric I.</a></li>
+			</ol>
+			<p><a href="/web/20120120004318/http://rubyquiz.com/quiz146_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120120004318/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:43:18 Jan 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:11:08 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

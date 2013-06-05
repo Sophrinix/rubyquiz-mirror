@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - C-Style Ints (#85)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121212532cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121212532cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz85.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz85.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121212532" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173714/http://rubyquiz.com/quiz85.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:25:32 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418151007/http://www.rubyquiz.com/quiz85.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145456/http://www.rubyquiz.com/quiz85.html" title="14:54:56 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:25:32 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122024241/http://rubyquiz.com/quiz85.html" title="2:42:41 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173714/http://rubyquiz.com/quiz85.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:25:32 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052547/http://rubyquiz.com/quiz85.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121212532*/http://rubyquiz.com/quiz85.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Oct 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000100_2007:-1:000101100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:40017000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">C-Style Ints (#85)</span>
+			<p>by Aaron Patterson</p>
+			<p>Write a class that can represent a signed or unsigned number with an arbitrary number of bits.  This class should support all bitwise operations ( &amp; ^ ~ | ), basic math operations ( + - / * ), and comparison operators.  It would behave like an integer in C (except with arbitrary length!), so an unsigned int 0xFFFFFFFF + 1 would equal 0x00000000.</p>
+			<p>One edge case is what to do in an overflow case ( see the first irb session number 2 ).  Another is how to handle numbers that are wider than the specified number of bits.  I'm not really sure how to handle that part, but what I do is just take the last N number of bits.  So if 0xFFEE was passed in to my 8 bit vector, I would just take 0xEE.</p>
+			<p class="example">Example irb sessions</p>
+			<p>Here is an example of using an 8 bit unsigned int with an initial value of 0xFF:</p>
+			<p class="example">irb(main):001:0&gt; n = UnsignedFixedWidthInt.new(0xFF, 8)<br />=&gt; 255<br />irb(main):002:0&gt; n += 2<br />=&gt; 1<br />irb(main):003:0&gt; n = n &lt;&lt; 1<br />=&gt; 2<br />irb(main):004:0&gt; n = n &gt;&gt; 1<br />=&gt; 1<br />irb(main):005:0&gt; ~n<br />=&gt; 254<br />irb(main):006:0&gt; n += 12<br />=&gt; 13<br />irb(main):007:0&gt; n = n &amp; 0x0E<br />=&gt; 12<br />irb(main):008:0&gt;</p>
+			<p>Now an example of an 8 bit signed int with an initial value of 0x01:</p>
+			<p class="example">irb(main):001:0&gt; n = SignedFixedWidthInt.new(0x01, 8)<br />=&gt; 1<br />irb(main):002:0&gt; n = n &lt;&lt; 7<br />=&gt; -128<br />irb(main):003:0&gt; n -= 1<br />=&gt; 127<br />irb(main):004:0&gt; n = n &gt;&gt; 6<br />=&gt; 1<br />irb(main):005:0&gt; n -= 2<br />=&gt; -1<br />irb(main):006:0&gt; n = n ^ 0xF3<br />=&gt; 12<br />irb(main):007:0&gt; n = n | 0x01<br />=&gt; 13<br />irb(main):008:0&gt;</p>
+			<p>Here is an example of handling numbers that are too wide:</p>
+			<p class="example">irb(main):001:0&gt; n = UnsignedFixedWidthInt.new(0x0, 8)<br />=&gt; 0<br />irb(main):002:0&gt; n += 0xFFEE<br />=&gt; 238<br />irb(main):003:0&gt;</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>There was quite a bit of confusion over what we were after in the quiz.  Ironically, I think that's all my fault for giving the author's simple quiz the name "C-Style Ints."  Things are always complicated when you drag C into them and some solvers bent over backwards to dissect C's behavior.  Luckily, that lead to some cool solutions for us to examine.</p>
+			<p>One way to tackle this problem is to rebuild all the needed math operations.  That leads to quite a bit of code like this excerpt from Hank Lords's submission:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> UFWI<br />     include Comparable<br /><br />     attr_reader :width<br /><br />     <span class="keyword">def</span> initialize(int=0, width=8)<br />       <span class="keyword">if</span> block_given?<br />         <span class="variable">@width</span> = int<br />         <span class="variable">@bits</span> = Array.new(<span class="variable">@width</span>) {|index| Bit.new(<span class="keyword">yield</span>( index)) }<br />       <span class="keyword">else</span><br />         <span class="variable">@width</span> = width<br />         <span class="variable">@bits</span> = Array.new(<span class="variable">@width</span>) {|bit| Bit.new(int.to_i &gt;&gt; bit) }<br />       <span class="keyword">end</span><br />     <span class="keyword">end</span><br /><br />     <span class="keyword">def</span> to_i<br />       <span class="variable">@bits</span>.reverse.inject(0) {|num, bit| (num &lt;&lt; 1) + bit.to_i}<br />     <span class="keyword">end</span><br />     <span class="keyword">alias</span> :to_int :to_i<br /><br />     <span class="keyword">def</span> coerce(*args)<br />       to_int.coerce(*args)<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> &amp;(cint)<br />       a = <span class="keyword">self</span>.<span class="keyword">class</span>.new(cint, width)<br />       <span class="keyword">self</span>.<span class="keyword">class</span>.new(width) {|bit| <span class="variable">@bits</span>[bit] &amp; a[bit] }<br />     <span class="keyword">end</span><br /><br />     <span class="comment"># ...</span><br /><br />     <span class="keyword">def</span> / (cint)<br />       <span class="comment"># Binary euclidian division</span><br /><br />       b = <span class="keyword">self</span>.<span class="keyword">class</span>.new(cint, width)<br />       raise DivisionByZero <span class="keyword">if</span> b == 0<br />       b0 = <span class="keyword">self</span>.<span class="keyword">class</span>.new(1, width)<br />       width.times {<br />         <span class="keyword">break</span> <span class="keyword">if</span> <span class="keyword">self</span> &lt; b0*b<br />         b0 &lt;&lt;= 1<br />       }<br />       a0 = b0 &gt;&gt; 1<br /><br />       <span class="keyword">while</span> b0 - a0 &gt; 1 <span class="keyword">do</span><br />         c = (a0 &gt;&gt; 1) + (b0 &gt;&gt; 1)<br />         <span class="keyword">if</span> c * b &lt;= <span class="keyword">self</span><br />           a0 = c<br />         <span class="keyword">else</span><br />           b0 = c<br />         <span class="keyword">end</span><br />       <span class="keyword">end</span><br />       a0<br />     <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Obviously, I'm showing only a couple of operations here and you can see that this code uses a Bit class (not shown).  Hank did the work by teaching Ruby to work with ordinary bits and then building the needed number operations on top of that framework.  You can see the numbers being constructed as an Array of Bits in initialize(), either from a provided integer or using a block to generate the bits iteratively.</p>
+			<p>The next couple of methods allow these numbers to be used in math operations with Ruby's native numbers.  The first step is to provide a conversion for this UFWI to a normal Ruby Integer.  Once we have that, a coerce() method is defined which Ruby uses to resolve numerical operations with custom objects.  This version just converts our UFWI to a normal Integer, then delegates the call to the built-in coerce().</p>
+			<p>Finally, I've left in two example operations.  You can see that Hank resolves these operations using handle-rolled bit math.  In some cases (like &amp;()), this can be done trivially, but others (like /()) get a little complicated.  Hank did a top notch job creating all the needed operations.  I've just left them out here to keep this summary reasonably small.</p>
+			<p>Hank's solution is solid, but it took a lot of work to create.  What we really want to do is to get Ruby to do as much of that work for us as humanly possible.  Many quiz solvers found ways to do this.  Here's a lovely version by Boris Prinz:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> UnsignedFixedWidthInt<br />      <span class="keyword">def</span> initialize(value, bits)<br />        raise ArgumentError.new(<span class="string">'number of bits must be &gt; 0'</span>) <span class="keyword">if</span> bits &lt;= 0<br />        <span class="variable">@bits</span>  = bits<br />        <span class="variable">@value</span> = value % 2**<span class="variable">@bits</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># operators returning a new FixedWidthInt</span><br />      <span class="string">%w{&amp; ^ | &lt;&lt; &gt;&gt; + - * / +@ -@ ~@}</span>.each <span class="keyword">do</span> |operator|<br />        define_method operator <span class="keyword">do</span> |*other|<br />          <span class="keyword">self</span>.<span class="keyword">class</span>.new(<span class="variable">@value</span>.send(operator, *other), <span class="variable">@bits</span>)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># methods forwarded to @value</span><br />      <span class="string">%w{== &lt; &gt; &lt;=&gt; inspect to_s to_i to_int}</span>.each <span class="keyword">do</span> |meth|<br />        define_method meth <span class="keyword">do</span> |*other|<br />          <span class="variable">@value</span>.send(meth, *other)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> coerce(other)<br />        Integer == other ? [other, <span class="variable">@value</span>] : [Float(other), Float(<span class="variable">@value</span>)]<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">class</span> SignedFixedWidthInt &lt; UnsignedFixedWidthInt<br />      <span class="keyword">def</span> initialize(value, bits)<br />        <span class="keyword">super</span>(value, bits)<br />        <span class="comment"># value is negative if MSB is set:</span><br />        <span class="variable">@value</span> -= 2**<span class="variable">@bits</span> <span class="keyword">if</span> <span class="variable">@value</span>[<span class="variable">@bits</span> - 1] == 1<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>With this example, the majority of the work is done in the initialize() methods of UnsignedFixedWidthInt and SignedFixedWidthInt.  They simply store the bit width and numerical value for future use.  It the passed number is larger than the indicated width, it is truncated at this time.  The SignedFixedWidthInt adds a check for the sign bit and negates the number when set.</p>
+			<p>Next Boris uses a little metaprogramming to quickly define a bunch of similar math operations.  These methods just delegate to the proper math method on the actual numerical object and hand the results back to the class constructor.  This insures that any result is truncated, if needed.</p>
+			<p>Boris also uses the metaprogramming trick to define a handful of methods that return native Ruby types.  The end result is 20 method definitions in just a few lines of code.  Very nice results.</p>
+			<p>Finally, Boris does add the coerce() method, similar to Hank's code, so the new integer types can be used in math operation with normal Ruby numerical types.</p>
+			<p>My thanks to all who took a stab at this quiz.  Sorry my naming of it made it seem more involved than intended.  Have a look at Daniel Martin's thorough C conversion for a great example of that solution path.</p>
+			<p>Tomorrow we will try our luck with a panagram problem...  (I had to look that word up.)</p>
+		</div>
+		<div id="logo"><img src="/web/20120121212532im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199757">John Baylor</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199815">Sander Land</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199894">Dave Burt</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199895">Juergen Strobel</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199898">Sander Land (2)</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199907">Hank Lords</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199917">Boris Prinz</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/199968">Dave Burt (2)</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/200231">Daniel Martin</a></li>
+				<li><a href="/web/20120121212532/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/200272">Daniel Martin (2)</a></li>
+			</ol>
+			<p><a href="/web/20120121212532/http://rubyquiz.com/quiz85_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121212532/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:25:32 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:14 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Longest Repeated Substring (#153)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121214634cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121214634cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz153.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz153.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121214634" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110826105852/http://rubyquiz.com/quiz153.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:46:34 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418120316/http://www.rubyquiz.com/quiz153.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110826105852/http://rubyquiz.com/quiz153.html" title="10:58:52 Aug 26, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:46:34 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122031538/http://rubyquiz.com/quiz153.html" title="3:15:38 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127174224/http://rubyquiz.com/quiz153.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:46:34 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052827/http://rubyquiz.com/quiz153.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121214634*/http://rubyquiz.com/quiz153.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>29 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Nov 10 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:3001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Longest Repeated Substring (#153)</span>
+			<p>This week's Ruby Quiz is to write a script that finds the longest repeated substring in a given text.</p>
+			<p>Your program will be passed some text on STDIN and is expected to print the longest repeated substring within that text to STDOUT.</p>
+			<p>Repeated substrings may not overlap.  If more than one substring is repeated with the same length, you may print any of them.  If there is no repeated substring, the result is an empty string (print nothing).</p>
+			<p>Example:</p>
+			<p class="example">$ echo banana | ruby longest_repeated_substring.rb<br />an<br /><br />OR<br /><br />$ echo banana | ruby longest_repeated_substring.rb<br />na</p>
+			<p>Make sure your code runs efficiently when passed a large text.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>I first saw this problem years ago.  It was one of the Perl's Quiz of the Week problems.  I remember being surprised at how the solution was sort of counter-intuitive to me.  I mean that my first thought was:  start at half the string size, try to find a string of that length that occurs twice in the full text, reduce the length by one character and recheck until you find a match.  Yoan Blanc coded that strategy up for us:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    text = STDIN.read<br /><br />    (text.length/2).downto 1 <span class="keyword">do</span> |l|<br />        match = Regexp.new(<span class="string">"(.{#{l}})\\1"</span>).match(text)<br />        <span class="keyword">if</span> match<br />            puts text[match.offset(1)[0]..(match.offset(1)[1]-1)]<br />            <span class="keyword">break</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Technically the regular expression engine will choke on this solution for a significantly large text.  The reason is that quantifiers in {…} limits are only allowed to be so large.  The theory is as I described though.</p>
+			<p>However, even if it could match any size, this solution turns out to be far too slow to be practical.  The reason is that given a megabyte or more of text, the longest repeated substring is typically less than 200 bytes.  That means you do a whole lot of wasted checks before you are even in the range that a match can occur.</p>
+			<p>Yoan realized this and submitted a second solution that flipped the search around.  Starting with a match of zero characters and finding the next biggest puts you in the right neighborhood from the get go.</p>
+			<p>The other key realized in Yoan's second solution is that if we know there is a four character repeated substring at some index, we can also count on the fact that there are one, two, and three character repeated substrings at the same index.  Given that, you can keep checking at the same index until you don't find a match for a given size.  The size found just before that was the biggest at that index.</p>
+			<p>The Perl guys found further means to optimize this approach, by trimming the search space.  However, this too breaks down in the face of significantly large inputs.  That's why we have suffix trees.</p>
+			<p>The idea of a suffix tree is to build a list of every suffix that occurs in the text.  Thus the quiz example "banana" breaks down to:</p>
+			<p class="example">banana<br /> anana<br />  nana<br />   ana<br />    na<br />     a</p>
+			<p>That may not look like a lot of help yet, but watch what happens if we sort the entries:</p>
+			<p class="example">a<br />ana<br />anana<br />banana<br />na<br />nana</p>
+			<p>See how the common prefixes group together?  We can now compare adjacent entries of our suffix tree for prefixes they have in common.  In this case, the second and third element share an "an" and that's one of the possible answers.  Note that the second and third share "ana" as well, but selecting that one causes overlap:</p>
+			<p class="example">[ana]na<br />  [ana]</p>
+			<p>There's a catch though.  Consider this example input from Eric I.:  ananana.  The suffix tree is:</p>
+			<p class="example">ananana<br /> nanana<br />  anana<br />   nana<br />    ana<br />     na<br />      a</p>
+			<p>That sorts into:</p>
+			<p class="example">a<br />ana<br />anana<br />ananana<br />na<br />nana<br />nanana</p>
+			<p>In this case comparing just the second and third entries gives us "an", because "ana" would overlap.  But, if you compare the second and fourth entries, "ana" becomes a valid answer.  That tells us that it's sometimes necessary to look ahead more than just one step.</p>
+			<p>Enough explaining, let's read some code.  I'm going to show Eric's solution below, because it was very well commented and that helped me understand it.  However, I'm going to remove those comment in the following listings in the interests of space.  I also made a couple of tiny edits that I felt simplified the code a touch.</p>
+			<p>First we have a simple helper method:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> longest_common_prefix(s1, s2, max = <span class="keyword">nil</span>)<br />     min = [s1.size, s2.size, max].compact.min<br />     min.times <span class="keyword">do</span> |i|<br />       <span class="keyword">return</span> s1.slice(0, i) <span class="keyword">if</span> s1[i] != s2[i]<br />     <span class="keyword">end</span><br />     <span class="keyword">return</span> s1.slice(0, min)<br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Given two Strings, this code will find the longest prefix they share.  It begins by finding the smallest length among the passed Strings and an optional provided maximum.  It then walks those indexes looking for mismatched characters.</p>
+			<p>When it finds a mismatch, it returns what came before.  How it does that is a little clever though, since it seems to use the same numbers.  Consider that we are comparing "abc" and "abd" on the third character.  That means i = 2 and s1[i] != s2[i].  That will cause the code to return s1.slice(0, i), but remember that i is used as a length there, not an index.  That's why we get the first two characters back ("ab").</p>
+			<p>If no mismatches arise during the search, they match all the way to our limit and that is returned.</p>
+			<p>The next method is where all the action is and it's a doozy, so we will take it in pieces.  The first chunk builds and sorts the suffix tree:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">def</span> longest_repeated_substring(string)<br />     size = string.length<br /><br />     suffixes = Array.new(size)<br />     size.times <span class="keyword">do</span> |i|<br />       suffixes[i] = string.slice(i, size)<br />     <span class="keyword">end</span><br /><br />     suffixes.sort!<br /><br />     <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This code might seem wildly inefficient (memory-wise) at first glance, but Ruby will surprise you here.  When you slice() a substring like this, Ruby cheats and doesn't actually make a copy of the text.  Instead, the new object is a pointer into the old object.  Now, if you change either String down the road, Ruby must and will finish the job, turning it into a full copy.  We call this behavior "Copy on Write."  Since we won't be changing these Strings though, just examining them, we're safe with the tiny pointers for the duration.</p>
+			<p>Note that the size variable is always used as the substring length here, though it's too long in all but the first case.  Ruby will stop at the end of the String even if you provide a longer length, so it does the same thing and avoids unneeded math or Range object construction.</p>
+			<p>OK, let's begin the search through the tree:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">     <span class="comment"># ...</span><br /><br />     best = <span class="string">""</span><br />     at_least_size = 1    <span class="comment"># the size to meet or exceed to be the new best</span><br />     distance = <span class="keyword">nil</span><br />     neighbors_to_check = 1<br /><br />     (1...size).each <span class="keyword">do</span> |i|<br />       s1 = suffixes[i]<br /><br />       neighbors_to_check.downto(1) <span class="keyword">do</span> |neighbor|<br />         s2 = suffixes[i - neighbor]<br /><br />         distance = (s1.size - s2.size).abs<br />         <span class="keyword">if</span> distance &lt; at_least_size<br />           <span class="keyword">if</span> s1.size &gt;= at_least_size &amp;&amp;<br />               s2.size &gt;= at_least_size &amp;&amp;<br />               s1.slice(0, at_least_size) == s2.slice(0, at_least_size)<br />             neighbors_to_check = [neighbors_to_check, neighbor + 1].max<br />           <span class="keyword">else</span><br />             neighbors_to_check = neighbor<br />           <span class="keyword">end</span><br />           <span class="keyword">next</span><br />         <span class="keyword">end</span><br /><br />         <span class="comment"># ...</span><br /><br /></div></div>
+			<p>First, some variables are set to hold the best match so far, the size a match would need to be to beat it, the distance between the substrings, and how far down the tree we need to search.  After, that we enter a simple loop trying each suffix.</p>
+			<p>The neighbors_to_check iteration is our look ahead for similar suffixes that share our prefix.  We usually only need to look one step ahead, but these checks watch for overlap cases and extends our search when needed.</p>
+			<p>Note that we figure a distance between substrings here, even though we didn't remember where they started.  That's possible because all suffixes are anchored to the far edge of our original text.  Knowing that, comparing lengths is the same as comparing starting indexes.</p>
+			<p>A distance below our needed match size warns us that there is overlap and we may need to look further ahead in this case.  The if conditions just ensure the Strings are of the length we should even consider and that they match at least that much.  If all of that turns out to be true, our search ahead is extended.</p>
+			<p>Now we are ready to do the actual comparisons:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">         <span class="comment"># ...</span><br /><br />         <span class="keyword">unless</span> s1.slice(0, at_least_size) == s2.slice(0, at_least_size)<br />           neighbors_to_check = neighbor<br />           <span class="keyword">next</span><br />         <span class="keyword">end</span><br /><br />         best = longest_common_prefix(s1, s2, distance)<br />         at_least_size = best.size + 1<br />         <span class="keyword">if</span> best.size == distance<br />           neighbors_to_check = [neighbors_to_check, neighbor + 1].max<br />         <span class="keyword">else</span><br />           neighbors_to_check = neighbor<br />         <span class="keyword">end</span><br />       <span class="keyword">end</span><br />     <span class="keyword">end</span><br /><br />     best<br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The unless check we see here is just a short circuit optimization.  There's no need to check for common prefixes if the Strings aren't a match at least as long as our current best.</p>
+			<p>If we've made it this far, we know the current two Strings share a prefix that meets or exceeds our current best.  A hand-off is made to longest_common_prefix() to grab our new best and the rest of the iterator resets the search parameters.</p>
+			<p>The best we found in the entire search is then returned as the solution.</p>
+			<p>Here's the interface code that wraps this method:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">if</span> <span class="global">$0</span> == <span class="keyword">__FILE__</span><br />     string = <span class="keyword">nil</span><br />     <span class="keyword">if</span> ARGV[0] == <span class="string">"-f"</span><br />       string = File.read(ARGV[1])<br />     <span class="keyword">elsif</span> ARGV.size == 0<br />       string = STDIN.read<br />     <span class="keyword">elsif</span> ARGV[0] =~ <span class="string">/^-/</span> || ARGV.size &gt; 1<br />       STDERR.puts <span class="string">"usage:"</span><br />       STDERR.puts <span class="string">"    #{$0} (note: input comes from standard input)"</span><br />       STDERR.puts <span class="string">"    #{$0} string"</span><br />       STDERR.puts <span class="string">"    #{$0} -f filename"</span><br />       exit<br />     <span class="keyword">else</span><br />       string = ARGV[0]<br />     <span class="keyword">end</span><br /><br />     result = longest_repeated_substring(string)<br />     puts <span class="string">%Q{"#{result}" (#{result.length} characters)}</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Most of the above code just sorts out the command-line arguments.  The checks determine whether to read the text from a file, STDIN, or the arguments themselves.</p>
+			<p>The last two lines call the workhorse method we just finished examining and print details about the best match found.</p>
+			<p>My thanks to all who stretched my brain with all of the excellent discussion about this week's problem.</p>
+			<p>Tomorrow we will try Ruby's hand at coin counting...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121214634im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288071">Raf Coremans</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288072">Denis Hennessy</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288073">Justin Ethier</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288083">Yoan Blanc</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288082">Yoan Blanc (2)</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288084">Clark Grubb</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288086">Dave Thomas</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288090">Guillaume Carbonneau</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288096">Eric I.</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288188">Thomas</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288196">Adam Shelly</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288200">James Koppel</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288227">Sergey Volkov</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288240">Urs Meyer</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288250">Douglas Meyer</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288381">Raffa</a></li>
+				<li><a href="/web/20120121214634/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/288390">SERGEY VOLKOV</a></li>
+			</ol>
+			<p><a href="/web/20120121214634/http://rubyquiz.com/quiz153_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121214634/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:46:34 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:11:15 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

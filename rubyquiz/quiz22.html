@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Roman Numerals (#22)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121190730cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121190730cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz22.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz22.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121190730" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110824082712/http://www.rubyquiz.com/quiz22.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:07:30 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418060650/http://www.rubyquiz.com/quiz22.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110824082712/http://www.rubyquiz.com/quiz22.html" title="8:27:12 Aug 24, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:07:30 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418060650/http://www.rubyquiz.com/quiz22.html" title="6:06:50 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172226/http://rubyquiz.com/quiz22.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:07:30 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052456/http://rubyquiz.com/quiz22.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121190730*/http://rubyquiz.com/quiz22.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>29 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">16 May 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010000100_2007:-1:000100200000_2008:-1:000010000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000020000_2012:0:10016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Roman Numerals (#22)</span>
+			<p>This week's quiz is to write a converter to and from Roman numerals.</p>
+			<p>The script should be a standard Unix filter, reading from files specified on the command-line or STDIN and writing to STDOUT.  Each line of input will contain one integer (between 1 and 3999) expressed as an Arabic or Roman numeral.  There should be one line of output for each line of input, containing the original number in the opposite format.</p>
+			<p>For example, given the following input:</p>
+			<p class="example">III<br />29<br />38<br />CCXCI<br />1999</p>
+			<p>The correct output is:</p>
+			<p class="example">3<br />XXIX<br />XXXVIII<br />291<br />MCMXCIX</p>
+			<p>If you're not familiar with or need a refresher on Roman numerals, the rules are simple.  First, there are seven letters associated with seven values:</p>
+			<p class="example">I = 1<br />V = 5<br />X = 10<br />L = 50<br />C = 100<br />D = 500<br />M = 1000</p>
+			<p>You can combine letters to add values, by listing them largest to smallest from left to right:</p>
+			<p class="example">II   is 2<br />VIII  is 8<br />XXXI is 31</p>
+			<p>However, you may only list three consecutive identical letters.  That requires a special rule to express numbers like 4 and 900.  That rule is that a single lower value may proceed a larger value, to indicate subtraction.  This rule is only used to build values not reachable by the previous rules:</p>
+			<p class="example">IV is 4<br />CM is 900</p>
+			<p>But 15 is XV, not XVX.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>I like these easy problems.  The barrier to entry is low, so we see lots of attempts and as a result, some great tricks.  I'll see if I can hit the highlights below.</p>
+			<p>First, I said solving this is easy, but how easy?  Well, the problem gives us the conversion chart, which is just crying out to be a Hash:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    ROMAN_MAP = { 1 =&gt; <span class="string">"I"</span>,<br />                  4 =&gt; <span class="string">"IV"</span>,<br />                  5 =&gt; <span class="string">"V"</span>,<br />                  9 =&gt; <span class="string">"IX"</span>,<br />                  10 =&gt; <span class="string">"X"</span>,<br />                  40 =&gt; <span class="string">"XL"</span>,<br />                  50 =&gt; <span class="string">"L"</span>,<br />                  90 =&gt; <span class="string">"XC"</span>,<br />                  100 =&gt; <span class="string">"C"</span>,<br />                  400 =&gt; <span class="string">"CD"</span>,<br />                  500 =&gt; <span class="string">"D"</span>,<br />                  900 =&gt; <span class="string">"CM"</span>,<br />                  1000 =&gt; <span class="string">"M"</span> }<br /><br /></div></div>
+			<p>That's the version from my code, but most people used something very similar.</p>
+			<p>From there we just need to_roman() and to_arabic() methods, right?  Sounded like too much work for a lazy bum like me, so I cheated.  If you build a conversion table, you can get away with just doing the conversion one way:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    ROMAN_NUMERALS = Array.new(3999) <span class="keyword">do</span> |index|<br />        target = index + 1<br />        ROMAN_MAP.keys.sort { |a, b| b &lt;=&gt; a }.inject(<span class="string">""</span>) <span class="keyword">do</span> |roman, div|<br />            times, target = target.divmod(div)<br />            roman &lt;&lt; ROMAN_MAP[div] * times<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This is the to_roman() method many solutions hit on.  I just used mine to fill an Array.  The algorithm here isn't too tough.  Divide the target number by each value there is a roman numeral for; copy the numeral that many times; reduce the target and repeat.  Ruby's divmod() is great for this.</p>
+			<p>From there, it's trivial to wrap a Unix filter around the Array.  However, I do like to validate input, so I did one more little prep task:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    IS_ROMAN = /^<span class="comment">#{ROMAN_MAP.keys.sort { |a,b| b&lt;=&gt;a }.inject("") do |exp, n|</span><br />        num = ROMAN_MAP[n]<br />        exp &lt;&lt; <span class="keyword">if</span> num.length == 2 <span class="keyword">then</span> <span class="string">"(?:#{num})?"</span> <span class="keyword">else</span> num + <span class="string">"{0,3}"</span> <span class="keyword">end</span><br />    <span class="keyword">end</span>}<span class="global">$/</span><br />    IS_ARABIC = <span class="string">/^(?:[123]\d{3}|[1-9]\d{0,2})$/</span><br /><br /></div></div>
+			<p>That first Regexp is a little ugly and it sure didn't save me any typing, but it did keep me from having to think, which is almost as good.  It builds the validating Regexp from my Array by tacking a "{0,3}" onto single letters and wrapping double letters in "(?:...)?".</p>
+			<p>The second Regexp is a much more straight forward.  It's just a hand coded pattern to match 1..3999, a number in the range we can convert to and from.</p>
+			<p>Now, we're ready for the Unix filter wrapper:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">if</span> <span class="keyword">__FILE__</span> == <span class="global">$0</span><br />        ARGF.each_line <span class="keyword">do</span> |line|<br />            line.chomp!<br />            <span class="keyword">case</span> line<br />            <span class="keyword">when</span> IS_ROMAN  <span class="keyword">then</span> puts ROMAN_NUMERALS.index(line) + 1<br />            <span class="keyword">when</span> IS_ARABIC <span class="keyword">then</span> puts ROMAN_NUMERALS[line.to_i - 1]<br />            <span class="keyword">else</span> raise <span class="string">"Invalid input:  #{line}"</span><br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>In English that says, for each line of input see if if matches IS_ROMAN and if it does, look it up in the Array.  If it doesn't match IS_ROMAN but does match IS_ARABIC, index into the Array to get the match.  If none of that is true, complain about the broken input.  Simple stuff.</p>
+			<p>If you don't want to build the Array, you just need to create the other converter.  It's not hard.  Here's the version from Jason Bailey's script:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="variable">@data</span> = [<br />    [<span class="string">"M"</span>  , 1000],<br />    [<span class="string">"CM"</span> , 900],<br />    [<span class="string">"D"</span>  , 500],<br />    [<span class="string">"CD"</span> , 400],<br />    [<span class="string">"C"</span>  , 100],<br />    [<span class="string">"XC"</span> ,  90],<br />    [<span class="string">"L"</span>  ,  50],<br />    [<span class="string">"XL"</span> ,  40],<br />    [<span class="string">"X"</span>  ,  10],<br />    [<span class="string">"IX"</span> ,   9],<br />    [<span class="string">"V"</span>  ,   5],<br />    [<span class="string">"IV"</span> ,   4],<br />    [<span class="string">"I"</span>  ,   1]<br />    ]<br /><br />    <span class="comment"># ...</span><br /><br />    <span class="keyword">def</span> toArabic(rom)<br />        reply = 0<br />        <span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="variable">@data</span><br />            <span class="keyword">while</span> rom.index(key) == 0<br />                reply += value<br />                rom.slice!(key)<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        reply<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The method starts by setting a reply variable to 0, to hold the answer.  Then it hunts for each roman numeral in in the rom String, increments reply by that value, and removes that numeral from the String.  The ordering of the @data Array ensures that a "XL" or "IV" will be found before an "X" or "I".</p>
+			<p>Those are simple solutions, but let's jump over to Dave Burt's code for a little Ruby voodoo.  Dave's code builds a module RomanNumerals (not shown) with to_integer() and from_integer(), similar to what we've discussed above.  The module also defines is_roman_numeral?() and some helpful constants like DIGITS, MAX, and REGEXP.  (Dave deserves an extra cookie for his clever dance to keep things like "IV" out of DIGITS.)</p>
+			<p>Anyway, the module is a small chunk of Dave's code and the rest is fun.  Let's see him put it to use:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> String<br />      <span class="comment"># Considers string a roman numeral numeral,</span><br />      <span class="comment"># and converts it to the corresponding integer.</span><br />      <span class="keyword">def</span> to_i_roman<br />        RomanNumerals.to_integer(<span class="keyword">self</span>)<br />      <span class="keyword">end</span><br />      <span class="comment"># Returns true iif the subject is a roman numeral.</span><br />      <span class="keyword">def</span> is_roman_numeral?<br />        RomanNumerals.is_roman_numeral?(<span class="keyword">self</span>)<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br />    <span class="keyword">class</span> Integer<br />      <span class="comment"># Converts this integer to a roman numeral.</span><br />      <span class="keyword">def</span> to_s_roman<br />        RomanNumerals.from_integer(<span class="keyword">self</span>) || <span class="string">''</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>First, he adds converters to String and Integer.  This allows you to code things like:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    puts <span class="string">"In the year #{1999.to_s_roman} ..."</span><br /><br /></div></div>
+			<p>Fun, but there's more.  For Dave's final magic trick he defines a class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># Integers that look like roman numerals</span><br />    <span class="keyword">class</span> RomanNumeral<br />        attr_reader :to_s, :to_i<br /><br />        <span class="variable">@@all_roman_numerals</span> = []<br /><br />        <span class="comment"># May be initialized with either a string or an integer</span><br />        <span class="keyword">def</span> initialize(value)<br />            <span class="keyword">case</span> value<br />            <span class="keyword">when</span> Integer<br />                <span class="variable">@to_s</span> = value.to_s_roman<br />                <span class="variable">@to_i</span> = value<br />            <span class="keyword">else</span><br />                <span class="variable">@to_s</span> = value.to_s<br />                <span class="variable">@to_i</span> = value.to_s.to_i_roman<br />            <span class="keyword">end</span><br />            <span class="variable">@@all_roman_numerals</span>[to_i] = <span class="keyword">self</span><br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Factory method: returns an equivalent existing object</span><br />        <span class="comment"># if such exists, or a new one</span><br />        <span class="keyword">def</span> <span class="keyword">self</span>.get(value)<br />            <span class="keyword">if</span> value.is_a?(Integer)<br />                to_i = value<br />            <span class="keyword">else</span><br />                to_i = value.to_s.to_i_roman<br />            <span class="keyword">end</span><br />            <span class="variable">@@all_roman_numerals</span>[to_i] || RomanNumeral.new(to_i)<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> inspect<br />            to_s<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Delegates missing methods to Integer, converting arguments</span><br />        <span class="comment"># to Integer, and converting results back to RomanNumeral</span><br />        <span class="keyword">def</span> method_missing(sym, *args)<br />            <span class="keyword">unless</span> to_i.respond_to?(sym)<br />                raise NoMethodError.new(<br />                    <span class="string">"undefined method '#{sym}' for #{self}:#{self.class}"</span>)<br />            <span class="keyword">end</span><br />            result = to_i.send(sym,<br />                *args.map {|arg| arg.is_a?(RomanNumeral) ? arg.to_i : arg })<br />            <span class="keyword">case</span> result<br />            <span class="keyword">when</span> Integer<br />                RomanNumeral.get(result)<br />            <span class="keyword">when</span> Enumerable<br />                result.map <span class="keyword">do</span> |element|<br />                    element.is_a?(Integer) ? RomanNumeral.get(element) :<br />                                             element<br />                <span class="keyword">end</span><br />            <span class="keyword">else</span><br />                result<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>If you use the factory method get() to create these objects, it's efficient with reuse, always giving you the same object for the same value.</p>
+			<p>Note that method_missing() basically delegates to Integer at the end there, allowing you to treat these objects mostly as Integers.  This class allows you to code things like:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    IV = RomanNumeral.get(4)<br />    IV + 5 <span class="comment"># =&gt; IX</span><br /><br /></div></div>
+			<p>Even better though, is that Dave removes the need for that first step with:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># Enables uppercase roman numerals to be used interchangeably</span><br />    <span class="comment"># with integers. They are auto-vivified RomanNumeral constants</span><br />    <span class="comment"># Synopsis:</span><br />    <span class="comment">#   4 + IV           #=&gt; VIII</span><br />    <span class="comment">#   VIII + 7         #=&gt; XV</span><br />    <span class="comment">#   III ** III       #=&gt; XXVII</span><br />    <span class="comment">#   VIII.divmod(III) #=&gt; [II, II]</span><br />    <span class="keyword">def</span> Object.const_missing sym<br />        <span class="keyword">unless</span> RomanNumerals::REGEXP === sym.to_s<br />            raise NameError.new(<span class="string">"uninitialized constant: #{sym}"</span>)<br />        <span class="keyword">end</span><br />        const_set(sym, RomanNumeral.get(sym))<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This makes it so that Ruby will automatically turn constants like IX into RomanNumeral objects as needed.  That's just smooth.</p>
+			<p>My thanks go out to friends and Romans alike.</p>
+			<p>Tomorrows quiz is about a constantly used but rarely implemented encoding, so stay tuned...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121190730im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121190730/http://groups-beta.google.com/group/comp.lang.ruby/msg/65a71c96a50491e3">Timothy Byrd</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133041">Jason Bailey</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133052">Tim Fletcher</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133054">Nikolai Weibull</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133072">Bill Guindon</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133087">Brian Schr&ouml;der</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133088">Vance A Heron</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133100">Dave Burt</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133160">Dave Burt (2)</a></li>
+				<li><a href="/web/20120121190730/http://groups-beta.google.com/group/comp.lang.ruby/msg/3bcab05c47d47bc6">Yannick Turgeon</a></li>
+				<li><a href="/web/20120121190730/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/133226">James Edward Gray II</a></li>
+			</ol>
+			<p><a href="/web/20120121190730/http://rubyquiz.com/quiz22_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121190730/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:07:30 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:17 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - QAPrototype (#91)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121215206cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121215206cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz91.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz91.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121215206" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110826110539/http://rubyquiz.com/quiz91.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:52:06 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418131402/http://www.rubyquiz.com/quiz91.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110826110539/http://rubyquiz.com/quiz91.html" title="11:05:39 Aug 26, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:52:06 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122032214/http://rubyquiz.com/quiz91.html" title="3:22:14 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175200/http://rubyquiz.com/quiz91.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:52:06 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052717/http://rubyquiz.com/quiz91.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121215206*/http://rubyquiz.com/quiz91.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>27 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Oct 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000100_2007:-1:000100100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:30016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">QAPrototype (#91)</span>
+			<p>by Caleb Tennis</p>
+			<p>I remember playing with some old AI programs of which you could ask questions and if it didn't know the answer, it would ask you what the answer is:</p>
+			<p class="example">Hi, I'm an AI program.  What's your question?<br /><br />&gt;&gt; How are you today?<br /><br />I'm afraid I don't know the answer to that.  Please tell me what I should say.<br /><br />&gt;&gt;&gt; Just fine, thanks.<br /><br />Okay, I will remember that.  Please ask a question.<br /><br />&gt;&gt;&gt; How are you today?<br /><br />Just fine, thanks.<br />Please ask another question.</p>
+			<p>This got me thinking about an interesting concept in Ruby.</p>
+			<p>Your Quiz: Write a Ruby module that can be mixed into a class.  The module does the following: upon receiving a method call that is unknown to the class, have Ruby inform the user that it doesn't know that particular method call.  Then, have it ask the user for Ruby code as input to use for that method call the next time it is called.</p>
+			<p>Example:</p>
+			<p class="example">&gt; object.some_unknown_method<br /><br />some_unknown_method is undefined<br />Please define what I should do (end with a newline):<br /><br />&gt;&gt; @foo = 5<br />&gt;&gt; puts "The value of foo is #{@foo}"<br />&gt;&gt;<br /><br />Okay, I got it.<br /><br />&gt;&gt;&gt; object.some_unknown_method<br />"The value of foo is 5"</p>
+			<p>[Editor's Note:</p>
+			<p>I envision this could actually be handy for prototyping classes IRb.  Bonus points if you can later print the source for all methods interactively defined.</p>
+			<p>--JEG2]</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>While this quiz is based on the fun idea of an interactive Ruby conversation, the answers reinforced my belief that it holds practical value in prototyping Ruby objects.  Here's a sample run of me playing with one of the solutions:</p>
+			<p class="example">$ irb -r qap.rb -r enumerator<br /><br />Call #start if you want to get a head start on QAPrototype...<br /><br />&gt;&gt; class PascalsTriangle; include QAPrototype; end<br />=&gt; PascalsTriangle<br />&gt;&gt; tri = PascalsTriangle.new<br />=&gt; #&lt;PascalsTriangle:0x33082c&gt;<br />&gt;&gt; tri.next<br /><br />next is undefined.<br />Please define what I should do, starting with arguments<br />this method should accept (skip and end with newline):<br /><br />def next <br />  case row<br />  when 0 then (@rows = [[1]]).last<br />  when 1 then (@rows &lt;&lt; [1, 1]).last<br />  else<br />    ( @rows &lt;&lt;<br />      [1] + @rows.last.enum_for(:each_cons, 2).map { |l, r| l + r } + [1]<br />      ).last<br />  end<br />  ensure<br />    @row += 1<br />  <br />end<br /><br />Okay, I got it.<br /><br /><br />Calling the method now!<br /><br /><br />row is undefined.<br />Please define what I should do, starting with arguments<br />this method should accept (skip and end with newline):<br /><br />def row <br />  @row ||= 0<br />  <br />end<br /><br />Okay, I got it.<br /><br /><br />Calling the method now!<br /><br />=&gt; [1]<br />&gt;&gt; tri.next<br />=&gt; [1, 1]<br />&gt;&gt; tri.next<br />=&gt; [1, 2, 1]<br />&gt;&gt; tri.next<br />=&gt; [1, 3, 3, 1]<br />&gt;&gt; tri.dump<br />class PascalsTriangle<br />  def next <br />    case row<br />    when 0 then (@rows = [[1]]).last<br />    when 1 then (@rows &lt;&lt; [1, 1]).last<br />    else<br />      ( @rows &lt;&lt;<br />        [1] + @rows.last.enum_for(:each_cons, 2).map { |l, r| l + r } + [1]<br />        ).last<br />    end<br />    ensure<br />      @row += 1<br />  end<br />  def row <br />    @row ||= 0<br />  end<br />end<br />=&gt; nil</p>
+			<p>Notice how I just used the non-existent row() method in my definition of next().  I knew I would get a chance to fill it in when it was needed.  Building up a class this way lets you work from the high level down, coding as you go.  It's an interesting new way to think about programming.  I encourage everyone to play with it a little and decide what you think.</p>
+			<p>The code for this is not hard to implement.  Here's a trivial solution by Erik Veenstra:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">module</span> QAPrototype<br />      <span class="keyword">def</span> method_missing(method_name)<br />        puts <span class="string">"#{method_name} is undefined"</span><br />        puts <span class="string">"Please define what I should do (end with a newline):"</span><br /><br />        (code ||= <span class="string">""</span>) &lt;&lt; (line = <span class="global">$stdin</span>.gets) <span class="keyword">until</span> line <span class="keyword">and</span> line.chomp.empty?<br /><br />        <span class="keyword">self</span>.<span class="keyword">class</span>.module_eval <span class="keyword">do</span><br />          define_method(method_name){eval code}<br />        <span class="keyword">end</span><br /><br />        at_exit <span class="keyword">do</span><br />          puts <span class="string">""</span><br />          puts <span class="string">"class #{self.class}"</span><br />          puts <span class="string">"  def #{method_name}"</span><br />          code.gsub(<span class="string">/[\r\n]+$/</span>, <span class="string">""</span>).split(<span class="string">/\r*\n/</span>).each{|s| puts <span class="string">" "</span>*4+s}<br />          puts <span class="string">"  end"</span><br />          puts <span class="string">"end"</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This code defines a QAPrototype module you can mix into any class you wish to interactively add methods to.  The only method in it currently is method_missing(), which Ruby calls whenever an unknown method is called.  This method prompts you for a method body, gathers some code, defines a new method on the current class that uses the given code, and finally arranges to have the method printed when IRb exits.  That literally covers everything asked for in the quiz, including my editor's note.</p>
+			<p>A limitation of the above code is that it doesn't deal with method arguments.  That means you can only use it to create and call unparameterized methods.  Another element that made many of the solutions interesting is the extra methods they defined to further evolve the interaction process.</p>
+			<p>Let's look at another solution that handles arguments and adds some nice extras.  Here's the beginning of the code used in the opening example of this summary, by Matt Todd:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">module</span> QAPrototype<br /><br />      attr :_methods_added<br /><br />      <span class="keyword">def</span> method_missing name, *args, &amp;block<br />        puts <span class="string">"\n#{name} is undefined.\n"</span><br />        puts <span class="string">"Please define what I should do, starting with arguments"</span><br />        puts <span class="string">"this method should accept (skip and end with newline):\n\n"</span><br /><br />        <span class="comment"># get arguments</span><br />        print <span class="string">"def #{name} "</span>; <span class="global">$stdout</span>.flush; arguments = <span class="global">$stdin</span>.gets<br /><br />        <span class="comment"># get method body</span><br />        method = <span class="string">""</span><br />        <span class="keyword">while</span> (print <span class="string">'  '</span>; <span class="global">$stdout</span>.flush; line = <span class="global">$stdin</span>.gets) != <span class="string">"\n"</span><br />          method &lt;&lt; <span class="string">"    "</span> &lt;&lt; line<br />        <span class="keyword">end</span><br />        puts <span class="string">"end\n"</span><br /><br />        <span class="keyword">if</span> method == <span class="string">""</span><br />          puts <span class="string">"\nOops: you left the method empty so we didn't add it.\n\n"</span><br />          <span class="keyword">return</span><br />        <span class="keyword">end</span><br /><br />        puts <span class="string">"\nOkay, I got it.\n\n"</span><br /><br />        <span class="comment"># now define a new method</span><br />        <span class="keyword">self</span>.<span class="keyword">class</span>.class_eval <span class="string">&lt;&lt;-"end;"<br />          def #{name} #{arguments}<br />            #{method}<br />          end</span><br />        <span class="keyword">end</span>;<br /><br />        <span class="comment"># and store the results to the stack for undoes and dumps</span><br />        <span class="variable">@_methods_added</span> ||= []<br />        <span class="variable">@_methods_added</span> &lt;&lt; { :name      =&gt; name,<br />                             :arguments =&gt; arguments.chomp,<br />                             :body      =&gt; method.chomp }<br /><br />        puts <span class="string">"\nCalling the method now!\n\n"</span><br /><br />        <span class="keyword">return</span> <span class="keyword">self</span>.method(name).call(*args, &amp;block)<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This method is not too different from the one we examined earlier. Again the user is prompted to enter code, but this time the code prompts for an argument list first.  This allows you to specify fixed or variable argument lists, with or without default values.  Once it has the arguments, the method reads the body of code until you feed it a blank line.  If you leave the body blank, the code skips adding it.  Otherwise a quick call to class_eval() installs the method.  Note the clever use of end; to close the heredoc in this code.  A Hash of method details is also added to the @_methods_added Array, so the code can look up information in later operations.  Before this method exits, it triggers the call you wanted to make in the first place.</p>
+			<p>Here's a new feature provided by this module:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> undo<br />        the_method = <span class="variable">@_methods_added</span>.pop<br /><br />        <span class="keyword">if</span> the_method.nil?<br />          puts <span class="string">"\nYou have not interactively defined any methods!\n"</span><br />          <span class="keyword">return</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">self</span>.<span class="keyword">class</span>.class_eval { remove_method the_method[:name] }<br /><br />        puts <span class="string">"\n#{the_method[:name]} is now gone from this class.\n\n"</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>When called, undo() pulls the last method added back out of its internal list and removes it from the class.  Future calls to the same method will again be funneled through method_missing() so you can redefine the code.</p>
+			<p>Here are a few more methods you can use to get information back out of the object:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="keyword">def</span> dump filename = <span class="keyword">nil</span><br />        body = <span class="string">""</span><br />        <span class="variable">@_methods_added</span>.each <span class="keyword">do</span> |method|<br />          body &lt;&lt; <span class="string">&lt;&lt;-"end;"<br />      def #{method[:name]} #{method[:arguments]}<br />    #{method[:body]}<br />      end</span><br />    <span class="keyword">end</span>;<br />        <span class="keyword">end</span><br /><br />        klass = <span class="string">&lt;&lt;-"end;"<br />    class #{self.class}<br />    #{body.chomp}<br />    end</span><br />    <span class="keyword">end</span>;<br /><br />        <span class="keyword">if</span> !filename.nil?<br />          File.open(filename, File::CREAT|File::TRUNC|File::RDWR, 0644) <span class="keyword">do</span> |file|<br />            <span class="keyword">if</span> file.write klass<br />              puts <span class="string">"\nClass was written to #{filename} successfully!\n\n"</span><br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">else</span><br />          puts klass<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> added_methods<br />        <span class="variable">@_methods_added</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">alias</span> :methods_added :added_methods<br /><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The main point of interest here is the dump() method.  When called, is builds up method definitions for all interactively defined methods and wraps those in a class definition.  If you provided a filename with the call, the entire definition is dumped to the indicated file.  Otherwise the code is printed to STDOUT.</p>
+			<p>This code has one final interesting feature, a sort of jump-start mode for IRb:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> Foo; include QAPrototype; <span class="keyword">end</span><br /><br />    puts <span class="string">"\nCall #start if you want to get a head start on QAPrototype...\n\n"</span><br /><br />    <span class="keyword">def</span> start<br />      puts <span class="string">"\nirb(prep):001:0&gt; @f = Foo.new"</span><br />      puts <span class="string">"irb(prep):002:0&gt; @f.bar\n\n"</span><br /><br />      puts <span class="string">"For your convenience in testing, I've created a class called"</span><br />      puts <span class="string">"Foo and have already mixed in QAPrototype! Aren't you glad?"</span><br />      puts <span class="string">"And while I was at it, I went ahead and created an instance"</span><br />      puts <span class="string">"of Foo and put it into @f. Now we can all shout for joy!"</span><br />      puts <span class="string">"Heck, we even started up the conversation with method_missing!"</span><br /><br />      <span class="variable">@f</span> = Foo.new<br />      <span class="variable">@f</span>.bar<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This code just loads the module into a class and provides a globally available method to create one of these objects and start the method definition process with a call to a non-existent method.  This is just a nice shortcut for getting started right away when you are playing with this module.</p>
+			<p>My thanks to all for their creative development of an exciting new way to incrementally and interactively develop code.  I think we may be on to something here, for a least some use cases.</p>
+			<p>Tomorrow I will launch the last queued quiz submission.  We've had a sensational run of submissions, so don't let it end now!  Keep the ideas rolling on in...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121215206im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209483">darren kirby</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209491">Sander Land</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209496">Mario Steele</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209511">Tim Hollingsworth</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209524">Rick DeNatale</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209528">Brent Fitzgerald</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209565">Scott Bauer</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209567">Rick DeNatale (2)</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209577">darren kirby (2)</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209587">Matt Todd</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209828">Stephen Lock</a></li>
+				<li><a href="/web/20120121215206/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/209957">Erik Veenstra</a></li>
+			</ol>
+			<p><a href="/web/20120121215206/http://rubyquiz.com/quiz91_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121215206/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:52:06 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:19 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - NDiff (#46)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121201345cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121201345cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz46.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz46.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121201345" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175856/http://rubyquiz.com/quiz46.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:13:45 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418054310/http://www.rubyquiz.com/quiz46.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175856/http://rubyquiz.com/quiz46.html" title="17:58:56 Nov 27, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:13:45 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418054310/http://www.rubyquiz.com/quiz46.html" title="5:43:10 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175856/http://rubyquiz.com/quiz46.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:13:45 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052248/http://rubyquiz.com/quiz46.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121201345*/http://rubyquiz.com/quiz46.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>32 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">8 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000200000100_2007:-1:000000100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:1001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">NDiff (#46)</span>
+			<p>by Bil Kleb</p>
+			<p>This week's quiz is to write a version of the diff command that compares files numerically.  In Unix-speak, </p>
+			<p class="example">$ ndiff --help<br />Usage: ndiff [options] file1 file2<br /><br />Numerically compare files line by line, numerical field by numerical field.<br /><br />-d INT  --digits INT     Maximum number of significant digits that<br />                         should match. (default: 0)<br />-h      --help           Output this help.<br />-q      --quiet          No output, just exit code.<br />-s      --statistics     Provide comparison statistics only. (extra credit)<br />-t DBL  --tolerance DBL  Tolerate &lt;= DBL distance between numbers.<br />                         (default: 0.0)</p>
+			<p>For example, given fileA,</p>
+			<p class="example">1.000001<br />2.00<br />-3<br />Cy=0.11278889E-01  Cx=-1.343e+02</p>
+			<p>And fileB,</p>
+			<p class="example">1.000000<br />1.99<br />-3.4<br />Cy=0.11278890E-01 Cx=-1.343e+02</p>
+			<p>the following scenarios could play out:</p>
+			<p class="example">$ ndiff fileA fileB<br />1,4c1,4<br />&lt; 1.000001<br />&lt; 2.00<br />&lt; -3<br />&lt; Cy=0.11278889E-01  Cx=-1.343e+02<br />---<br />&gt; 1.000000<br />&gt; 1.99<br />&gt; -3.4<br />&gt; Cy=0.11278890E-01 Cx=-1.343e+02<br /><br />$ ndiff -t 0.000001 fileA fileB<br />2,3c2,3<br />&lt; 2.00<br />&lt; -3<br />---<br />&gt; 1.99<br />&gt; -3.4<br /><br />$ ndiff --tolerance 0.01 fileA fileB<br />3c3<br />&lt; -3<br />---<br />&gt; -3.4<br /><br />$ ndiff --digits 1 fileA fileB  (zero exit code)<br /><br />$ ndiff -q fileA fileB  (non-zero exit code)</p>
+			<p>and, for extra credit,</p>
+			<p class="example">$ ndiff --statistics fileA fileB<br />Numbers compared: 5<br />Distance range: 0.0..0.4<br />Average distance: 0.99987e-01 [guess]<br />Mean distance: 1.0e-06 [guess]</p>
+			<p>FWIW, the results of this quiz will be used by NASA's FUN3D team for regression testing aerothermodynamic simulation software.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>by James Edward Gray II</p>
+			<p>Both solutions had some really interesting material in them.  I would certainly talk about both, if time and space allowed.</p>
+			<p>Paul Vaillant had some interesting parsing code (see DataFile.parse_line()) and comparison code (see DataFile::CompareResults.compare()).  Paul's entire solution was also very clean and readable, though it did come out a bit longer than Daniel Sheppard's code.  Finally, Paul's code is over three times faster, which could be a real asset for significant data sets.</p>
+			<p>Daniel's code is the one I want to look at below, because of the way it handles an interesting Ruby problem.  What makes this challenge fun, I think, is that it's one of the edge cases where Ruby's internal iterator can feel awkward.  You're always walking through two separate collections in this problem.  Ruby has some nice solutions for this, buried in the dark corners of its standard library, but many of us just aren't aware of them.  One of these tools, SyncEnumerator from the generator library, is heavily used in the following code.  Let's see how something like that can make a real difference in the end result:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'generator'</span><br />    require <span class="string">'pathname'</span><br />    require <span class="string">'optparse'</span><br />    require <span class="string">'bigdecimal'</span><br /><br />    <span class="keyword">class</span> NumberLine<br />        include Enumerable<br />        <span class="keyword">def</span> initialize(line)<br />            <span class="variable">@line</span> = line<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> each<br />            <span class="variable">@line</span>.scan( <span class="string">/ ((-)?([0-9]+|\.)<br />                          \.?([0-9]+)?[Ee]?<br />                          ([-+]?[0-9]+)?) /x</span>) <span class="keyword">do</span> |match|<br />                <span class="keyword">yield</span> BigDecimal.new(match[0])<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> to_s<br />            <span class="variable">@line</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This is a simple encapsulation of a single line of one or more numbers.  The only method of interest here is each(), which scan()s the line looking for all the numbers it can find.  That lengthy Regexp just matches an optional minus sign, followed by some digits (or a period), optionally followed by a period and some more digits, optionally following by an E or e and another number.  This isn't a fool-proof match since it will catch a String like "-." or even "..", but it's probably good enough for most cases.  Each number matched is fed to BigDecimal and then yielded to a given block.  The use of the library here slows things down a bit, but it avoids floating point inaccuracies too, which is more important to this challenge.</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> NumericalDifferencer<br />        attr_accessor :digits, :tolerance<br />        <span class="keyword">def</span> initialize<br />            <span class="variable">@digits</span> = 0<br />            <span class="variable">@tolerance</span> = 0.0<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> each_diff(file1, file2)<br />            line = 0<br />            diff = <span class="keyword">nil</span><br />            SyncEnumerator.new(file1, file2).each <span class="keyword">do</span> |line1, line2|<br />                line1, line2 = NumberLine.new(line1), NumberLine.new(line2)<br />                line += 1<br />                num_enum =  SyncEnumerator.new(line1, line2)<br />                <span class="keyword">if</span> num_enum.all? <span class="keyword">do</span> |a,b|<br />                    <span class="keyword">unless</span> <span class="variable">@digits</span> == 0<br />                        a,b = a.round(<span class="variable">@digits</span>-1), b.round(<span class="variable">@digits</span>-1)<br />                    <span class="keyword">end</span><br />                    (a - b).abs &lt;= <span class="variable">@tolerance</span><br />                <span class="keyword">end</span><br />                    <span class="keyword">if</span> diff<br />                        <span class="keyword">yield</span> diff<br />                        diff = <span class="keyword">nil</span><br />                    <span class="keyword">end</span><br />                <span class="keyword">else</span><br />                    diff = NumericalDiff.new(line) <span class="keyword">unless</span> diff<br />                    diff.add_lines(line1, line2)<br />                <span class="keyword">end</span><br />            <span class="keyword">end</span><br />            <span class="keyword">yield</span> diff <span class="keyword">if</span> diff<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Here we get into the actual file comparison code and some SyncEnumerator fun.  The first SyncEnumerator created here walks through the two files given in step.  Each iteration of the block receives the next line from both files.  Those lines are turned into NumberLine objects, which we have already seen.  Then a SyncEnumerator is made from those objects, which allows the code to traverse each number found in both lines, again in step.  That object is used in the if condition to ensure that all?() numbers in the line are within the needed tolerance (rounding if requested).  When any numbers of the lines don't match close enough a NumericalDiff object is created and the current lines, plus any following lines that also differ, are added to it.  When the NumericalDiff is complete, because the code has returned to matching lines or completed running through the files, the diff object is yielded to the provided block.</p>
+			<p>Let's take a look at that NumercialDiff class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> NumericalDiff<br />        attr_reader :start_line, :left, :right<br />        <span class="keyword">def</span> initialize(start_line)<br />            <span class="variable">@start_line</span> = start_line<br />            <span class="variable">@left</span> = []<br />            <span class="variable">@right</span> = []<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> add_lines(line1, line2)<br />            <span class="variable">@left</span> &lt;&lt; line1<br />            <span class="variable">@right</span> &lt;&lt; line2<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> to_s<br />            lines = <span class="string">"#{@start_line},#{@start_line + @left.length - 1}"</span><br />            str = <span class="string">"#{lines}c#{lines}\n"</span><br />            str &lt;&lt; <span class="variable">@left</span>.collect { |x| <span class="string">"&lt; #{x}"</span> }.join<br />            str &lt;&lt; <span class="string">"---\n"</span><br />            str &lt;&lt; <span class="variable">@right</span>.collect { |x| <span class="string">"&gt; #{x}"</span> }.join<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>No black magic in here.  The work method is to_s() and it should be easy enough to see that it's just creating the quiz format there.</p>
+			<p>That's really the majority of the solution.  The rest is mainly option parsing:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    differ = NumericalDifferencer.new<br />    quiet = <span class="keyword">false</span><br />    statistics = <span class="keyword">false</span><br /><br />    opts = OptionParser.new <span class="keyword">do</span> |opts|<br />            opts.banner = <span class="string">"Usage: #{$0} [options] file1 file2"</span><br /><br />            opts.separator <span class="string">""</span><br />            opts.separator <span class="string">"Numerically compare files line by line, "</span> +<br />                           <span class="string">"numerical field by numerical field."</span><br />            opts.separator <span class="string">""</span><br />            opts.on(<span class="string">"-d"</span>, <span class="string">"--digits INT"</span>, Integer,<br />                    <span class="string">"Maximum number of significant digits that should match."</span>,<br />                    <span class="string">"(default: 0)"</span>) <span class="keyword">do</span> |digits|<br />              differ.digits = digits<br />            <span class="keyword">end</span><br />            opts.on(<span class="string">"-t"</span>, <span class="string">"--tolerance DBL"</span>, String,<br />                    <span class="string">"Tolerate &lt;= DBL distance between numbers."</span>,<br />                    <span class="string">"(default: 0.0)"</span>) <span class="keyword">do</span> |tolerance|<br />              differ.tolerance = BigDecimal.new(tolerance)<br />            <span class="keyword">end</span><br />            opts.on(<span class="string">"-h"</span>, <span class="string">"--help"</span>, <span class="string">"Output this help."</span>) <span class="keyword">do</span> |help|<br />            puts opts<br />            exit 0<br />            <span class="keyword">end</span><br />        opts.on(<span class="string">"-q"</span>, <span class="string">"--quiet"</span>, <span class="string">"No output, just exit code."</span>) <span class="keyword">do</span> |value|<br />            quiet = value<br />        <span class="keyword">end</span><br />        opts.on(<span class="string">"-s"</span>, <span class="string">"--statistics"</span>,<br />                <span class="string">"Provide comparison statistics only."</span>) <span class="keyword">do</span> |value|<br />            statistics = value<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The top few lines there create a variables to hold the diff tools and setting information.  Then the last chunk of code is OptionParser 101.</p>
+			<p>Finally, here's the code that kicks it all off:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">begin</span><br />        opts.parse!(ARGV)<br />        <span class="keyword">if</span> quiet &amp;&amp; statistics<br />            raise <span class="string">"--quiet and --statistics are mutually exclusive"</span><br />        <span class="keyword">end</span><br />        raise <span class="string">"Must pass two filenames"</span> <span class="keyword">unless</span> ARGV.length == 2<br />        files = ARGV.collect { |x| Pathname.new(x) }<br />        files.each <span class="keyword">do</span> |f|<br />            <span class="keyword">unless</span> f.exist? &amp;&amp; f.file?<br />                raise <span class="string">"'#{f}' does not exist"</span><br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        File.open(files[0]) <span class="keyword">do</span> |file1|<br />            File.open(files[1]) <span class="keyword">do</span> |file2|<br />                <span class="keyword">if</span>(statistics)<br />                    distances = []<br />                    SyncEnumerator.new(file1, file2).each <span class="keyword">do</span> |line1, line2|<br />                        line1, line2 = NumberLine.new(line1),<br />                                       NumberLine.new(line2)<br />                        SyncEnumerator.new(line1, line2).each <span class="keyword">do</span> |num1, num2|<br />                            distances &lt;&lt; (num1 - num2).abs<br />                        <span class="keyword">end</span><br />                    <span class="keyword">end</span><br />                    <span class="keyword">class</span> &lt;&lt; distances<br />                        <span class="keyword">def</span> median<br />                            sorted = <span class="keyword">self</span>.sort<br />                            mid = sorted.size / 2<br />                            <span class="keyword">if</span> sorted.size % 2 == 0<br />                                (sorted[mid] + sorted[mid - 1]) / 2<br />                            <span class="keyword">else</span><br />                                sorted[mid]<br />                            <span class="keyword">end</span><br />                        <span class="keyword">end</span><br />                        <span class="keyword">def</span> mean<br />                            <span class="keyword">self</span>.inject(0) { |sum, x| sum + x / <span class="keyword">self</span>.size}<br />                        <span class="keyword">end</span><br />                    <span class="keyword">end</span><br />                    puts(<span class="string">&lt;&lt;-EOF)<br />    Numbers compared: #{distances.size}<br />    Distance range: #{distances.min}..#{distances.max}<br />    Median distance: #{distances.median}<br />    Mean distance: #{distances.mean}<br />                    EOF</span><br />                <span class="keyword">elsif</span>(quiet)<br />                    differ.each_diff(file1, file2) <span class="keyword">do</span> |diff|<br />                        exit 1<br />                    <span class="keyword">end</span><br />                    exit 0<br />                <span class="keyword">else</span><br />                    different = <span class="keyword">false</span><br />                    differ.each_diff(file1, file2) <span class="keyword">do</span> |diff|<br />                        different = <span class="keyword">true</span><br />                        puts diff<br />                    <span class="keyword">end</span><br />                    exit(different ? 1 : 0)<br />                <span class="keyword">end</span><br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">rescue</span> =&gt; e<br />        warn e<br />        warn opts<br />        exit 1<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>I know that looks like a lot of code, but the majority of it is the extra credit part of the challenge.  If you can spot that big if statement in the middle, you'll see that the majority of the code is in the first branch.  That part calculates statistics, by implementing its own inline custom traversal of the files (again with SyncEnumerator).  The really interesting feature in this code is that the results are just compiled into an Array and then that Array is modified with extra methods to make outputting the results easy.  If you're not familiar with Ruby's class &lt;&lt; some_object ... end idiom, it simply adds the methods to just that one object.  A handy trick put to good use here, I think.</p>
+			<p>The other two very short branches (elsif and else), actually solve the quiz.  They just react according to the each_diff() method we examined earlier.</p>
+			<p>It's probably worth mentioning again here, the generator library is pure Ruby and makes use of continuations, which can be quite slow.  BigDecimal is never going to be as fast as using Floats either, for obvious reasons.  The result is that this code is quite a bit slower than Paul's solution.  (Over three times slower, in my tests.)  That doesn't affect small data sets, like the ones in the quiz, very much, but you may start waiting a bit on longer inputs.</p>
+			<p>My thanks to both quiz solvers, for showing off some super cool Ruby techniques.</p>
+			<p>Tomorrows quiz is a simple challenge for all you web application junkies, that may just prove interesting to the community at large.  Join in the fun and show us just how cool your favorite web application framework can be...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121201345im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121201345/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/155786">Paul Vaillant</a></li>
+				<li><a href="/web/20120121201345/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/155846">Daniel Sheppard</a></li>
+			</ol>
+			<p><a href="/web/20120121201345/http://rubyquiz.com/quiz46_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121201345/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:13:45 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:43 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

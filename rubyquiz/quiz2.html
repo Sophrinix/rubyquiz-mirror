@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Secret Santas (#2)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121213805cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121213805cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz2.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz2.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121213805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110824082452/http://www.rubyquiz.com/quiz2.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:38:05 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120502040920/http://rubyquiz.com/quiz2.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 May 2012"><strong>MAY</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103143123/http://www.rubyquiz.com/quiz2.html" title="14:31:23 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:38:05 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122030358/http://rubyquiz.com/quiz2.html" title="3:03:58 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175644/http://rubyquiz.com/quiz2.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:38:05 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052222/http://rubyquiz.com/quiz2.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121213805*/http://rubyquiz.com/quiz2.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>42 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000310000100_2007:-1:000001000000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000001210000_2012:0:5000c000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Secret Santas (#2)</span>
+			<p>Honoring a long standing tradition started by my wife's dad, my friends all play a Secret Santa game around Christmas time.  We draw names and spend a week sneaking that person gifts and clues to our identity.  On the last night of the game, we get together, have dinner, share stories, and, most importantly, try to guess who our Secret Santa was.  It's a crazily fun way to enjoy each other's company during the holidays.</p>
+			<p>To choose Santas, we use to draw names out of a hat.  This system was tedious, prone to many "Wait, I got myself..." problems.  This year, we made a change to the rules that further complicated picking and we knew the hat draw would not stand up to the challenge.  Naturally, to solve this problem, I scripted the process.  Since that turned out to be more interesting than I had expected, I decided to share.</p>
+			<p>This weeks Ruby Quiz is to implement a Secret Santa selection script.</p>
+			<p>Your script will be fed a list of names on STDIN.  An example might be:</p>
+			<p class="example">Luke Skywalker   &lt;luke@theforce.net&gt;<br />Leia Skywalker   &lt;leia@therebellion.org&gt;<br />Toula Portokalos &lt;toula@manhunter.org&gt;<br />Gus Portokalos   &lt;gus@weareallfruit.net&gt;<br />Bruce Wayne      &lt;bruce@imbatman.com&gt;<br />Virgil Brigman   &lt;virgil@rigworkersunion.org&gt;<br />Lindsey Brigman  &lt;lindsey@iseealiens.net&gt;</p>
+			<p>Note:  If you cannot tell, I made those addresses up and you'll need to replace them with something meaningful.  Please don't pester those people, should they happen to be real.</p>
+			<p>The format for these names is:</p>
+			<p class="example">FIRST_NAME space FAMILY_NAME space &lt;EMAIL_ADDRESS&gt; newline</p>
+			<p>We'll keep things simple and say that people only have two names, so you don't have to worry about tricky names like Gray II.</p>
+			<p>Your script should then choose a Secret Santa for every name in the list.  Obviously, a person cannot be their own Secret Santa.  In addition, my friends no longer allow people in the same family to be Santas for each other and your script should take this into account.</p>
+			<p>Output is obvious.  E-mail the Santa and tell them who their person is.</p>
+			<p>The extra credit for this quiz is to convince all your friends how much fun this can really be, so you can put your script to good use.  Go forth spreading holiday cheer into the world!</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Please allow me a quick clarification, before I talk about this week's quiz.  Joe Cheng asked:</p>
+			<p class="example">Will you accept solutions that just print out the e-mails<br />instead of sending them? :)</p>
+			<p>My answer to this is simply that you may submit whatever you like to a Ruby Quiz.  There's no right and wrong answers here.  However, when I define a specification in a quiz, that's what I'm prepared to benchmark, test and summarize.  Please understand if I do not include altered solutions in those processes.  (This has been added to the Ruby Quiz FAQ.)</p>
+			<p>Let's move on to the problem at hand.</p>
+			<p>As many have now pointed out, this problem is trickier than it first appears.  The first solution that came to my mind when playing with this problem was simple:</p>
+			<p class="example">1.  Choose a name from the list.<br />2.  Filter all matching surnames out of the Santa list.<br />3.  Assign a random Santa from the list in step 2, to the name in step 1.<br />4.  Repeat until all names are assigned...</p>
+			<p>As I quickly learned, that doesn't quite work.  The easiest way to see why it doesn't work is to consider three families, one member each:</p>
+			<p class="example">Skywalker can be assigned as a Santa for Portokalos.<br />Portokalos can then be assigned as the Santa for Skywalker.<br />And then we're stuck!  There are no matches left for Brigman or whoever.</p>
+			<p>Depending on how you implement the above, you'll probably get incorrect output or get stuck in an infinite loop at this point.  That was when I personally began to take this problem seriously, and look at other options.  Let's see what others found.</p>
+			<p>The submitted solutions are more or less variations on three major themes:</p>
+			<p class="example">Random Sorts<br />Circular Lists and/or Family Grouping<br />"Hill Climbing" Algorithms</p>
+			<p>Let's examine each of those in turn, starting with random sorts.  Here's the code from my own submission that handles this:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="global">$players</span> = STDIN.readlines.map { |line| line.chomp }<br />    <span class="global">$santas</span> = <span class="global">$players</span>.sort_by { rand }<br /><br />    <span class="keyword">def</span> check_families?<br />        <span class="global">$players</span>.each_with_index <span class="keyword">do</span> |who, i|<br />            <span class="keyword">return</span> <span class="keyword">false</span> <span class="keyword">if</span> who[<span class="string">/\S+ &lt;/</span>] == <span class="global">$santas</span>[i][<span class="string">/\S+ &lt;/</span>]<br />        <span class="keyword">end</span><br />        <span class="keyword">return</span> <span class="keyword">true</span><br />    <span class="keyword">end</span><br /><br />    <span class="global">$santas</span> = <span class="global">$players</span>.sort_by { rand } <span class="keyword">until</span> check_families?<br /><br /></div></div>
+			<p>The idea there is simple, keep randomly shuffling $santas until we can verify that none of the match-ups share the same surname.  That ensures no one will have themself or common family members, of course.  This method does give us a good random shuffle of the match-ups, but unfortunately, the performance is far from stellar.</p>
+			<p>Still, in a Secret Santa selection script, how critical is performance?  This type of answer could be a viable solution in this case, though it usually isn't in the majority of "Real World" problems.</p>
+			<p>The techniques in the second category of solutions, circular lists/family groupings, were quite varied.  One solution built a circular linked list, separated family members in that list, and then assigned Santas straight down.  Another tactic, used in more than one submission, was to separate the input into family groups, choose a member from the most populated family, and assign a Santa from the next highest populated family, until the list was exhausted.</p>
+			<p>Algorithms like this are far more efficient that my random sort above, critically so in pathological cases.  They do make a trade off though.  These types of assignments are not unbiased and do not allow for all possible permutations of assignment.  Consider this: in a circular list approach, it is impossible for two players of the game to be assigned to each other as Santas.  That's not to say this is a minus of these algorithms, some groups may even prefer this behavior, but if you're looking for something quite random you probably need to look at little further.</p>
+			<p>However, Niklas Frykholm submitted what I believe to be a variation of the family grouping theme that does produce unbiased matches.  Here's the matching portion of his code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Array<br />        <span class="keyword">def</span> random_member(&amp;block)<br />            <span class="keyword">return</span> select(&amp;block).random_member <span class="keyword">if</span> block<br />            <span class="keyword">return</span> <span class="keyword">self</span>[rand(size)]<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> count(&amp;block)<br />            <span class="keyword">return</span> select(&amp;block).size<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">class</span> String<br />        <span class="keyword">def</span> clean_here_string<br />            indent = <span class="keyword">self</span>[<span class="string">/^\s*/</span>]<br />            <span class="keyword">return</span> <span class="keyword">self</span>.gsub(<span class="string">/^#{indent}/</span>, <span class="string">""</span>)<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">class</span> Person<br />        attr_reader :first, :family, :mail<br />        <span class="keyword">def</span> initialize(first, family, mail)<br />            <span class="variable">@first</span>, <span class="variable">@family</span>, <span class="variable">@mail</span> = first, family, mail<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> to_s() <span class="string">"#{first} #{family} &lt;#{mail}&gt;"</span> <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="keyword">class</span> AssignSanta<br />        <span class="keyword">def</span> initialize(persons)<br />            <span class="variable">@persons</span> = persons.dup<br />            <span class="variable">@santas</span> = persons.dup<br />            <span class="variable">@families</span> = persons.collect {|p| p.family}.uniq<br />            <span class="variable">@families</span>.each { |f|<br />                <span class="keyword">if</span> santa_surplus(f) &lt; 0<br />                    raise <span class="string">"No santa configuration possible"</span><br />            }<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Key function -- extra santas available for a family</span><br />        <span class="comment">#        if this is negative -- no santa configuration is possible</span><br />        <span class="comment">#        if this is 0 -- next santa must be assigned to this family</span><br />        <span class="keyword">def</span> santa_surplus(family)<br />            <span class="keyword">return</span> <span class="variable">@santas</span>.count {|s| s.family != family} -<br />                   <span class="variable">@persons</span>.count {|p| p.family == family}<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> call<br />            <span class="keyword">while</span> <span class="variable">@persons</span>.size() &gt; 0<br />                family = <span class="variable">@families</span>.detect { |f|<br />                    santa_surplus(f)==0 <span class="keyword">and</span><br />                    <span class="variable">@persons</span>.count{|p| p.family == f} &gt; 0<br />                }<br />                person = <span class="variable">@persons</span>.random_member { |p|<br />                    family == <span class="keyword">nil</span> || p.family == family<br />                }<br />                santa = <span class="variable">@santas</span>.random_member{ |s|<br />                    s.family != person.family<br />                }<br />                <span class="keyword">yield</span>(person, santa)<br />                <span class="variable">@persons</span>.delete(person)<br />                <span class="variable">@santas</span>.delete(santa)<br />            <span class="keyword">end</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The exciting stuff is at the bottom, particularly the santa_surplus() method.  Niklas' code tracks how many Santas are still available to all the families at each step and uses this information to avoid running out of options for future selections.  But don't take my word for it, he posted a wonderful follow-up breakdown of exactly how it works to Ruby Talk:</p>
+			<p><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/cgi-bin/scat.rb/ruby/ruby-talk/114760">Niklas Explains his Algorithm</a></p>
+			<p>The final type of solution was what is generally known as a "Hill Climbing" algorithm.  Dennis Ranke explains his version nicely:</p>
+			<p class="example">I start by assigning a random santa to everyone without caring about the<br />constraints. Then I go through the list of people and for each one not<br />having a correct santa I swap santas with someone else, so that both have<br />correct santas afterwards.<br />As far as I can see, this will only fail when no solution is possible and<br />should be reasonably unbiased.</p>
+			<p>Put another way, you start with a random and likely quite incorrect match-up, then correct it one swap at a time.  Here's the code to match the description:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Person<br />       attr_reader :first, :last, :email<br />       attr_accessor :santa<br /><br />       <span class="keyword">def</span> initialize(line)<br />         m = <span class="string">/(\S+)\s+(\S+)\s+&lt;(.*)&gt;/</span>.match(line)<br />         raise <span class="keyword">unless</span> m<br />         <span class="variable">@first</span> = m[1].capitalize<br />         <span class="variable">@last</span> = m[2].capitalize<br />         <span class="variable">@email</span> = m[3]<br />       <span class="keyword">end</span><br /><br />       <span class="keyword">def</span> can_be_santa_of?(other)<br />         <span class="variable">@last</span> != other.last<br />       <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    input = <span class="global">$stdin</span>.read<br /><br />    people = []<br />    input.each_line <span class="keyword">do</span> |line|<br />       line.strip!<br />       people &lt;&lt; Person.new(line) <span class="keyword">unless</span> line.empty?<br />    <span class="keyword">end</span><br /><br />    santas = people.dup<br />    people.each <span class="keyword">do</span> |person|<br />       person.santa = santas.delete_at(rand(santas.size))<br />    <span class="keyword">end</span><br /><br />    people.each <span class="keyword">do</span> |person|<br />       <span class="keyword">unless</span> person.santa.can_be_santa_of? person<br />         candidates = people.select { |p|<br />             p.santa.can_be_santa_of?(person) &amp;&amp;<br />             person.santa.can_be_santa_of?(p)<br />         }<br />         raise <span class="keyword">if</span> candidates.empty?<br />         other = candidates[rand(candidates.size)]<br />         temp = person.santa<br />         person.santa = other.santa<br />         other.santa = temp<br />         finished = <span class="keyword">false</span><br />       <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    people.each <span class="keyword">do</span> |person|<br />       printf <span class="string">"%s %s -&gt; %s %s\n"</span>, person.santa.first, person.santa.last,<br />                                  person.first, person.last<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Santas are randomly assigned in the first people.each() iteration above and then swapped until correct in the following people.each() iteration.  I was surprised at how simple this solution came out, with such effective results.</p>
+			<p>That's all I have time to cover, but that's certainly not all there is to see in the submitted solutions.  I learn new tricks every time I read the code to put together one of these summaries.  They're certainly worth a look, if you haven't given them one already.  Other highlights include Warren Brown's rules based approach and Gavin Kistner's Ouroboros class for building circular lists, but again, I think all the solutions are worth examining.</p>
+			<p>Before I wrap this up, let me congratulate Robo and Cristi BALAN who both claimed inexperience and promptly proved it false with working code.  I singled Robo out in the discussion early on to hint at the quiz's complexity, but the truth is that his solution could work fine for the problem at hand.  Who cares if you sometimes have to run it twice?  I sure don't.</p>
+			<p>My thanks to all who submitted and all those that just tolerate our babble on Ruby Talk.  Look for Gavin's quiz tomorrow morning...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121213805im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114675">Robo</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114677">Thomas Leitner</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114678">Gavin Kistner</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114682">Joe Cheng</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114684">Andre Nathan</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114690">James Edward Gray II</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114693">Dennis Ranke</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114695">Joe Cheng (2)</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114698">Martin Ankerl</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114700">Roeland Moors</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114720">Jeremy Hinegardner</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114734">Cristi BALAN</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114746">Niklas Frykholm</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114833">Warren Brown</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/114851">Ara.T.Howard</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/115005">Cedric Foll</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/115108">Peter McMaster</a></li>
+				<li><a href="/web/20120121213805/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/115116">Peter McMaster(2)</a></li>
+			</ol>
+			<p><a href="/web/20120121213805/http://rubyquiz.com/quiz2_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121213805/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:38:05 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:08:58 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

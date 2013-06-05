@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - RRobots (#59)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121205525cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121205525cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz59.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz59.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121205525" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172727/http://rubyquiz.com/quiz59.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 20:55:25 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418141311/http://www.rubyquiz.com/quiz59.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145048/http://www.rubyquiz.com/quiz59.html" title="14:50:48 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 20:55:25 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418141311/http://www.rubyquiz.com/quiz59.html" title="14:13:11 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172727/http://rubyquiz.com/quiz59.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 20:55:25 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052346/http://rubyquiz.com/quiz59.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121205525*/http://rubyquiz.com/quiz59.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>30 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000110000100_2007:-1:000100100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000000000_2012:0:20016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">RRobots (#59)</span>
+			<p>by Simon Kroeger</p>
+			<p>RRobots, Inc. is always looking for new talented pilots.  Recently they lost so many skilled employees in a show battle against one of their competitors that they decided to try something new.</p>
+			<p>Don't be afraid, you don't have to lead a robot into the fight personally.  RRobots, Inc. is asking you to write an AI for one of their bots.  You will be provided with a programming interface and as many shiny new robots as you may need to test your creation.</p>
+			<p>All bots have a body equipped with a powerful engine and robust plating, a gun capable of firing energy bullets of various strengths, and a radar to scan the battlefield for enemy bots.</p>
+			<p>Battles take place in an arena, 1600m by 1600m, each robot is placed at a randomly chosen position and powered on simultaneously.  For this test all fights are one-on-one, so if you scan something it will be your opponent.</p>
+			<p>RRobots, Inc. will run a championship competition on 12-27-2005 (wasting even more hardware) matching each participant against all others, three times.  (Your bot must be posted to Ruby Talk on or before 6 PM (GMT) the 27th, to compete.  A resubmission of the same bot class replaces the original submission, but contestants are allowed to submit multiple distinct bots.)  The winner of the competition will be the bot with the most overall wins.  The result of these battles will lead to a winner honored with having the next product-line named after him.  (James and Simon will provide the winner with a Desktop R/C Mini-Rover from ThinkGeek.com, after the quiz summary is posted.  Contestants must provide a valid email address with their solutions to be eligible.)</p>
+			<p>If you are interested, here are the details:</p>
+			<p>You have to provide a class including the module 'Robot', defining a method named 'tick' taking an array of events as input.  By including the module 'Robot' you gain access to the robot hardware via methods like:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    fire(power)   <span class="comment"># fires a bullet in the direction of your gun</span><br />    turn(degrees) <span class="comment"># turns the robot (and the gun and the radar)</span><br />    energy        <span class="comment"># your remaining energy (if this drops below 0 you are dead)</span><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>You have to define the behavior of the robot for each tick (approximately 20ms).  This approach is kind of low level but you are allowed (if not encouraged) to unleash the whole power of Ruby to create higher level functions and interfaces (take a look at <a href="/web/20120121205525/http://rrobots.rubyforge.org/OOSittingDuck.rb">OOSittingDuck</a> for an idea).</p>
+			<p>A word of warning:  If your AI tries to cheat (using other ways than those provided by the 'Robot' module to gain information about the battlefield or the other bots) or throws any errors, your submission will be disqualified.</p>
+			<p>You can get information, sample bots and the arena program on <a href="/web/20120121205525/http://rrobots.rubyforge.org/">RRobots</a>.</p>
+			<p>Good luck and may the best bot win!</p>
+			<p>Disclaimer:  Of course there is no 'RRobots, Inc.' (if there is, this is totally unrelated to them) and you will not receive any hardware whatsoever via snail mail. While it is very unlikely that you get hurt in a RRobots battle, I'm not responsible for any harm done to you or your equipment during this quiz.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>The tournament has been run, so let's begin with the official results.  You can find the complete statistics here:</p>
+			<p><a href="/web/20120121205525/http://www.rubyquiz.com/rrobots/tournament.html">Tournament Results</a></p>
+			<p>Briefly though, here are the total wins:</p>
+			<p class="example">+------------------+-------+<br />| Bot              | Wins  |<br />+------------------+-------+<br />| Ente             | 241.5 |<br />| RubberDuck       | 228.0 |<br />| RubberDuckLinear | 179.0 |<br />| WKB              | 177.5 |<br />| Kite2            | 165.0 |<br />| DuckBill09       | 161.0 |<br />| CloseTalker      | 153.0 |<br />| GayRush          | 115.0 |<br />| HornRobot        | 108.0 |<br />| Harlock          |  67.0 |<br />| SporkBot         |  55.0 |<br />+------------------+-------+</p>
+			<p>Looks like our big winner was Ente.  I'm told that's German for duck.  Congratulations to Jannis Harder, Ente's creator.</p>
+			<p>Ente is just shy of 500 lines of code, so we're going to get the short version below.  As always, I suggest looking at the actual code.  Here's the start of the robot:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'robot'</span><br /><br />    <span class="keyword">class</span> &lt;&lt; Module.new <span class="comment"># anonymous container</span><br /><br />      <span class="keyword">module</span> RobotMath<br /><br />        <span class="keyword">def</span> weighted_linear_regression(data)<br />          <span class="comment"># ...</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> zero_fixed_linear_regression(data)<br />          <span class="comment"># ...</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> offset(heading_a,heading_b = 0)<br />          <span class="comment"># ...</span><br />        <span class="keyword">end</span><br /><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Obviously, we have the required module for the robot interface.  Then we see the definition of some simple math helpers.</p>
+			<p>The interesting part of the above code to me was the second line.  Since this code has no need to refer to the defined modules, classes, and methods outside of its own scope, the whole mess added to an anonymous namespace.  That seems like a clever way to guard against name collision, among other uses.</p>
+			<p>One of the larger tasks all the robots had to deal with was turning.  You have to ensure your robot, radar, and gun are facing where you need at any given time.  Ente has a whole module of helpers for this:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">module</span> Turnarounder<br />        <span class="comment"># ...</span><br /><br />        <span class="keyword">def</span> head_to deg  <span class="comment"># ...</span><br />        <span class="keyword">def</span> head_gun_to deg  <span class="comment"># ...</span><br />        <span class="keyword">def</span> head_radar_to deg  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_delta_heading  <span class="comment"># ...</span><br />        <span class="keyword">alias</span> turn_amount next_delta_heading<br />        <span class="keyword">def</span> ready?  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_heading  <span class="comment"># ...</span><br />        <span class="keyword">def</span> turn_gun_amount  <span class="comment"># ...</span><br />        <span class="keyword">def</span> gun_ready?  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_delta_gun_heading  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_gun_heading  <span class="comment"># ...</span><br />        <span class="keyword">def</span> turn_radar_amount  <span class="comment"># ...</span><br />        <span class="keyword">def</span> radar_ready?  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_delta_radar_heading  <span class="comment"># ...</span><br />        <span class="keyword">def</span> next_radar_heading  <span class="comment"># ...</span><br />        <span class="keyword">def</span> final_turn  <span class="comment"># ...</span><br />        <span class="keyword">def</span> turn x  <span class="comment"># ...</span><br />        <span class="keyword">def</span> turn_gun x  <span class="comment"># ...</span><br />        <span class="keyword">def</span> turn_radar x  <span class="comment"># ...</span><br />        <span class="keyword">def</span> mid_radar_heading  <span class="comment"># ...</span><br /><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The functionality of those methods should be fairly obvious from the names and we will see them put to use in a bit.</p>
+			<p>Next we have a module for movement:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">module</span> Pointanizer<br />        include Math<br />        include RobotMath<br />        include Turnarounder<br /><br />        <span class="keyword">def</span> move_to x,y<br />          <span class="variable">@move_x</span> = x<br />          <span class="variable">@move_y</span> = y<br />          <span class="variable">@move_mode</span> = :to<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> move mode,x,y<br />          <span class="variable">@move_x</span>,<span class="variable">@move_y</span> = x,y<br />          <span class="variable">@move_mode</span> = mode<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> halt<br />          <span class="variable">@move_mode</span> = <span class="keyword">false</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> moving?<br />           <span class="variable">@move_mode</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> on_wall?<br />          xcor &lt;= size*3 <span class="keyword">or</span> ycor &lt;= size*3 <span class="keyword">or</span><br />          battlefield_width - xcor &lt;= size*3 <span class="keyword">or</span><br />          battlefield_height - ycor &lt;= size*3<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> final_point<br /><br />            yc = ycor-<span class="variable">@move_y</span> <span class="keyword">rescue</span> 0<br />            xc = <span class="variable">@move_x</span>-xcor <span class="keyword">rescue</span> 0<br /><br />            <span class="keyword">if</span> hypot(yc,xc) &lt; size/3<br />              <span class="variable">@move_mode</span> = <span class="keyword">false</span><br />            <span class="keyword">end</span><br /><br />            acc = <span class="keyword">true</span><br /><br />            <span class="keyword">case</span> <span class="variable">@move_mode</span><br />            <span class="keyword">when</span> :to<br />              head_to atan2(yc,xc).to_deg<br />            <span class="keyword">when</span> :away<br />              head_to atan2(yc,xc).to_deg+180<br />            <span class="keyword">when</span> :side_a<br />              head_to atan2(yc,xc).to_deg+60<br />            <span class="keyword">when</span> :side_b<br />              head_to atan2(yc,xc).to_deg-60<br />            <span class="keyword">when</span> <span class="keyword">nil</span>,<span class="keyword">false</span><br />              acc = <span class="keyword">false</span><br />            <span class="keyword">else</span><br />              raise <span class="string">"Unknown move mode!"</span><br />            <span class="keyword">end</span><br /><br />            accelerate(8) <span class="keyword">if</span> acc<br /><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> rad_to_xy(r,d)<br />          <span class="keyword">return</span> xcor + cos(r.to_rad)*d, \<br />                 ycor - sin(r.to_rad)*d<br />        <span class="keyword">end</span><br /><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>We're starting to see robot specific knowledge here.  This module deals with robot movement.  The methods move() and move_to() are used to set a new destination, or halt() can stop the robot.</p>
+			<p>If you glance through final_point(), you will see the various movement modes this robot uses.  For example, :away will turn you 180 degrees so you move "away" from the indicated destination.</p>
+			<p>Now we're ready for a look at Ente's brain:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">class</span> Brain<br />        include Math<br />        include RobotMath<br />        include Turnarounder<br />        include Pointanizer<br /><br />        <span class="comment"># ...</span><br /><br />        attr_accessor :predx, :predy<br /><br />        <span class="keyword">def</span> initialize(robot)<br />          <span class="variable">@robot</span> = robot<br />          <span class="keyword">super</span>()<br /><br />          <span class="variable">@points</span> = []<br /><br />          <span class="variable">@last_seen_time</span> = -TRACK_TIMEOUT<br /><br />          <span class="variable">@radar_speed</span> = 1<br />          <span class="variable">@track_mul</span> = 1<br /><br />          <span class="variable">@searching</span> =0<br />          <span class="variable">@seeking</span> =0<br /><br />          <span class="comment">#movement</span><br />          <span class="variable">@move_direction</span> = 1<br />          <span class="variable">@lasthitcount</span> = 0<br />          <span class="variable">@lasthitcount2</span> = <span class="keyword">false</span><br />          <span class="variable">@lastchange</span> = -TIMEOUT<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># ...</span><br /><br />        <span class="keyword">def</span> predict ptime<br />          <span class="comment"># ...</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> predcurrent<br />          <span class="variable">@predx</span>,<span class="variable">@predy</span> = predict time <span class="keyword">unless</span> <span class="variable">@predx</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> tick events<br /><br />          fire 0.1<br /><br />          <span class="comment">#event processing</span><br /><br />          <span class="comment"># ...</span><br /><br />          <span class="comment">#moving</span><br /><br />          <span class="comment"># ...</span><br /><br />          <span class="comment">#aiming</span><br /><br />          <span class="comment"># ...</span><br /><br />          <span class="comment">#scanning</span><br /><br />          <span class="comment"># ...</span><br /><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> method_missing(*args,&amp;block)<br />          <span class="variable">@robot</span>.relay(*args,&amp;block)<br />        <span class="keyword">end</span><br /><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The majority of that is the tick() method, of course.  It's quite a beast and I'm not even going to try to predict all that it does.  The comments in it will tell you what the following calculations are for, at least.  (Jannis should feel free to reply with a detailed breakdown...  :D  )</p>
+			<p>One thing that is interesting in the above code is the use of the passed in @robot.  Take a look at the first line in the constructor and the definition of method_missing() at the end of this class.  In order to understand that, we need to see the last class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">class</span> Proxy<br />        include ::Robot<br /><br />        <span class="keyword">def</span> initialize<br />          <span class="variable">@brain</span> = Brain.new(<span class="keyword">self</span>)<br />        <span class="keyword">end</span><br /><br />        EXPORT_MAP = Hash.new{|h,k|k}<br /><br />        EXPORT_MAP[<span class="string">'xcor'</span>] = <span class="string">'x'</span><br />        EXPORT_MAP[<span class="string">'ycor'</span>] = <span class="string">'y'</span><br />        EXPORT_MAP[<span class="string">'proxy_turn'</span>] = <span class="string">'turn'</span><br />        EXPORT_MAP[<span class="string">'proxy_turn_gun'</span>] = <span class="string">'turn_gun'</span><br />        EXPORT_MAP[<span class="string">'proxy_turn_radar'</span>] = <span class="string">'turn_radar'</span><br /><br />        <span class="keyword">def</span> relay(method,*args,&amp;block)<br />          <span class="keyword">self</span>.send(EXPORT_MAP[method.to_s],*args,&amp;block)<br />        <span class="keyword">end</span><br /><br />        <span class="keyword">def</span> tick events<br />          <span class="variable">@brain</span>.tick events<br />        <span class="keyword">end</span><br /><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>As you can see, Proxy ties together the Brain class and the Robot module with a combination of relay() and the Brain.method_missing() we saw earlier.  You could swap out brains by changing the assignment in initialize(), or even reassign @brain at runtime to switch behaviors.</p>
+			<p>Only one issue remains.  RRobots is expecting an Ente class to be defined but we haven't seen that yet.  That needs to be resolved before we leave this anonymous namespace we're in and lose access to all of these classes.  Here's the final chunk of code that handles just that:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      classname = <span class="string">"Ente"</span><br />      <span class="keyword">unless</span> Object.const_defined?(classname)<br />        Object.const_set(classname,Class.new(Proxy))<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>A new class is created by subclassing Proxy and that class is assigned to a constant on Object by the name of Ente.  That ensures RRobots will find what it expects when the time comes.</p>
+			<p>My thanks to all the robot coders, especially for the robots I didn't show above.  They all wrote some interesting code.  Also, a big thank you to Simon Kroeger who helped me setup this quiz, and ran the final tournament.</p>
+			<p>Tomorrow, Christer Nilsson has a fun little maze of numbers for us...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121205525im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171365">Gary Watson</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171505">Maurizio Monge</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171636">bill hunter</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171646">Edward Faulkner</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171660">Ilmari Heikkinen</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/171703">Edward Faulkner (2)</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/172675">horndude77</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/172680">Bob Aman</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/172687">Jannis Harder</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/172689">Warren Brown</a></li>
+				<li><a href="/web/20120121205525/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/172703">Stefan Walk</a></li>
+			</ol>
+			<p><a href="/web/20120121205525/http://rubyquiz.com/quiz59_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121205525/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:55:25 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:53 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Sampling (#39)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120120002728cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120120002728cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz39.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz39.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120120002728" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127181009/http://rubyquiz.com/quiz39.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:27:28 Jan 20, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418094758/http://www.rubyquiz.com/quiz39.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101127181009/http://rubyquiz.com/quiz39.html" title="18:10:09 Nov 27, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:27:28 Jan 20, 2012">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418094758/http://www.rubyquiz.com/quiz39.html" title="9:47:58 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127181009/http://rubyquiz.com/quiz39.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:27:28 Jan 20, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052952/http://rubyquiz.com/quiz39.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120120002728*/http://rubyquiz.com/quiz39.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>36 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">15 Apr 06 - 10 Mar 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000110000100_2007:-1:000100100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000000000_2012:0:1001c000a100_2013:-1:011000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Sampling (#39)</span>
+			<p>This week's Ruby quiz is a classic sampling problem that I've seen many interesting solutions for in the past.</p>
+			<p>The challenge is to implement a program called "sample" that takes exactly two integer inputs.  The first of those should be the number of members chosen at random you would like included in the sample.  The second is the upper boundary (exclusive) of the range of integers members can be selected from.  The lower boundary is zero (inclusive).</p>
+			<p>Your program should output exactly the requested number of members from the defined range to STDOUT, one number per line.  Each member must be unique and they should appear in sorted order.</p>
+			<p>Here are some sample runs of my solution to illustrate the task:</p>
+			<p class="example">$ ./sample <br />Usage:  sample MEMBERS LIMIT<br /><br />MEMBERS:  The number of members you want in the sample.  (Integer)<br />  LIMIT:  The upper limit for the sample range.  All     (Integer)<br />          members will between 0 and LIMIT - 1.<br /><br />Note that MEMBERS must be less than LIMIT.<br />$ ./sample 3 10<br />0<br />1<br />5<br />$ ./sample 3 10<br />1<br />2<br />8<br />$ ./sample 3 10<br />2<br />3<br />9<br />$ ./sample 9 10<br />0<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />$ ./sample 20 400<br />1<br />3<br />4<br />25<br />32<br />36<br />42<br />56<br />93<br />111<br />137<br />139<br />153<br />213<br />222<br />226<br />263<br />289<br />293<br />314</p>
+			<p>Now for all the algorithm junkies out there that enjoy a little friendly competition, here's the time to beat:</p>
+			<p class="example">$ time ./sample 5_000_000 1_000_000_000 &gt; big_sample.txt<br /><br />real    30m10.593s<br />user    29m54.544s<br />sys     0m4.736s<br />$ ls -l big_sample.txt <br />-rw-r--r--   1 james  staff  49011436 Jul 11 15:26 big_sample.txt<br />$ head big_sample.txt <br />112<br />221<br />450<br />655<br />900<br />1216<br />1399<br />1469<br />1494<br />1628<br />$ tail big_sample.txt <br />999995325<br />999996330<br />999996552<br />999996682<br />999997426<br />999997676<br />999998253<br />999999153<br />999999658<br />999999693</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>To me, the solutions to this week's quiz are a fascinating combination of the various degrees of correct, dangerous, and fast.  Let's examine a few different solutions and I'll try to show you why I think that.</p>
+			<p>The fast characteristic seemed to be in abundant supply.  Ezra Zygmuntowicz started scaring people with time readouts before solutions were even posted.  Let's start with that code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br />    members, limit, index = ARGV[0].to_i, ARGV[1].to_i, 0<br />    member_range = limit / members<br />    0.upto(members-1) <span class="keyword">do</span><br />      res = rand member_range<br />      puts res + index<br />      index += member_range<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>How does this work?</p>
+			<p>We can see that it reads in the two settings and initializes an index to zero.  Next if calculates a member_range by dividing limit by members.  That line is when this code started to smell fishy to me.</p>
+			<p>The upto() iterator does all the work.  It generates a random number in the member_range, adds that to the index and spits it out, then bumps index by member_range.  This happens members times.</p>
+			<p>I think it's important to think about how this works.  Let's assume we want two members with a limit of ten.  That's going to give us a member_range of five.  So we'll chose a random number between zero and four, add zero to it (index), and spit that out.  Then bump index by five and repeat.  Put another way, we'll choose a random member of the first half of the range and then a random member from the second half of the range.  We may get one and nine or even four and five, but we'll never see seven and eight since they're both in the same half of the range.</p>
+			<p>That's a lightning quick solution.  It solves the quiz example in 26 seconds on my box.  However, the real question is, is it correct?  Obviously, that's subjective.  My opinion is that I can find combinations of the range that it will not choose and I don't consider that to be meeting the requirement of randomly selecting members from the (amended) quiz.  Many of us are probably familiar with the famous quote:</p>
+			<p class="example">"Anyone who considers arithmetical methods of producing random digits is,<br />of course, in a state of sin." --Von Neumann</p>
+			<p>I think that's probably more applicable to the above code than it is to random number generation in general.</p>
+			<p>Let's look at another solution.  This one is from Dominik Bathon:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    <span class="keyword">if</span> <span class="global">$DEBUG</span><br />        <span class="keyword">def</span> ptime(evt)<br />            <span class="global">$ptimeg</span> ||= Time.now.to_f<br />            STDERR.puts <span class="string">"#{evt} at #{Time.now.to_f - $ptimeg}"</span><br />        <span class="keyword">end</span><br />    <span class="keyword">else</span><br />        <span class="keyword">def</span> ptime(evt)<br />            <span class="comment"># noop</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># the actuall sampling, just store the seen values in a hash and return the</span><br />    <span class="comment"># sorted hash keys</span><br />    <span class="keyword">def</span> sample(cnt, lim)<br />        x = {}<br />        tmp = <span class="keyword">nil</span><br /><br />        <span class="keyword">for</span> i <span class="keyword">in</span> 0...cnt<br />            <span class="keyword">while</span> x.has_key?(tmp = rand(lim))<br />            <span class="keyword">end</span><br />            x[tmp] = <span class="keyword">true</span><br />        <span class="keyword">end</span><br />        ptime <span class="string">"rand"</span><br /><br />        x = x.keys.sort<br />        ptime <span class="string">"sort"</span><br />        x<br />    <span class="keyword">end</span><br /><br />    <span class="comment"># this is the key to success, but needs lots of ram</span><br />    GC.disable<br /><br />    ptime <span class="string">"start"</span><br /><br />    x = sample(cnt=ARGV[0].to_i, ARGV[1].to_i)<br /><br />    <span class="comment"># creating the newline string only once saves 5s</span><br />    nl = <span class="string">"\n"</span><br />    i = 0<br />    <span class="keyword">while</span> i+10 &lt;= cnt<br />        <span class="comment"># this is saves about 1s</span><br />        print x[i], nl, x[i+1], nl, x[i+2], nl, x[i+3], nl, x[i+4],<br />        nl, x[i+5], nl, x[i+6], nl, x[i+7], nl, x[i+8], nl, x[i+9], nl<br />        i += 10<br />    <span class="keyword">end</span><br />    <span class="keyword">for</span> j <span class="keyword">in</span> i...cnt<br />        print x[j], nl<br />    <span class="keyword">end</span><br />    ptime <span class="string">"print"</span><br /><br /></div></div>
+			<p>I don't want to focus too much on the details here.  The first chunk of code just defines a timing helper method and the last chunk it some heavily optimized printing.  The actual solution is the sample() method in the middle.  The comment before the method tells you exactly how it works, so I'm not going to insult your intelligence by repeating it.  This is a great time to bring up an interesting question that came up on Ruby Talk though:</p>
+			<p class="example">"How would someone not being aware of the advantages a Hash-lookup gives<br />(compared to Array-lookup) choose to implement the problem with a Hash?<br />It is not obvious for inexperienced programmers." --Stefan Mahlitz</p>
+			<p>I think the keyword in what we're trying to find here is "unique".  Whenever I think unique, I start thinking about a Hash.  The keys of a Hash are unique, by definition.  In order to find out if something is unique in an Array, you've got to walk it.  In order to find out if something if something exists in a Hash, you just need to check for that one key.  That's slower than a single Array lookup, but much faster than five million Array lookups.  Get into the habit of making that quick mental translation:  Unique (almost always) means Hash.</p>
+			<p>Back to Dominik's code.</p>
+			<p>Again, this code is fast.  It solves the quiz example in 40 seconds for me.  My main concern is what Dominik reported in the submission message:</p>
+			<p class="example">"But the "real solution" is GC.disable. That has a downside of course. The  <br />above run of sample.rb needs approx. 400MB of RAM. So, don't try this at  <br />home if you have less than 512MB ;-)" --Dominik Bathon</p>
+			<p>I'm probably a little old school, but that warning scares me.  What if we add a zero to both numbers in the quiz example?  If I looked into some code and saw that it was using a lot of memory, I don't think I would try untying the memory safety net with GC.disable().  Clearly this solution works and is very fast for certain samples on certain hardware, but I think it needs some caution tape warning users and apparently Dominik does too.</p>
+			<p>If you like the Hash idea, here's the cleanest version I saw from Jim Menard with a slight syntax change suggested by Daniel Brockman:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/env ruby</span><br /><br />    require <span class="string">'set'</span><br /><br />    <span class="keyword">def</span> sample(members, range)<br />      selected = Set.new<br />      members.times {<br />        <span class="keyword">begin</span><br />          val = rand(range)<br />        <span class="keyword">end</span> <span class="keyword">until</span> selected.add?(val)<br />      }<br />      selected.to_a.sort<br />    <span class="keyword">end</span><br /><br />    puts sample(ARGV[0].to_i, ARGV[1].to_i).join(<span class="string">"\n"</span>)<br /><br /></div></div>
+			<p>This solution uses the Ruby set library.  (Sets are implemented using Hashes, because of the aforementioned unique behavior.)  This version just adds a random choice to the selected set, member times.  The add?() method ensures that it was a new member for the set, causing the code to loop until it returns true.  The results are then converted to an Array, sorted, and printed.</p>
+			<p>This solution took two minutes and ten seconds with the quiz example on my box.  It still allocates a good sized chunk of memory, but significantly less than Dominik's code (around 150 MB).</p>
+			<p>The other issue with these kinds of solutions is collisions.  In the quiz example the members requested are much less than the limit.  However, as those two numbers get closer together, random selections will be repeats a lot more often.  That can reverse the nice runtimes of these solutions.  Here's a simple script to demonstrate collisions:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby -w</span><br /><br />    members, limit = ARGV.map { |n| Integer(n) }<br /><br />    choices    = Hash.new<br />    collisions = 0<br /><br />    <span class="keyword">until</span> choices.size == members<br />        choice = rand(limit)<br />        <span class="keyword">if</span> choices.include? choice<br />            collisions += 1<br />        <span class="keyword">else</span><br />            choices[rand(limit)] = <span class="keyword">true</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    warn <span class="string">"#{collisions} collisions"</span><br /><br /></div></div>
+			<p>Now watch a few runs of that script</p>
+			<p class="example">$ ruby collisions.rb 2 10<br />0 collisions<br />$ ruby collisions.rb 2 10<br />1 collisions<br />$ ruby collisions.rb 2 10<br />0 collisions<br />$ ruby collisions.rb 2 10<br />0 collisions<br />$ ruby collisions.rb 9 10<br />25 collisions<br />$ ruby collisions.rb 9 10<br />21 collisions<br />$ ruby collisions.rb 9 10<br />50 collisions<br />$ ruby collisions.rb 9_999 10_000<br />39205236 collisions<br />$ time ruby collisions.rb 9_999 10_000<br />35249691 collisions<br /><br />real    1m13.996s<br />user    1m13.876s<br />sys     0m0.084s</p>
+			<p>As you can see the number of collisions can climb very fast and the runtime is quickly dropping off.  Joost Diepenmaat suggested that it might be a good idea to switch algorithms when members &gt; limit / 2.  Joost's idea was simply to reverse the above algorithm, looking for what not to include, but here's a different option from Matthew D Moss:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/local/bin/ruby</span><br /><br />    (k, n) = ARGV.map { |s| s.to_i }<br />    n.times <span class="keyword">do</span> |i|<br />       r = rand * (n - i)<br />       <span class="keyword">unless</span> (k &lt; r)<br />          puts i<br />          k -= 1<br />       <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This solution does not use memory to store the numbers or even need to call sort() at any point.  It works by walking the entire range and randomly selecting which numbers to include.  You can see that it selects a random number in what's left of the range on each iteration.  When the number of members needed is less than that choice, the code just moves on to the next number.  However, when members is equal to that choice, the number is selected (printed) and the remaining members count is dropped.  The behavior ensure that we get enough numbers, with each number having an equal chance at selection.</p>
+			<p>The minus with this one is speed.  Walking all those numbers takes time.  This algorithm is very similar to my own, used to make the quiz.  You saw how high that runtime got.  However, the code's not gobbling up memory and it is going to find a proper sample, eventually.</p>
+			<p>That concludes our tour of the solutions.  As you can see, there are many trade-offs to be made over this problem.  If you want super speed and can spare the memory, a Hash based solution is a good answer.  Otherwise, something like Matthew's solution is probably the best choice.  It's fast enough on smaller inputs, it doesn't keep eating memory, and it gives a good random sample.</p>
+			<p>Many, many thanks to all who decided to jump in on this problem.  The solutions and discussion were all vary insightful.</p>
+			<p>Tomorrow we will find out if heaps grow on trees...</p>
+		</div>
+		<div id="logo"><img src="/web/20120120002728im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148464">Dominik Bathon</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148485">Joost Diepenmaat</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148486">Reto Schuettel</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148495">Bill Kelly</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148499">Stefan Mahlitz</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148507">Matthew D Moss</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148508">Ezra Zygmuntowicz</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148509">Adam Sanderson</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148575">Jim Menard</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148605">Wybo Dekker</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148613">James Edward Gray II</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148648">Paolo Capriotti</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148682">hp gobelli</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/148819">Stefan Mahlitz (2)</a></li>
+				<li><a href="/web/20120120002728/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/150276">Simon Kroeger</a></li>
+			</ol>
+			<p><a href="/web/20120120002728/http://rubyquiz.com/quiz39_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120120002728/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:27:28 Jan 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:36 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Geodesic Dome Faces (#3)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121193014cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121193014cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz3.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz3.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121193014" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110826110651/http://rubyquiz.com/quiz3.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:30:14 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120502105513/http://rubyquiz.com/quiz3.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 May 2012"><strong>MAY</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145123/http://www.rubyquiz.com/quiz3.html" title="14:51:23 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:30:14 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120125030222/http://www.rubyquiz.com/quiz3.html" title="3:02:22 Jan 25, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175117/http://rubyquiz.com/quiz3.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:30:14 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052727/http://rubyquiz.com/quiz3.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121193014*/http://rubyquiz.com/quiz3.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>32 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000210000100_2007:-1:000000000000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000001110000_2012:0:30007000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Geodesic Dome Faces (#3)</span>
+			<p>by Gavin Kistner</p>
+			<p><b>SUMMARY</b></p>
+			<p>Given the faces for a tetrahedron, octahedron, or isocahedron, create a geodesic dome of arbitrary frequency.</p>
+			<p>The (equilateral triangle) faces of each primitive are given as triplets of vertex points. Each vertex is itself a triplet of cartesian 3-space coordinates, all of unit-distance from 0,0,0. (See the supplied points at the end for an example.) The resulting geodesic should be an array of triangular faces; again each face is a triplet of points, and each point is unit-distance from 0,0,0.</p>
+			<p><b>DETAILS</b></p>
+			<p>A 'simple' solution (using recursion) exists to subdivide each primary face into 4^n sub-faces. Instead, the following (more flexible) algorithm should be used, which allows for n^2 sub-faces:</p>
+			<p>[See <a href="/web/20120121193014/http://phrogz.net/CSS/Geodesics/index.html">http://phrogz.net/CSS/Geodesics/index.html</a> for a visual example of the following algorithm.]</p>
+			<p><i>Step 1)</i> Start with the three points defining a primary face.</p>
+			<p><i>Step 2)</i> Divide each side of the face into equal length pieces; the number of pieces is specified by the 'frequency'. (A frequency of 0 subdivides the face not at all, a frequency of 1 divides each side into two equal pieces, a frequency of 2 into three equal pieces, and so on.)</p>
+			<p><i>Step 3)</i> Connect each division point along two sides with a line that is parallel to the third side.</p>
+			<p><i>Step 4)</i> Repeat with lines parallel to all three sides.</p>
+			<p><i>Step 5)</i> New points are defined wherever the lines intersect.</p>
+			<p>The combination of the initial face points, the edge points, and the intersection of the connecting lines provide the points for the faces of the geodesic. (As diagrammed in <a href="/web/20120121193014/http://phrogz.net/CSS/Geodesics/index.html#step5">http://phrogz.net/CSS/Geodesics/index.html#step5</a>, the 16 faces created by subdividing the primary face with frequency 3 can be described as Aqm, qfm, qrf, rgf, rsg, szg, sBz, mfn, fhn, fgh, gyh, gzy, nho, hxo, hyx, oxC. )</p>
+			<p>All points should be 'normalized', so that they are unit-distance from the origin.</p>
+			<p>For extra points, ensure that the points for each face are always specified in the same direction, clockwise or counter-clockwise when looking from the origin. (The above list of faces are all specified in a clockwise direction.)</p>
+			<p><b>STARTER DATA</b></p>
+			<p>The points for the three primitives follow. (Solving for any one of them solves for all of them.)</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    SQRT2 = Math.sqrt(2)<br />    SQRT3 = Math.sqrt(3)<br />    TETRA_Q = SQRT2 / 3<br />    TETRA_R = 1.0 / 3<br />    TETRA_S = SQRT2 / SQRT3<br />    TETRA_T = 2 * SQRT2 / 3<br />    GOLDEN_MEAN = (Math.sqrt(5)+1)/2<br /><br />    PRIMITIVES = {<br />        :tetrahedron =&gt; {<br />            :points =&gt; {<br />                <span class="string">'a'</span> =&gt; Vector[ -TETRA_S, -TETRA_Q, -TETRA_R ],<br />                <span class="string">'b'</span> =&gt; Vector[  TETRA_S, -TETRA_Q, -TETRA_R ],<br />                <span class="string">'c'</span> =&gt; Vector[        0,  TETRA_T, -TETRA_R ],<br />                <span class="string">'d'</span> =&gt; Vector[        0,        0,        1 ]<br />            },<br />            :faces =&gt; <span class="string">%w| acb abd adc dbc |</span><br />        },<br />        :octahedron =&gt; {<br />            :points =&gt; {<br />                <span class="string">'a'</span> =&gt; Vector[  0,  0,  1 ],<br />                <span class="string">'b'</span> =&gt; Vector[  1,  0,  0 ],<br />                <span class="string">'c'</span> =&gt; Vector[  0, -1,  0 ],<br />                <span class="string">'d'</span> =&gt; Vector[ -1,  0,  0 ],<br />                <span class="string">'e'</span> =&gt; Vector[  0,  1,  0 ],<br />                <span class="string">'f'</span> =&gt; Vector[  0,  0, -1 ]<br />            },<br />            :faces =&gt; <span class="string">%w| cba dca eda bea<br />                          def ebf bcf cdf |</span><br />        },<br />        :icosahedron =&gt; {<br />            :points =&gt; {<br />                <span class="string">'a'</span> =&gt; Vector[  1,  GOLDEN_MEAN, 0 ],<br />                <span class="string">'b'</span> =&gt; Vector[  1, -GOLDEN_MEAN, 0 ],<br />                <span class="string">'c'</span> =&gt; Vector[ -1, -GOLDEN_MEAN, 0 ],<br />                <span class="string">'d'</span> =&gt; Vector[ -1,  GOLDEN_MEAN, 0 ],<br />                <span class="string">'e'</span> =&gt; Vector[  GOLDEN_MEAN, 0,  1 ],<br />                <span class="string">'f'</span> =&gt; Vector[ -GOLDEN_MEAN, 0,  1 ],<br />                <span class="string">'g'</span> =&gt; Vector[ -GOLDEN_MEAN, 0, -1 ],<br />                <span class="string">'h'</span> =&gt; Vector[  GOLDEN_MEAN, 0, -1 ],<br />                <span class="string">'i'</span> =&gt; Vector[ 0,  1,  GOLDEN_MEAN ],<br />                <span class="string">'j'</span> =&gt; Vector[ 0,  1, -GOLDEN_MEAN ],<br />                <span class="string">'k'</span> =&gt; Vector[ 0, -1, -GOLDEN_MEAN ],<br />                <span class="string">'l'</span> =&gt; Vector[ 0, -1,  GOLDEN_MEAN ]<br />            },<br />            :faces =&gt; <span class="string">%w| iea iad idf ifl ile<br />                          eha ajd dgf fcl lbe<br />                          ebh ahj djg fgc lcb<br />                          khb kjh kgj kcg kbc |</span><br />        }<br />    }<br /></div></div>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>by Gavin Kistner</p>
+			<p>There were three major challenges which comprised the meat of this quiz:</p>
+			<p><b>1) What the heck was I talking about?</b></p>
+			<p>Although finding the answer to #1 was not intended to be part of the quiz, it certainly was. Due to incomplete specification and background, one had to do a bit of searching to understand what a geodesic dome is, and how that related to the supplied information about primitives and faces.</p>
+			<p>A quick search on Wikipedia yields:</p>
+			<p><a href="/web/20120121193014/http://en.wikipedia.org/wiki/Geodesic_dome">Geodesic Dome</a></p>
+			<p>I won't repeat the information on that page here, but the summary is:</p>
+			<p class="example">A geodesic dome is an approximation of a sphere, made out of triangles<br />connected by straight edges. To create a geodesic dome, start with a<br />platonic solid with triangular faces--tetrahedron, octahedron, or<br />icosahedron. Subdivide each triangular face into a number of smaller<br />triangles, and then push the points of those triangles out from the center<br />of the primitive to the radius of the sphere.</p>
+			<p>This brings us to challenge number 2:</p>
+			<p><b>2) How do you find the points on the face, and make triangles from them?</b></p>
+			<p>There are various techniques for determining the exact locations of the points for the sub triangles. (Several techniques are described in the white paper "<a href="/web/20120121193014/http://www.salsburg.com/geod/geodesicmath.pdf">Geodesic Math</a>", starting on page 9. The one chosen for and described by this quiz is the Class 1, Method 1 technique (page 9), which creates small triangles with sides of equal length.</p>
+			<p>Each of the four solutions was unique.</p>
+			<p>Everyone used vectors to solve the problem, although Dennis worked extra hard and created his own Vector class rather than using the one included in the matrix library included with Ruby.</p>
+			<p>Dennis also went his own way and divided the sides of the triangles into equal-angles (as measured from the center of the geodesic), instead of equal-length pieces. This technique is slightly more effective at evenly distributing the triangles across the surface of the sphere. For example, compare an octahedron subdivided with frequency 20, using the linear technique (as outlined by the quiz) versus the angular technique Dennis used in <a href="/web/20120121193014/http://phrogz.net/CSS/Geodesics/LinearVersusRadial.gif">this picture</a>. Note how the linear technique has the triangles piling up along the edges of the original face of the octahedron, where the radial technique does a better job of spacing them out.</p>
+			<p>I was the only one who used a recursive technique to hunt down all the triangles on the face, and was the only one to consider groups of faces as hexagons. The other three solutions all use cleaner methods of using one loop inside another and cleanly navigating the whole face, once.</p>
+			<p>Dennis and I both used a separate class for a face/triangle, while Warren and Martinus keep track of their information in a more 'raw' fashion.</p>
+			<p><b>3) How do you provide the results?</b></p>
+			<p>The solution by Martinus stands out, as he put the extra effort in to create a simple OpenGL viewer for his solution. While his solution wasn't quite correct (he forgot to normalize the points on the face, pushing them out away from the plane of the face to the surface of the sphere), it was a trivial change to fix it, <a href="/web/20120121193014/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/116102">as Dennis pointed out</a>.</p>
+			<p>Further, Martinus' solution was the fastest (even with the additional code to normalize the points). In calculating the 20,808 faces for an octahedron of frequency 50, the times on my computer were:</p>
+			<p class="example">Martinus:  4.32 seconds<br />   Gavin:  8.61 seconds<br />  Warren:  12.81 seconds<br />  Dennis:  80.49 seconds</p>
+			<p>For reasons I couldn't figure out, Dennis' solution returns a bunch of NaN points when dealing with the icosahedron primitive. (Which is why I used octahedrons to test the output.) Also, I had to add</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    attr_reader :faces<br /><br /></div></div>
+			<p>to his Dome class; without that (or an #instance_eval call) there was no way to get at the data, once created :)</p>
+			<p>It was difficult to test Warren's output, as the results it provided were not organized into triplets of points. The call to flatten took Warren's array of point-triplet arrays and squashed it into a flat array of points. However, without the call to flatten, the points were stuck in arrays of faces for each original face in the primitive. I had this problem initially with my solution, which is why I created a separate Face class -- so that flattening the arrays of arrays of faces would not squash out the array of points contained within each face.</p>
+			<p>An alternative solution, and I think what Warren intended, is something like <a href="/web/20120121193014/http://www.wobblini.net/ruby/flattenx.html">Array#flatten_once</a>, either through that separate library or by rolling ones' own #flatten_once method.</p>
+			<p>Despite the above 'problems', the quiz didn't specify what to do with the data in the end, or how to provide it. The solutions met the requirements correctly, if not conveniently :)</p>
+			<p><b>Wrap Up</b></p>
+			<p>When I proposed this quiz, I didn't realize how few people were conversant with the concepts of Geodesic domes (although I should have). I apologize for not being more clear with the specifications to the problem, particularly in the lack of background information.</p>
+			<p>I also did not see that the scope of the quizzes is intended to be as short as it is (30-60 minutes). Although this problem took some longer than I had expected, I *did* expect it to be a 2-3 hour problem. So, sorry for supplying a quiz which was perhaps more work than people have time for.</p>
+			<p>As penance, I give you some pretty pictures to end with: showing what the domes look like (using the linear interpolation defined by the quiz) for the three primitive types and with various frequencies. <a href="/web/20120121193014/http://phrogz.net/CSS/Geodesics/VariousGeodesics_planar.png">The first picture</a> shows the faces clearly, <a href="/web/20120121193014/http://phrogz.net/CSS/Geodesics/VariousGeodesics_smooth.png">the second</a> shows how well they approximate spheres when used in a rendering engine that can smooth the shading between the faces.</p>
+		</div>
+		<div id="logo"><img src="/web/20120121193014im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121193014/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/116044">Gavin Kistner</a></li>
+				<li><a href="/web/20120121193014/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/116080">martinus</a></li>
+				<li><a href="/web/20120121193014/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/116106">Dennis Ranke</a></li>
+				<li><a href="/web/20120121193014/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/116525">Warren Brown</a></li>
+			</ol>
+			<p><a href="/web/20120121193014/http://rubyquiz.com/quiz3_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121193014/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:30:14 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:08:59 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

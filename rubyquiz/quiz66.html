@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - FasterGenerator (#66)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120120002251cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120120002251cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz66.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz66.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120120002251" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110829004457/http://www.rubyquiz.com/quiz66.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="29 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 0:22:51 Jan 20, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418100245/http://www.rubyquiz.com/quiz66.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110829004457/http://www.rubyquiz.com/quiz66.html" title="0:44:57 Aug 29, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 0:22:51 Jan 20, 2012">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418100245/http://www.rubyquiz.com/quiz66.html" title="10:02:45 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127180720/http://rubyquiz.com/quiz66.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 0:22:51 Jan 20, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052936/http://rubyquiz.com/quiz66.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120120002251*/http://rubyquiz.com/quiz66.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>32 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">16 May 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010000100_2007:-1:000100100000_2008:-1:000010000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:1001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">FasterGenerator (#66)</span>
+			<p>Ruby includes a useful Generator library for switching internal iterators to external iterators.  It is used like this:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'generator'</span><br /><br />    <span class="comment"># Generator from an Enumerable object</span><br />    g = Generator.new([<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'Z'</span>])<br /><br />    <span class="keyword">while</span> g.next?<br />      puts g.<span class="keyword">next</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>I've heard complaints in the past that this library is slow.  One reason is that it was implemented with continuations, which have performance issues in the current version of Ruby.  "Was" is the keyword there though, because I've just learned that Generator was recently re-implemented.  I learned some good tricks reading the new version, so let's try fixing Generator ourselves.  (No peeking at the new version!)</p>
+			<p>This week's Ruby Quiz is to write FasterGenerator, your own re-implementation of Generator with an eye towards working faster.  (This is a small library.  My version is 54 lines.)  It is possible to go even faster than the new implementation, with certain trade-offs:</p>
+			<p class="example">### Construction ###<br /><br />Rehearsal -----------------------------------------------------------<br />Current Generator         0.280000   0.320000   0.600000 (  0.598148)<br />Old callcc Generator      0.630000   1.070000   1.700000 (  1.701587)<br />James's FasterGenerator   0.000000   0.000000   0.000000 (  0.003935)<br />-------------------------------------------------- total: 2.300000sec<br /><br />                              user     system      total        real<br />Current Generator         0.710000   0.640000   1.350000 (  1.356412)<br />Old callcc Generator      0.220000   1.540000   1.760000 (  1.762054)<br />James's FasterGenerator   0.000000   0.000000   0.000000 (  0.003240)<br /><br />### next() ###<br /><br />Rehearsal -----------------------------------------------------------<br />Current Generator        15.960000   0.110000  16.070000 ( 16.116409)<br />Old callcc Generator      5.840000  34.560000  40.400000 ( 40.452677)<br />James's FasterGenerator   0.040000   0.000000   0.040000 (  0.038548)<br />------------------------------------------------- total: 56.510000sec<br /><br />                              user     system      total        real<br />Current Generator        15.910000   0.100000  16.010000 ( 16.063431)<br />Old callcc Generator      5.810000  34.430000  40.240000 ( 40.300504)<br />James's FasterGenerator   0.030000   0.000000   0.030000 (  0.036539)</p>
+			<p>It you want to see the class documentation, you can find it here:</p>
+			<p><a href="/web/20120120002251/http://www.ruby-doc.org/stdlib/libdoc/generator/rdoc/classes/Generator.html">Generator Documentation</a></p>
+			<p>If you want to make sure your implementation is correct, you can use these tests straight out of the current implementation:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'test/unit'</span><br /><br />    <span class="keyword">class</span> TC_Generator &lt; Test::Unit::TestCase<br />      <span class="keyword">def</span> test_block1<br />        g = Generator.new { |g|<br />          <span class="comment"># no yield's</span><br />        }<br /><br />        assert_equal(0, g.pos)<br />        assert_raises(EOFError) { g.current }<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_block2<br />        g = Generator.new { |g|<br />          <span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">'A'</span>..<span class="string">'C'</span><br />            g.<span class="keyword">yield</span> i<br />          <span class="keyword">end</span><br /><br />          g.<span class="keyword">yield</span> <span class="string">'Z'</span><br />        }<br /><br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.current)<br /><br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.current)<br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="string">'B'</span>, g.current)<br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="string">'B'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(g, g.rewind)<br /><br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.current)<br /><br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.current)<br />        assert_equal(0, g.pos)<br />        assert_equal(<span class="string">'A'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="string">'B'</span>, g.current)<br />        assert_equal(1, g.pos)<br />        assert_equal(<span class="string">'B'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(2, g.pos)<br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(2, g.pos)<br />        assert_equal(<span class="string">'C'</span>, g.current)<br />        assert_equal(2, g.pos)<br />        assert_equal(<span class="string">'C'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(3, g.pos)<br />        assert_equal(<span class="keyword">true</span>, g.next?)<br />        assert_equal(3, g.pos)<br />        assert_equal(<span class="string">'Z'</span>, g.current)<br />        assert_equal(3, g.pos)<br />        assert_equal(<span class="string">'Z'</span>, g.<span class="keyword">next</span>)<br /><br />        assert_equal(4, g.pos)<br />        assert_equal(<span class="keyword">false</span>, g.next?)<br />        assert_raises(EOFError) { g.<span class="keyword">next</span> }<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_each<br />        a = [5, 6, 7, 8, 9]<br /><br />        g = Generator.new(a)<br /><br />        i = 0<br /><br />        g.each { |x|<br />          assert_equal(a[i], x)<br /><br />          i += 1<br /><br />          <span class="keyword">break</span> <span class="keyword">if</span> i == 3<br />        }<br /><br />        assert_equal(3, i)<br /><br />        i = 0<br /><br />        g.each { |x|<br />          assert_equal(a[i], x)<br /><br />          i += 1<br />        }<br /><br />        assert_equal(5, i)<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The Generator library also includes a SyncEnumerator class, but it is written to use Generator and will work fine with a new version, as long as it is API-compatible.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>There were two kinds of solutions to this problem.  The first were Array-based solutions.  The logic here is that we can do the iteration, shove all the results in an Array, and then hand them out one-at-a-time.  Here is Christoffer Lerno's solution, doing exactly that:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> MyGenerator<br />        attr_reader :index<br />        <span class="keyword">def</span> initialize(enum = <span class="keyword">nil</span>)<br />            <span class="keyword">if</span> enum <span class="keyword">then</span><br />                <span class="variable">@array</span> = enum.to_a<br />            <span class="keyword">else</span><br />                <span class="variable">@array</span> = Array.new<br />                <span class="keyword">yield</span> <span class="keyword">self</span><br />            <span class="keyword">end</span><br />            <span class="variable">@index</span> = 0<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> current<br />            raise EOFError <span class="keyword">unless</span> next?<br />            <span class="variable">@array</span>[<span class="variable">@index</span>]<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> <span class="keyword">next</span><br />            value = current<br />            <span class="variable">@index</span> += 1<br />            <span class="keyword">return</span> value<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> next?<br />            <span class="keyword">return</span> <span class="variable">@index</span> &lt; <span class="variable">@array</span>.length<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> rewind<br />            <span class="variable">@index</span> = 0<br />            <span class="keyword">self</span><br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> each(&amp;block)<br />            <span class="variable">@array</span>.each(&amp;block)<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> <span class="keyword">yield</span>(value)<br />            <span class="variable">@array</span> &lt;&lt; value<br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> pos<br />            <span class="keyword">return</span> <span class="variable">@index</span><br />        <span class="keyword">end</span><br />        <span class="keyword">def</span> end?<br />            <span class="keyword">return</span> !next?<br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Even though Generator supposedly works off of the each() method, it claims to accept an Enumerable argument.  If we go on that assumption, there should be a to_a() method which will return all the objects each() iteration would.  (If you are uncomfortable with this logic, you could iterate and add them to an Array by hand.)  You can see Christoffer putting this shortcut to work in initialize(), filling @array with a simple call to to_a().</p>
+			<p>The rest of the methods are trivial.  An @index is saved pointing into the @array, which can be incremented or reset to walk the objects.</p>
+			<p>The good news:  this is wicked fast in comparison to the old or even the new Generator library.  The bad news:  it doesn't work for all cases.  First, an iterator does not have to be finite, and trying to shove something like a lazily evaluated infinite stream in an Array is going to go poorly.  Furthermore, iteration may be sensitive to external factors like when it is executed.  In those cases, running the full iteration up front may produce different results.</p>
+			<p>For these reasons the standard Generator library requires a more general solution.  However, I would still tuck the Array-and-index trick away in the back of your mind, as it may just come in handy some day.  If you can be sure you aren't dealing with any of the edge cases mentioned above and sure you can spare the memory, using an Array and an index is simple and fast.</p>
+			<p>For all other times, you have the standard Generator library.</p>
+			<p>We know that the library use to work with continuations, but now it has a new implementation.  The new technique was the other one used by the solutions.  It goes like this:  launch a Thread to iterate over the elements, stop the Thread just before each iteration, and wake it up each time you need a new item.</p>
+			<p>Let's see how Jacob Fugal implemented that (with a small patch from Ross Bamford).  Here's the setup:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'thread'</span><br /><br />    <span class="keyword">class</span> FasterGenerator<br />      <span class="keyword">def</span> initialize( enum=<span class="keyword">nil</span>, &amp;block )<br />        <span class="variable">@position</span> = 0<br />        <span class="variable">@values</span> = []<br />        <span class="variable">@done</span> = <span class="keyword">false</span><br />        <span class="variable">@mutex</span> = Mutex.new<br />        <span class="variable">@block</span> = block<br /><br />        <span class="keyword">if</span> enum<br />          <span class="variable">@block</span> = proc{ |g|<br />            enum.each{ |x| g.<span class="keyword">yield</span> x }<br />          }<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This almost looks like the Array-and-index trick again, when you see @position and @values, but this version isn't going to slurp the values all at once.  @done is just a flag to tell us when we have exhausted the values and @mutex is a locking tool from the thread library.</p>
+			<p>Now @block is a little more interesting.  Generator can be called in two ways, either with an Enumerable object, or with a block that yield()s values to the Generator.  The code above merges the two cases, by providing a block that yield()s through each() when the Enumerable object is given.</p>
+			<p>That means the next piece of the puzzle is the yield() method:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> <span class="keyword">yield</span>( x )<br />        <span class="variable">@mutex</span>.synchronize{ <span class="variable">@values</span> &lt;&lt; x }<br />        Thread.stop<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>We're starting to see threading work here.  This method grabs the lock, adds the object to @values, drops the lock, and halts the Thread that fetched the object.  The lock is to ensure that multiple Threads don't stomp on the internal @values queue at the same time and the halting is the pause before each iteration I mentioned earlier.</p>
+			<p>So, let's see see what current() and next() look like:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> current<br />        collect_value<br />        raise EOFError <span class="keyword">if</span> eof?<br />        <span class="variable">@values</span>[<span class="variable">@position</span>]<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> <span class="keyword">next</span><br />        x = current<br />        <span class="variable">@position</span> += 1<br />        x<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Seems like all the magic here is hidden in the collect_value() method and everything else is just indexing.  Here's the magic method:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      private<br />      <span class="keyword">def</span> collect_value<br />        <span class="variable">@thread</span> ||= Thread.new {<br />          Thread.stop<br />          <span class="variable">@block</span>[<span class="keyword">self</span>]<br />          <span class="variable">@mutex</span>.synchronize{ <span class="variable">@done</span> = <span class="keyword">true</span> }<br />        }<br />        Thread.pass <span class="keyword">until</span> <span class="variable">@thread</span>.stop?<br />        <span class="variable">@thread</span>.run <span class="keyword">if</span> <span class="variable">@thread</span>.status <span class="keyword">and</span> need_value?<br />        Thread.pass <span class="keyword">while</span> need_value?<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> need_value?<br />        <span class="variable">@mutex</span>.synchronize{ <span class="keyword">not</span> <span class="variable">@position</span> &lt; <span class="variable">@values</span>.size <span class="keyword">and</span> <span class="keyword">not</span> <span class="variable">@done</span> }<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>collect_value() makes sure we have a Thread running, or creates it if needed.  The Thread is trivial:  halt (to pause before the first iteration), run the block, grab the lock, toggle the @done flag, and release the lock.  Once we are sure there is a Thread, we can pass() the calling Thread until the generator Thread gets a chance to run() and reaches its stop()ing point.</p>
+			<p>need_value?() is just a check to make sure we don't have one queued, and we're not finished with iteration.</p>
+			<p>The only challenge left is knowing when we are at the end?() of iteration:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> next?<br />        <span class="keyword">return</span> (<span class="keyword">not</span> end?)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> end?<br />        collect_value<br />        <span class="keyword">return</span> eof?<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br />      private<br /><br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> eof?<br />        <span class="variable">@mutex</span>.synchronize{ <span class="keyword">not</span> <span class="variable">@position</span> &lt; <span class="variable">@values</span>.size <span class="keyword">and</span> <span class="variable">@done</span> }<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The secret to end?() is that we must make sure we have a value queued, if possible.  That's because we pause just after each item is added.  We might be in the very last pause before iteration would end.  Calling collect_value() will find the next item or cause the @done flag to be set.  Either way, we then have enough information to properly answer the question.</p>
+			<p>Here are the rest of the methods for Jacob's solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> pos<br />        <span class="variable">@position</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> rewind<br />        <span class="variable">@position</span> = 0<br />        <span class="keyword">self</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> each<br />        <span class="keyword">self</span>.rewind<br />        <span class="keyword">while</span> <span class="keyword">self</span>.next?<br />          <span class="keyword">yield</span> <span class="keyword">self</span>.<span class="keyword">next</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> index<br />        pos<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>There shouldn't be any surprises left in there.</p>
+			<p>Some other solutions that used this same technique were faster, or even slower.  This seems primarily related to which tools were used to control Thread synchronization.  Mutex, for example, is fairly slow while `Thread.critical = true` is quick and probably all you need in this instance.</p>
+			<p>Let me send out a big thank you to all who tried this quiz and an even bigger thank you to Ross Bamford for helping me out with the timings.</p>
+			<p>Tomorrow we have a deep meditation on metaprogramming...</p>
+		</div>
+		<div id="logo"><img src="/web/20120120002251im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179510">Jacob Fugal</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179518">James Edward Gray II</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179525">Christoffer Lern&ouml;</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179534">Ross Bamford</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179556">Caleb Clausen</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179645">Dave Lee</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179656">Jay Anderson</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179674">Jesse Yoon</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/179893">Dave Lee (2)</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180022">Dave Lee (3)</a></li>
+				<li><a href="/web/20120120002251/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180136">Ross Bamford (2)</a></li>
+			</ol>
+			<p><a href="/web/20120120002251/http://rubyquiz.com/quiz66_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120120002251/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 0:22:51 Jan 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:58 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Time Window (#144)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121211442cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121211442cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz144.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz144.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121211442" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110828025954/http://www.rubyquiz.com/quiz144.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="28 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:14:42 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418172540/http://www.rubyquiz.com/quiz144.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110828025954/http://www.rubyquiz.com/quiz144.html" title="2:59:54 Aug 28, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:14:42 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122020512/http://rubyquiz.com/quiz144.html" title="2:05:12 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175350/http://rubyquiz.com/quiz144.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:14:42 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052733/http://rubyquiz.com/quiz144.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121211442*/http://rubyquiz.com/quiz144.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>25 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">20 Nov 08 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000010_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000010000_2012:0:30016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Time Window (#144)</span>
+			<p>by Brian Candler</p>
+			<p>Write a Ruby class which can tell you whether the current time (or any given time) is within a particular "time window". Time windows are defined by strings in the following format:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#    0700-0900                     # every day between these times</span><br />    <span class="comment">#    Sat Sun                       # all day Sat and Sun, no other times</span><br />    <span class="comment">#    Sat Sun 0700-0900             # 0700-0900 on Sat and Sun only</span><br />    <span class="comment">#    Mon-Fri 0700-0900             # 0700-0900 on Monday to Friday only</span><br />    <span class="comment">#    Mon-Fri 0700-0900; Sat Sun    # ditto plus all day Sat and Sun</span><br />    <span class="comment">#    Fri-Mon 0700-0900             # 0700-0900 on Fri Sat Sun Mon</span><br />    <span class="comment">#    Sat 0700-0800; Sun 0800-0900  # 0700-0800 on Sat, plus 0800-0900 on Sun</span><br /><br /></div></div>
+			<p>Time ranges should exclude the upper bound, i.e. 0700-0900 is 07:00:00 to 08:59:59. An empty time window means "all times everyday". Here are some test cases to make it clearer:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> TestTimeWindow &lt; Test::Unit::TestCase<br />      <span class="keyword">def</span> test_window_1<br />        w = TimeWindow.new(<span class="string">"Sat-Sun; Mon Wed 0700-0900; Thu 0700-0900 1000-1200"</span>)<br /><br />        assert ! w.include?(Time.mktime(2007,9,25,8,0,0))   <span class="comment"># Tue</span><br />        assert   w.include?(Time.mktime(2007,9,26,8,0,0))   <span class="comment"># Wed</span><br />        assert ! w.include?(Time.mktime(2007,9,26,11,0,0))<br />        assert ! w.include?(Time.mktime(2007,9,27,6,59,59)) <span class="comment"># Thu</span><br />        assert   w.include?(Time.mktime(2007,9,27,7,0,0))<br />        assert   w.include?(Time.mktime(2007,9,27,8,59,59))<br />        assert ! w.include?(Time.mktime(2007,9,27,9,0,0))<br />        assert   w.include?(Time.mktime(2007,9,27,11,0,0))<br />        assert   w.include?(Time.mktime(2007,9,29,11,0,0))  <span class="comment"># Sat</span><br />        assert   w.include?(Time.mktime(2007,9,29,0,0,0))<br />        assert   w.include?(Time.mktime(2007,9,29,23,59,59))<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_window_2<br />        w = TimeWindow.new(<span class="string">"Fri-Mon"</span>)<br />        assert ! w.include?(Time.mktime(2007,9,27)) <span class="comment"># Thu</span><br />        assert   w.include?(Time.mktime(2007,9,28))<br />        assert   w.include?(Time.mktime(2007,9,29))<br />        assert   w.include?(Time.mktime(2007,9,30))<br />        assert   w.include?(Time.mktime(2007,10,1))<br />        assert ! w.include?(Time.mktime(2007,10,2)) <span class="comment"># Tue</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_window_nil<br />        w = RDS::TimeWindow.new(<span class="string">""</span>)<br />        assert w.include?(Time.mktime(2007,9,25,1,2,3))     <span class="comment"># all times</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /></div></div>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>I've said it before, and I'll say it again this time:  I love the easy problems.  I'm always impressed by the creativity in the solutions for them.  The tricks solvers manage to sneak into their code are so great.  Let me show you a few highlights from this week's solutions.</p>
+			<p>For the first trick, let's have a peek at Eric's send()-changes-the-rules comparison:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">        <span class="comment"># ...</span><br /><br />        <span class="comment"># Equality is defined as a TimeSpecifier on the RHS being in the</span><br />        <span class="comment"># this range.</span><br />        <span class="keyword">def</span> ==(time_spec)<br />          <span class="comment"># do either a &lt; or a &lt;= when comparing the end of the range</span><br />          <span class="comment"># depending on value of @include_end</span><br />          end_comparison = <span class="variable">@include_end</span> ? :&lt;= : :&lt;<br /><br />          <span class="comment"># NOTE: the call to the send method below is used to call the</span><br />          <span class="comment"># method in end_comparison</span><br />          <span class="keyword">if</span> <span class="variable">@start_t</span> &lt; <span class="variable">@end_t</span><br />            time_spec &gt;= <span class="variable">@start_t</span> &amp;&amp; time_spec.send(end_comparison, <span class="variable">@end_t</span>)<br />          <span class="keyword">else</span>  <span class="comment"># a reverse range, such as "Fri-Mon", needs an ||</span><br />            time_spec &gt;= <span class="variable">@start_t</span> || time_spec.send(end_comparison, <span class="variable">@end_t</span>)<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="comment"># ...</span><br /><br /></div></div>
+			<p>In this code Eric is doing a range inclusion test.  The interesting aspect is that the range can include or exclude the end point, just like Ruby's native Range class.  To handle that, Eric sticks a Symbol for a comparison operator in a variable and lets send() sort it out during the actual comparison.</p>
+			<p>Here's another trick, this time from Gordon.  It's a terrific yet simple recursive parser for the time formats allowed by this quiz:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">        <span class="comment"># ...</span><br /><br />        <span class="comment">#recursive method to parse input string</span><br />        <span class="keyword">def</span> parse(token)<br />          <span class="keyword">case</span> token<br />          <span class="keyword">when</span> <span class="string">""</span><br />            REWeek.new(0)<br />          <span class="keyword">when</span> <span class="string">/^(.+);(.+)/</span> <span class="comment"># split at semicolons</span><br />            parse(<span class="global">$1</span>) | parse(<span class="global">$2</span>)<br />          <span class="keyword">when</span> <span class="string">/(\D+) (\d.+)/</span> <span class="comment"># split days and times</span><br />            parse(<span class="global">$1</span>) &amp; parse(<span class="global">$2</span>)<br />          <span class="keyword">when</span> <span class="string">/(\D+) (\D+)/</span>, <span class="string">/(\d+-\d+) (\d+-\d+)/</span> <span class="comment"># split at spaces</span><br />            parse(<span class="global">$1</span>) | parse(<span class="global">$2</span>)<br />          <span class="keyword">when</span> <span class="string">/([A-Z][a-z][a-z])-([A-Z][a-z][a-z])/</span> <span class="comment"># create range of days</span><br />            REWeek.new(Runt.const_get(<span class="global">$1</span>), Runt.const_get(<span class="global">$2</span>))<br />          <span class="keyword">when</span> <span class="string">/([A-Z][a-z][a-z])/</span> <span class="comment"># create single day</span><br />            DIWeek.new(Runt.const_get(<span class="global">$1</span>))<br />          <span class="keyword">when</span> <span class="string">/(\d\d)(\d\d)-(\d\d)(\d\d)/</span> <span class="comment">#create time range</span><br />            start = Time.mktime(2000,1,1,<span class="global">$1</span>.to_i,<span class="global">$2</span>.to_i)<br />            <span class="comment"># 0600-0900 should work like 0600-0859,</span><br />            stop = Time.mktime(2000,1,1,<span class="global">$3</span>.to_i,<span class="global">$4</span>.to_i) - 1<br />            REDay.new(start.hour, start.min, stop.hour, stop.min)<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="comment"># ...</span><br /><br /></div></div>
+			<p>To understand this code, you need to know that Gordon used Runt to do the actual time comparisons.  Runt's time objects (REWeek, DIWeek, and REDay) can be "anded" and "ored" together using the &amp; and | operators.  Have a look at how elegant that makes the above parser.</p>
+			<p>I'm going to simplify the code a bit to show this next one, but the idea is straight out of Ken's solution.  Have a look at how he handles optional captures in a regular expression:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    DAYS    = <span class="string">%w[Sun Mon Tue Wed Thu Fri Sat]</span><br />    DAY_RE  = <span class="string">/\b(?:#{DAYS.join("|")})\b/</span><br />    DAYS_RE = <span class="string">/(#{DAY_RE})(?=[;\s]|$)|(#{DAY_RE})-(#{DAY_RE})/</span><br /><br />    <span class="keyword">def</span> show_match(day_str)<br />      day_str.scan(DAYS_RE) <span class="keyword">do</span> |day, start_day, end_day|<br />        day       &amp;&amp;= DAYS.index(day)<br />        start_day &amp;&amp;= DAYS.index(start_day)<br />        end_day   &amp;&amp;= DAYS.index(end_day)<br />        p [day, start_day, end_day]<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    show_match(<span class="string">"Mon; Wed-Fri"</span>)<br />    <span class="comment"># &gt;&gt; [1, nil, nil]</span><br />    <span class="comment"># &gt;&gt; [nil, 3, 5]</span><br /><br /></div></div>
+			<p>The interesting part here was the use of the &amp;&amp;= operator.  This Regexp can match in two ways:  a single day name or two day names as a range.  Because of that, we don't know which variables will be set inside the scan() block.  Ken shows that this doesn't really matter though, as we can perform index conversion on just those that are set with a little operator magic.</p>
+			<p>To show a final trick, don't forget that you can get a free initialize() method plus accessors from Struct to bootstrap your class building.  This is a classic Ruby idiom and we saw it in two different forms this week.  First, using inheritance by Philip:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> TimeWindow<br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">class</span> Range &lt; Struct.new(:day_parts, :time_parts)<br />        <span class="comment"># ...</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Or using the under-documented block parameter to the constructor as Yossef showed:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> TimeInterval<br />      <span class="comment"># ...</span><br /><br />      UnboundTime = Struct.new(:hour, :minute) <span class="keyword">do</span><br />        <span class="comment"># ...</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Alright, enough fancy stuff.  Let's get to a solution already.</p>
+			<p>Last week, Jesús had the huge all-features-included solution, but this week he gives us the the short and sweet version.  Let's examine that below.</p>
+			<p>Jesús breaks the problem down into two classes.  The first class represents some range of time:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'time'</span><br /><br />    <span class="keyword">class</span> TimeRange<br />      <span class="keyword">def</span> initialize(s)<br />        <span class="variable">@day_of_week</span> = []<br />        <span class="variable">@hour</span> = []<br />        s.strip.split(<span class="string">" "</span>).each <span class="keyword">do</span> |range|<br />          <span class="keyword">if</span> (match = range.match(<span class="string">/(\d{4})-(\d{4})/</span>))<br />            <span class="variable">@hour</span> &lt;&lt; (match[1].to_i...match[2].to_i)<br />          <span class="keyword">elsif</span> (match = range.match(<span class="string">/([a-zA-Z]{3})-([a-zA-Z]{3})/</span>))<br />            first = Time::RFC2822_DAY_NAME.index(match[1])<br />            second = Time::RFC2822_DAY_NAME.index(match[2])<br />            <span class="keyword">if</span> (first &lt; second)<br />              <span class="variable">@day_of_week</span> &lt;&lt; (first..second)<br />            <span class="keyword">else</span><br />              <span class="variable">@day_of_week</span> &lt;&lt; (first..(Time::RFC2822_DAY_NAME.size-1))<br />              <span class="variable">@day_of_week</span> &lt;&lt; (0..second)<br />            <span class="keyword">end</span><br />          <span class="keyword">else</span><br />            <span class="variable">@day_of_week</span> &lt;&lt; ( Time::RFC2822_DAY_NAME.index(range) ..<br />                              Time::RFC2822_DAY_NAME.index(range) )<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This is the main parser for the solution.  It tokenizes a given time range and processes hour ranges, day ranges, and individual days.  All of these pieces are added to the @day_of_week and @hour Arrays as Ranges representing the times they include.  Days are handled as indexes in an Array loaded by the Ruby standard library and hours and minutes are converted to simple Integers.</p>
+			<p>The thing to note in the parser is how days are handled.  First, a Range of days can be tricky index-wise.  For example, Friday to Sunday would be the Range 5..0 and that doesn't make sense.  To handle that, Jesús adds two Ranges in such cases:  5..6 and 0..0 for our example.  Then Ruby's standard Range membership tests will function for the problem.  Single days are treated similarly by adding a Range with the same start and end point.</p>
+			<p>Let's have a look at the rest of that class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> include?(time)<br />        dow = time.wday<br />        hour = time.strftime(<span class="string">"%H%M"</span>).to_i<br />        any?(<span class="variable">@day_of_week</span>, dow) <span class="keyword">and</span> any?(<span class="variable">@hour</span>, hour)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> any?(enum, value)<br />        <span class="keyword">return</span> <span class="keyword">true</span> <span class="keyword">if</span> enum.empty?<br />        enum.any?{|x| x.include?(value)}<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Together, these methods tell if a passed Time object occurs in this TimeRange.  The include?() method first converts the Time object into the formats stored in the internal Range objects.  After that, a hand-off is made to any?() to verify that both the days and times match-up.</p>
+			<p>The last step is to wrap these TimeRange objects in the interface dictated by the quiz:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="keyword">class</span> TimeWindow<br />      <span class="keyword">def</span> initialize(s)<br />        <span class="variable">@ranges</span> = []<br />        s.split(<span class="string">";"</span>).each <span class="keyword">do</span> |part|<br />          <span class="variable">@ranges</span> &lt;&lt; TimeRange.new(part)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> include?(time)<br />        <span class="keyword">return</span> <span class="keyword">true</span> <span class="keyword">if</span> <span class="variable">@ranges</span>.empty?<br />        <span class="variable">@ranges</span>.any? {|x| x.include?(time)}<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Creating a TimeWindow is as simple as, split()ing the input on ";" characters and creating a new TimeRange from each chunk.  This makes the include?() test trivial as well, since it can just forward the call to all of the TimeRange objects and see if any of them accept.</p>
+			<p>My usual thanks to all for being so creative and giving me cool examples to show off in this summary.</p>
+			<p>Tomorrow we will dig into just how editors are constructed...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121211442im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275091">Rub&eacute;n Mart&iacute;nez</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275092">Justin Ethier</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275097">Eric I.</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275117">Gordon Thiesfeld</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275134">Juanger</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275135">Ken Bloom</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275148">Yossef Mendelssohn</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275169">Philip Gatt</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275183">Jes&uacute;s Gabriel y Gal&aacute;n</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275203">Kaushik Sridharan</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275202">Gordon Thiesfeld (2)</a></li>
+				<li><a href="/web/20120121211442/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/275532">James Koppel</a></li>
+			</ol>
+			<p><a href="/web/20120121211442/http://rubyquiz.com/quiz144_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121211442/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:14:42 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:11:06 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

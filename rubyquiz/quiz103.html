@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - DictionaryMatcher (#103)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121221608cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121221608cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz103.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz103.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121221608" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110827015745/http://www.rubyquiz.com/quiz103.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 22:16:08 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418123005/http://www.rubyquiz.com/quiz103.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110827015745/http://www.rubyquiz.com/quiz103.html" title="1:57:45 Aug 27, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 22:16:08 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122034919/http://rubyquiz.com/quiz103.html" title="3:49:19 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175802/http://rubyquiz.com/quiz103.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 22:16:08 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052241/http://rubyquiz.com/quiz103.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121221608*/http://rubyquiz.com/quiz103.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>31 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">3 Jul 08 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000100000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000010000_2012:0:3001b000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">DictionaryMatcher (#103)</span>
+			<p>by Ken Bloom</p>
+			<p>From time to time someone asks on ruby-talk how they can write a regexp of the form:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="string">/alligator|crocodile|bear|dinosaur|...|seven-thousandth-word/</span><br /><br /></div></div>
+			<p>It's not hard to write such a regexp, but Ruby has in internal limit on how big the regular expression can be, so users find they can't do this matching function easily.</p>
+			<p>Implement a class DictionaryMatcher that determines whether any of the strings added to it are substrings of a string S. This should function as almost a drop-in replacement for a Regexp, therefore your implementation should support the following operations:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># creates a new empty matcher</span><br />    dm=DictionaryMatcher.new<br /><br />    <span class="comment"># adds strings to the matcher</span><br />    dm &lt;&lt; <span class="string">"string"</span><br />    dm &lt;&lt; <span class="string">"Ruby"</span><br /><br />    <span class="comment"># determines whether a given word was one of those added to the matcher</span><br />    dm.include?(<span class="string">"Ruby"</span>)                 <span class="comment"># =&gt; true</span><br />    dm.include?(<span class="string">"missing"</span>)              <span class="comment"># =&gt; false</span><br />    dm.include?(<span class="string">"stringing you along"</span>)  <span class="comment"># =&gt; false</span><br /><br />    <span class="comment"># Regexp-like substing search</span><br />    dm =~ <span class="string">"long string"</span>            <span class="comment"># =&gt; 5</span><br />    dm =~ <span class="string">"rub you the wrong way"</span>  <span class="comment"># =&gt; nil</span><br /><br />    <span class="comment"># will automatically work as a result of implementing</span><br />    <span class="comment"># DictionaryMatcher#=~ (see String#=~)</span><br />    <span class="string">"long string"</span> =~ dm  <span class="comment"># =&gt; true</span><br /><br />    <span class="comment"># implement the rest of the interface implemented by Regexps (well, almost)</span><br />    <span class="keyword">class</span> DictionaryMatcher<br />      alias_method :===, :=~<br />      alias_method :match, :=~<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>If you can add additional features, like a case insensitivity option when creating a new DictionaryMatcher this is also very useful.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>As stated in the quiz, this question comes up quite a bit.  There are a few ways to address including a fairly simple approach.  Let's examine Jamie Macey's rather short solution for an example of that:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> DictionaryMatcher &lt; Array<br />     alias_method :===, :=~<br />     alias_method :match, :=~<br /><br />     <span class="keyword">def</span> initialize(default = [], options = <span class="keyword">nil</span>)<br />       <span class="keyword">super</span>(default)<br /><br />       <span class="keyword">unless</span> options.nil? <span class="keyword">or</span> options.is_a? Fixnum<br />         options = Regexp::IGNORECASE<br />       <span class="keyword">end</span><br />       <span class="variable">@regexp_options</span> = options<br />     <span class="keyword">end</span><br /><br />     <span class="keyword">def</span> =~(string)<br />       <span class="keyword">self</span>.map{|e| Regexp.new(e, <span class="variable">@regexp_options</span>) =~ string }.compact.min<br />     <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Jamie's idea is easy enough to follow:  DictionaryMatcher is just an Array of expressions and we can hit the String with them one at a time to find a match.  This code even has an advantage over many of the solutions in that the individual expressions themselves can be arbitrarily complex (full regular expressions).</p>
+			<p>The big downside to this approach though is speed.  Unfortunately, it's a pretty big downside in this case because if you had been dealing with a small number of matches to begin with, you probably wouldn't have needed a DictionaryMatcher.  The main reason performance is bad is that all expressions must be tested, to find the match that occurs first in the String.  All that context shifting in and out of the regular expression engine just takes time.</p>
+			<p>If we're going to get around that, we need a clever way to store the terms we are looking for and a custom match process that takes advantage of that data structure.</p>
+			<p>The structure used by the majority of the solutions to store the words is called a trie or prefix tree.  Louis J Scoras wrote a solution using Trie objects, and even taught them how to display themselves.  This might help you see how this works.  Have a look at this example (with corrected indentation):</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    &gt;&gt; t = Trie.new<br />    =&gt;<br />    &gt;&gt; t[<span class="string">"cat"</span>] = <span class="keyword">true</span><br />    =&gt; <span class="keyword">true</span><br />    &gt;&gt; t[<span class="string">"cab"</span>] = <span class="keyword">true</span><br />    =&gt; <span class="keyword">true</span><br />    &gt;&gt; t[<span class="string">"cate"</span>] = <span class="keyword">true</span><br />    =&gt; <span class="keyword">true</span><br />    &gt;&gt; t[<span class="string">"bob"</span>] = <span class="keyword">true</span><br />    =&gt; <span class="keyword">true</span><br />    &gt;&gt; t<br />    =&gt; b =&gt;<br />         o =&gt;<br />           b =&gt;<br />             value: <span class="keyword">true</span><br />       c =&gt;<br />         a =&gt;<br />           b =&gt;<br />             value: <span class="keyword">true</span><br />           t =&gt;<br />             value: <span class="keyword">true</span><br />             e =&gt;<br />               value: <span class="keyword">true</span><br /><br /></div></div>
+			<p>This structure is similar to a Hash, in that it has keys and values.  (Values are only used to indicate word boundaries, so we will leave those as true and focus on the keys.)  Where a Trie differs from a Hash is how it stores the keys.</p>
+			<p>The key "cat" isn't stored as one complete String, instead it is stored as a separate "c", "a", and "t".  Those individual letters are nested beneath each other in the structure to indicate order.  "c" comes before the "a" beneath it, which comes before the "t" beneath it.</p>
+			<p>Now, to add "cab" or even "cate" into the structure just involves adding in the new letters at the right depth.  "bob", on the other hand, begins a new tree, since it starts with a different letter.</p>
+			<p>This structure can be used to make rather efficient large matches.  Where a Regexp has to ask does "cat", "cab", or "cate" match here, the tree version just checks to see if the "c" matches here.  When it does, more letters still need to be checked, but when it doesn't we instantly know that all "c" words are no good and we can move on.</p>
+			<p>To see how that comes together, let's examine some of Ross Bamford's solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> DictionaryMatcher<br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> initialize(*words)<br />        <span class="variable">@pt</span> = {}<br />        words.each { |word| <span class="keyword">self</span> &lt;&lt; word }<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> &lt;&lt;(word)<br />        <span class="comment"># small memory optimization - if there's a longer word that shares</span><br />        <span class="comment"># this prefix, we can discard it since we'll only ever take the</span><br />        <span class="comment"># shortest match anyway.</span><br />        word.split(<span class="string">''</span>).inject(<span class="variable">@pt</span>) <span class="keyword">do</span> |pt, chr|<br />          pt[chr] ||= {}<br />        <span class="keyword">end</span>.clear[:__WORD__] = <span class="keyword">true</span><br /><br />        <span class="keyword">self</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> match(str, start_ofs = 0)<br />        start_ofs.upto(str.length) <span class="keyword">do</span> |i|<br />          word = <span class="string">""</span><br />          next_pt = <span class="variable">@pt</span><br />          si = i<br />          <span class="keyword">while</span> next_pt = next_pt[chr = str[i,1]]<br />            word &lt;&lt; chr<br />            <span class="keyword">return</span> MatchData.new(si, i, word, str) <span class="keyword">if</span> next_pt[:__WORD__]<br />            i+=1<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="keyword">nil</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> =~(str)<br />        m = match(str) <span class="keyword">and</span> m.start_offset<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>I've trimmed a lot of code here, but what I've shown is the heart of the matching algorithm.  Ross uses a simple set of nested Hashes to build his prefix tree (@pt) in initialize().</p>
+			<p>Words are inserted into the tree in the &lt;&lt;() method.  It splits the word into letters, and walks the nested Hashes inserting each letter.  When it reaches the end of the word, any further nesting is cleared (an optimization explained in the comment) and the special :__WORD__ marker is inserted to indicate a word boundary.</p>
+			<p>The rest of the magic is in the match() method.  It works much as I explained before.  It walks the String index by index.  If a character is found in the prefix tree, it tries to find a run of matches by walking the tree forward (the while loop).  When it makes it all the way to a word boundary marker, it declares victory by returning Ross's custom MatchData object (not shown).  If the tree walk fails, the code advances to the next index and when the indices are exhausted, nil is tossed to indicate that no match could be found.</p>
+			<p>The =~() method also uses match(), but changes the return value to mimic Ruby.</p>
+			<p>There's certainly more to see in the solutions and I hope this gives you enough of a map to encourage your own spelunking expidition into the code.  A big thank you to all of the programmers who helped reduce this FAQ to a link we can pass on to those who ask.</p>
+			<p>Sharpen your turtles folks, because it's pretty picture drawing time with tomorrow's Ruby Quiz...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121221608im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226825">Ken Bloom</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226833">Edwin Fine</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226837">Louis J Scoras</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226838">Adam</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226840">Jamie Macey</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226842">Ken Bloom (2)</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/226884">Ross Bamford</a></li>
+				<li><a href="/web/20120121221608/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/227191">Ken Bloom (3)</a></li>
+			</ol>
+			<p><a href="/web/20120121221608/http://rubyquiz.com/quiz103_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121221608/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 22:16:08 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:30 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Counting Cards (#152)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121191704cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121191704cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz152.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz152.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121191704" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110826110615/http://rubyquiz.com/quiz152.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:17:04 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418045438/http://www.rubyquiz.com/quiz152.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110826110615/http://rubyquiz.com/quiz152.html" title="11:06:15 Aug 26, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:17:04 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418045438/http://www.rubyquiz.com/quiz152.html" title="4:54:38 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127175213/http://rubyquiz.com/quiz152.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:17:04 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052713/http://rubyquiz.com/quiz152.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121191704*/http://rubyquiz.com/quiz152.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>23 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">5 Jan 10 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000010000_2012:0:10016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Counting Cards (#152)</span>
+			<p>Learning to count cards is much easier than Hollywood or the casinos would have us believe.  Some systems only require you to track a single running total in your head.</p>
+			<p>One such system, called the Knock-out system of card counting, is extra easy.  You start your count at 4 - (4 x number_of_decks).  That gives us an initial running count of 0, -4, -20, or -28 for the common casino shoe sizes of 1, 2, 6, or 8 decks.  From there, you add one each time you see a 2, 3, 4, 5, 6 or 7 and subtract one when you see a 10, jack, queen, king, or ace.  The 8 and 9 cards do not affect the count.  Once you learn to track the running count, you can make strategy decisions and vary your bets based on the times when the count is in your favor.</p>
+			<p>That's not a lot to remember, but it does take practice to get fast.  You really need to get to where you can count a deck in 20 to 30 seconds if you are going to keep up with those fast moving casinos dealers.</p>
+			<p>This week's Ruby Quiz is to build a training program for helping you learn to count cards.</p>
+			<p>The program needs to show you one or more cards at a time, running through a Blackjack shoe.  As it goes, the program should track the running count.  Have it pause at random intervals, ask you the count, and notify you if you are right or wrong.</p>
+			<p>Both the time to go through the deck and the number of cards displayed at a time should be configurable.  It's important to practice with seeing multiple cards at once because you learn to cancel out pairs of high and low cards.  It might even be nice to provide a mixed mode, which varies the number of cards shown at a time.</p>
+			<p>You can show cards as simple Strings, ASCII art, or full graphics as you prefer.  You may wish to make cards fully disappear after their display time though, to make the conditions more like they would be in a casino.</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Denis Hennessy put it very well when explained that there are two challenges to this quiz.  The first was to implement a card counter.  That's the easy bit.</p>
+			<p>Here's the library Denis submitted for counting cards:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    CARDS = <span class="string">%w{A K Q J T 9 8 7 6 5 4 3 2}</span><br />    SUITS = <span class="string">%w{c s h d}</span><br /><br />    <span class="keyword">class</span> Counter<br />      <span class="keyword">def</span> initialize(decks)<br />        <span class="variable">@count</span> = 4 - 4*decks<br />        <span class="variable">@shoe</span> = []<br />        decks.times <span class="keyword">do</span><br />          CARDS.each <span class="keyword">do</span> |c|<br />            SUITS.each <span class="keyword">do</span> |s|<br />              <span class="variable">@shoe</span> &lt;&lt; c.to_s + s.to_s<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        size = 52*decks<br />        size.times <span class="keyword">do</span> |i|<br />          j = rand(size)<br />          <span class="variable">@shoe</span>[i],<span class="variable">@shoe</span>[j] = <span class="variable">@shoe</span>[j],<span class="variable">@shoe</span>[i]<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> deal<br />        card = <span class="variable">@shoe</span>.pop<br />        <span class="variable">@count</span> += 1 <span class="keyword">if</span> <span class="string">"234567"</span>.include? card[0,1].to_s<br />        <span class="variable">@count</span> -= 1 <span class="keyword">if</span> <span class="string">"TJQKA"</span>.include? card[0,1].to_s<br />        card<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> count<br />        <span class="variable">@count</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> size<br />        <span class="variable">@shoe</span>.size<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>This code is very easy to follow.  You construct a Counter from a number of decks and it will determine the starting count, load a shoe full of cards, and shuffle those cards (the code is just a longhand form of @shoe.sort_by { rand }).</p>
+			<p>The deal() method is the only other one that does any work.  It pulls cards from the shoe, but before returning them it makes sure to update the count.  Our counting system is easy, so it breaks down into the two simple conditional checks we see here.</p>
+			<p>That's literally all it takes to setup some cards, deal, and track a count.</p>
+			<p>The other challenge is how are we going to allow the user to interact with this code.  I left the quiz wide open on this front, but the truth is that you will probably desire a GUI interface if you really want to practice.  Recognizing the card faces will be import when you are actually sitting at a Blackjack table.</p>
+			<p>Denis decided to use Rails as a GUI framework.  He located some free card images and built a tiny web application to show them.  All of the action takes place in a single controller and there are only two views.  (The library we've already examined is the only model needed.)</p>
+			<p>When you first visit the application, it will display a simple form:</p>
+			<p class="example">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;<br />&lt;head&gt;<br />  &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;<br />  &lt;%= javascript_include_tag :defaults %&gt;<br />  &lt;title&gt;Practice Card Counting&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />    &lt;% form_tag :action =&gt; 'practice' do %&gt;<br />        Number of Decks in Shoe: &lt;%= text_field_tag :decks, '1' %&gt;&lt;br/&gt;<br />        Deal between <br />        &lt;%= text_field_tag :min, '1', :size =&gt; 1%&gt; and<br />        &lt;%= text_field_tag :max, '3', :size =&gt; 1 %&gt;<br />        cards per hand.&lt;br/&gt;<br />        Deal cards every<br />        &lt;%= text_field_tag :delay, '5', :size =&gt; 1%&gt; seconds.&lt;br/&gt;<br />        &lt;%= submit_tag("Start") %&gt;<br />    &lt;% end %&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</p>
+			<p>As you can see, this just collects a few parameters for the application.  You can set a deck count, a range of cards that will be dealt at one time, and a delay between new deals.</p>
+			<p>Submitting this form will kick us into the controller, where the majority of the work is done:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'card_counter'</span><br /><br />    <span class="keyword">class</span> CardCounterController &lt; ApplicationController<br /><br />      <span class="keyword">def</span> practice<br />        session[:counter] = Counter.new params[:decks].to_i<br />        session[:min] = params[:min].to_i<br />        session[:max] = params[:max].to_i<br />        session[:delay] = params[:delay].to_i<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> deal<br />        min = session[:min]<br />        max = session[:max]<br />        counter = session[:counter]<br />        max = counter.size <span class="keyword">if</span> counter.size&lt;max<br />        min = max <span class="keyword">if</span> max &lt; min<br />        count = min + rand(max-min+1)<br />        text = <span class="string">""</span><br />        text = <span class="string">"Shoe complete"</span> <span class="keyword">if</span> count == 0<br />        count.times <span class="keyword">do</span><br />          card = session[:counter].deal<br />          text += <span class="string">"&lt;img src='/images/#{card_index(card)}.png' "</span> +<br />                  <span class="string">"width='72' height='96'/&gt;\n"</span><br />        <span class="keyword">end</span><br />        text += <span class="string">"&lt;p id='count' style='visibility: hidden'&gt;"</span> +<br />                <span class="string">"Count is #{counter.count}&lt;/p&gt;"</span><br />        render :text =&gt; text<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Convert card name ("6d", "Qs"...) to image index where</span><br />      <span class="comment"># 1=Ac,2=As,3=Ah,4=Ad,5=Kc and so on</span><br />      <span class="keyword">def</span> card_index(card)<br />        c = CARDS.index card[0,1].to_s<br />        s = SUITS.index card[1,1].to_s<br />        c * 4 + s + 1<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The form we just saw dumps us into the practice() method which just stores all of the parameters in your session.  Note that the full Counter object (require()d at the top of this file) is constructed at this point and also placed in your session.</p>
+			<p>The deal() method is the only other action and it's called to replace some page elements via Ajax.  It reads your session parameters back, selects a random number of cards to display based on your range and what is left in the shoe, and renders a chunk of HTML text with the images for those cards as well as a hidden paragraph with the current count in it.</p>
+			<p>The card_index() method is just a helper that constructs image names based on the face and suit.</p>
+			<p>Just after practice() runs, Rails will render the only other view for this application:</p>
+			<p class="example">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<br />  "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-strict.dtd"&gt;<br />&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;<br />&lt;head&gt;<br />  &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;<br />  &lt;%= javascript_include_tag :defaults %&gt;<br />  &lt;title&gt;Practice Card Counting&lt;/title&gt;<br />  &lt;script type="text/javascript"&gt;<br />  //&lt;![CDATA[<br />  paused = false;<br />  function pause() {<br />    paused = !paused;<br />    if (paused) {<br />      $('count').setStyle('visibility: visible');<br />      $('pause').update('Continue')<br />    } else {<br />      $('pause').update('Pause')<br />    }<br />  }<br />  //]]&gt;<br />  &lt;/script&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />  &lt;a id='pause' href="#" onClick="pause()"&gt;Pause&lt;/a&gt;<br />  &lt;div id="cards"&gt;&lt;/div&gt;<br /><br />  &lt;%= periodically_call_remote(<br />  :condition =&gt; "paused == false",<br />  :update =&gt; "cards",<br />  :frequency =&gt; session[:delay],<br />  :url =&gt; { :action =&gt; "deal" }) %&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;</p>
+			<p>If you glance down at the body, you will see that there are really only two elements in this page:  a link and an initially empty div.</p>
+			<p>The link controls a Javascript toggle function.  When you click "Pause" the function shows the count, switches the link name to "Continue," and stops the periodic Ajax calls.  Clicking Continue changes the link name back to Pause and restarts the periodic calls.  The next Ajax action will render a (re-)hidden count.</p>
+			<p>When you put all of these pieces together, you get an effective trainer for card counting with pictures.  Do have a look at the other solutions though, for examples of how to handle the event loop in the console.</p>
+			<p>My thanks to all who were brave enough to risk having themselves labeled a card counter.  With any luck, we will train a future generation of super counters.</p>
+			<p>Tomorrow we will tackle a classic computer science optimization problem...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121191704im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121191704/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/287289">Robert Dober</a></li>
+				<li><a href="/web/20120121191704/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/287303">Denis Hennessy</a></li>
+				<li><a href="/web/20120121191704/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/287319">Thomas</a></li>
+				<li><a href="/web/20120121191704/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/287322">James Koppel</a></li>
+				<li><a href="/web/20120121191704/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/287458">Brian Knoll</a></li>
+			</ol>
+			<p><a href="/web/20120121191704/http://rubyquiz.com/quiz152_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121191704/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:17:04 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:11:14 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

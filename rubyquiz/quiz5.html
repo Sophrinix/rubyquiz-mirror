@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - Sokoban (#5)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121191539cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121191539cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz5.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz5.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121191539" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110827120432/http://www.rubyquiz.com/quiz5.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:15:39 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418152640/http://www.rubyquiz.com/quiz5.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103145610/http://www.rubyquiz.com/quiz5.html" title="14:56:10 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:15:39 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418152640/http://www.rubyquiz.com/quiz5.html" title="15:26:40 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172349/http://rubyquiz.com/quiz5.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:15:39 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052312/http://rubyquiz.com/quiz5.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121191539*/http://rubyquiz.com/quiz5.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>34 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000210000100_2007:-1:000100000000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000001110000_2012:0:20017000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Sokoban (#5)</span>
+			<p>Ruby isn't the only good thing to come out of Japan.  The computer game Sokoban, invented by Hiroyuki Imabayashi, was introduced by Thinking Rabbit of Takarazuka, Japan in 1982.  This simple game of logic puzzles was an instant success.  It won awards and spawned sequels.  Over the years, Sokoban has been ported to a huge number of platforms.  Fan support remains strong and many of those fans even produce new levels for the game.</p>
+			<p>This week's quiz is to implement the game of Sokoban with the interface of your choosing and any extra features you would like to have.</p>
+			<p>Sokoban (which translates to "Warehouse Man") has simple rules, which basically amount to push crates into their storage spots in the warehouse.  The elements of the levels are simple:  The "man", crates, walls, open floor, and storage.  Different level designers use various symbols to represent these items in level data files.  Here's one possible mix:</p>
+			<p class="example">@       for the man<br />o       for crates<br />#       for walls<br />&lt;space&gt; for open floor<br />.       for storage</p>
+			<p>Now because a man or a crate can also be on a storage space, we need special conditions to represent those setups:</p>
+			<p class="example">*       for crate on storage<br />+       for man on storage</p>
+			<p>Using this, we can build an extremely simple level:</p>
+			<p class="example">#####<br />#.o@#<br />#####</p>
+			<p>This level is completely surrounded by walls, as all Sokoban levels must be.  Walls are, of course, impassable.  In the center we have from left to right:  A storage space, a crate (on open floor), and the man (also on open floor).</p>
+			<p>(The original Sokoban levels were 19 x 16, but later levels have varied in size.)</p>
+			<p>The game is played by moving the man up, down, left and right.  When the man moves towards a crate, he may push it along in front of him as long as there is no wall or second crate behind the one being pushed.  A level is solved when all crates are on storage spaces.</p>
+			<p>Given those rules, we can solve our level above with a single move to the left, yielding:</p>
+			<p class="example">#####<br />#*@ #<br />#####</p>
+			<p>That simple system can lead to some surprisingly complicated mind benders, but please don't take my word for it.  Here are some levels to test your game engine and your logic skills:</p>
+			<p><a href="/web/20120121191539/http://www.rubyquiz.com/sokoban_levels.txt">Classic Sokoban Levels</a></p>
+			<p>(Note:  These levels are Copyrighted by Thinking Rabbit.  You may play them but not profit from them in any way.)</p>
+			<p>Be warned, Sokoban is extremely addictive!</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Well, how far did you get?  I'm stuck on level 28 myself.</p>
+			<p style="text-align: center"><img src="/web/20120121191539im_/http://rubyquiz.com/images/sokoban.jpg" alt="" width="299" height="321" /></p>
+			<p>As those of you who have now built Sokoban know, the game is quite trivial to implement.  Here's a very brief solution from Dennis Ranke:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Level<br />      <span class="keyword">def</span> initialize(level)<br />        <span class="variable">@level</span> = level<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> play<br />        <span class="keyword">while</span> count_free_crates &gt; 0<br />          printf <span class="string">"\n%s\n\n&gt; "</span>, <span class="keyword">self</span><br />          c = gets<br />          c.each_byte <span class="keyword">do</span> |command|<br />            <span class="keyword">case</span> command<br />              <span class="keyword">when</span> ?w<br />                move(0, -1)<br />              <span class="keyword">when</span> ?a<br />                move(-1, 0)<br />              <span class="keyword">when</span> ?s<br />                move(0, 1)<br />              <span class="keyword">when</span> ?d<br />                move(1, 0)<br />              <span class="keyword">when</span> ?r<br />                <span class="keyword">return</span> <span class="keyword">false</span><br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />        printf <span class="string">"\n%s\nCongratulations, on to the next level!\n"</span>, <span class="keyword">self</span><br />        <span class="keyword">return</span> <span class="keyword">true</span><br />      <span class="keyword">end</span><br /><br />    private<br /><br />      <span class="keyword">def</span> move(dx, dy)<br />        x, y = find_player<br />        dest = <span class="keyword">self</span>[x+dx, y+dy]<br />        <span class="keyword">case</span> dest<br />          <span class="keyword">when</span> ?<span class="comment">#</span><br />            <span class="keyword">return</span><br />          <span class="keyword">when</span> ?o, ?*<br />            dest2 = <span class="keyword">self</span>[x+dx*2, y+dy*2]<br />            <span class="keyword">if</span> dest2 == 32<br />              <span class="keyword">self</span>[x+dx*2, y+dy*2] = ?o<br />            <span class="keyword">elsif</span> dest2 == ?.<br />              <span class="keyword">self</span>[x+dx*2, y+dy*2] = ?*<br />            <span class="keyword">else</span><br />              <span class="keyword">return</span><br />            <span class="keyword">end</span><br />            dest = (dest == ?o) ? 32 : ?.<br />        <span class="keyword">end</span><br />        <span class="keyword">self</span>[x+dx, y+dy] = (dest == 32) ? ?@ : ?+<br />        <span class="keyword">self</span>[x, y] = (<span class="keyword">self</span>[x, y] == ?@) ? 32 : ?.<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> count_free_crates<br />        <span class="variable">@level</span>.scan(<span class="string">/o/</span>).size<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> find_player<br />        pos = <span class="variable">@level</span>.index(<span class="string">/@|\+/</span>)<br />        <span class="keyword">return</span> pos % 19, pos / 19<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> [](x, y)<br />        <span class="variable">@level</span>[x + y * 19]<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> []=(x, y, v)<br />        <span class="variable">@level</span>[x + y * 19] = v<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> to_s<br />        (0...16).map {|i| <span class="variable">@level</span>[i * 19, 19]}.join(<span class="string">"\n"</span>)<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    levels = File.readlines(<span class="string">'sokoban_levels.txt'</span>)<br />    levels = levels.map {|line| line.chomp.ljust(19)}.join(<span class="string">"\n"</span>)<br />    levels = levels.split(<span class="string">/\n {19}\n/</span>).map{|level| level.gsub(<span class="string">/\n/</span>, <span class="string">''</span>)}<br /><br />    levels.each <span class="keyword">do</span> |level|<br />      <span class="keyword">redo</span> <span class="keyword">unless</span> Level.new(level.ljust(19*16)).play<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Dennis decided to keep the levels in their text format and lean on Ruby's text processing strengths.  This probably doesn't make for the prettiest of solutions, but it is short.</p>
+			<p>Level.play() is the primary interface for the code above.  It handles one level, start to finish, returning true if the level was solved and false if it was restarted.  It checks for a level being solved by looping until Levels.count_free_crates() returns 0.  That method simply scan()s for "o" characters, returning a count.  When a player enters a move command, work is handed off to the game-play routine Level.move().</p>
+			<p>The first step to performing a move is to find the player.  Level.find_player() uses a combination of index() and simple math to locate a "@" or "+" character.  (Note:  This is a weakness of Dennis' solution.  It only works for levels 19 characters wide and smaller.)  Once found, move() checks the square in front of the player.  If it's a wall, it disallows the move and if it's open, the player moves.  The special case is when there is a crate in front of the player.  When found, move() looks farther forward to ensure that the path is clear and if it is, both crate and player are moved.  All this testing and swapping is handled with Level.[]() and Level.[]=(), which function as expected.</p>
+			<p>For a more abstract OO solution, check out the code sent in by Dave Burt.</p>
+			<p>So, as I've said and we've now seen, implementing Sokoban is pretty easy stuff.  Extra features weren't too popular, but some did allow for a way to restart levels.  That is pretty critical in Sokoban, where you can easily get yourself stuck.  Dave Burt's solution includes a debugging mode that allows you to feed the game engine pure Ruby.  My solution also provided Undo, Save, and Load.  I think a level editor and a solver would make interesting additions.</p>
+			<p>Let's talk about one more thing though.  Interface.  To a game, interface is critical.  Dennis Ranke's and Dave Burt's games read line-oriented input, requiring you to push enter/return to send a move.  While they do allow you to queue up a long line of moves, this tires my poor little fingers out, especially on involved levels.</p>
+			<p>That begs the question, why did they use this approach?</p>
+			<p>Portability, would be my guess.  Reading a single character from a terminal interface can get tricky, depending on which operating system you are running on.  Here's how I do it on Unix:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> read_char<br />        system <span class="string">"stty raw -echo"</span><br />        STDIN.getc<br />    <span class="keyword">ensure</span><br />        system <span class="string">"stty -raw echo"</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Here's one way you might try the same thing on Windows:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">def</span> read_char<br />        require <span class="string">"Win32API"</span><br /><br />        Win32API.new(<span class="string">"crtdll"</span>, <span class="string">"_getch"</span>, [], <span class="string">"L"</span>).Call<br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>If you want your game to run on both, you may need to write code to detect the platform and use the proper method.  Here's one way you might accomplish that:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">begin</span><br />        require <span class="string">"Win32API"</span><br /><br />        <span class="keyword">def</span> read_char<br />            Win32API.new(<span class="string">"crtdll"</span>, <span class="string">"_getch"</span>, [], <span class="string">"L"</span>).Call<br />        <span class="keyword">end</span><br />    <span class="keyword">rescue</span> LoadError<br />        <span class="keyword">def</span> read_char<br />            system <span class="string">"stty raw -echo"</span><br />            STDIN.getc<br />        <span class="keyword">ensure</span><br />            system <span class="string">"stty -raw echo"</span><br />        <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>That doesn't cover every platform, but I believe it will work with Windows and most Unix flavors (including Mac OS X).  That may be enough for some purposes.</p>
+			<p>Other submissions dealt with this differently.  G.Durga Prasad's solution used Curses.  Curses is standard Ruby, but unfortunately not so standard in the Windows world.  A great advantage to this approach was being able to use the arrow keys, which makes for the best interface, I think.</p>
+			<p>I believe Florian Gross also used the arrow keys, but his solution doesn't seem to support my platform.  He used the Ruby/Gosu game library to build a graphical Sokoban.</p>
+			<p>Thomas Leitner provided another Curses solution in addition to one that requires FXRuby, a Ruby interface to the FOX GUI library.  Thomas's submission is also a brilliant piece of AI, since it knew to tell me "You are the greatest player in history!!!"</p>
+			<p>My own solutions either relied on a Unix terminal or a Ruby/OpenGL library being installed.</p>
+			<p>Interface work can get neck deep in external dependancies pretty quick it seems.  Since games are largely defined by their interface, that can make for some complex choices.  Maybe we should hope for a Swing-like addition to the Ruby Standard Library sometime in the future.</p>
+			<p>My thanks to the game writers and game players.</p>
+			<p>Look for our second contributed quiz topic tomorrow morning, this time by Jamis Buck...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121191539im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118540">Dave Burt</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118554">G.Durga Prasad</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118577">Dennis Ranke</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118586">James Edward Gray II</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118601">Florian Gross</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/118958">Thomas Leitner</a></li>
+				<li><a href="/web/20120121191539/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/201932">Morton Goldberg</a></li>
+			</ol>
+			<p><a href="/web/20120121191539/http://rubyquiz.com/quiz5_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121191539/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:15:39 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:01 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

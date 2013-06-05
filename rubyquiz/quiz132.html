@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Crossword Solver (#132)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121223516cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121223516cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz132.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz132.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121223516" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172601/http://rubyquiz.com/quiz132.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 22:35:16 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418132740/http://www.rubyquiz.com/quiz132.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172601/http://rubyquiz.com/quiz132.html" title="17:26:01 Nov 27, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 22:35:16 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122041040/http://rubyquiz.com/quiz132.html" title="4:10:40 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127172601/http://rubyquiz.com/quiz132.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 22:35:16 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052332/http://rubyquiz.com/quiz132.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121223516*/http://rubyquiz.com/quiz132.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>23 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">21 Apr 07 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000100000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:100000000010_2011:-1:000000000000_2012:0:30014000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Crossword Solver (#132)</span>
+			<p>by Eugene Kalenkovich</p>
+			<p>Write a Ruby crossword solver.  Randomly fill a crossword template with words from a dictionary. Use any dictionary you want (/usr/share/dict/words, text of pickaxe, etc.).</p>
+			<p>Template is provided in a file formatted very similarly to one in quiz #10 (http://www.rubyquiz.com/quiz10.html), with "X" substituted with "#". Simple template example:</p>
+			<p class="example"> _ _ _ _ _<br /> <br /> _ # _ # _<br /> <br /> _ _ _ _ _<br /> <br /> _ # _ # _<br /> <br /> _ _ _ _ _</p>
+			<p>Format output any way you want, just make it readable. Each run of the program with big enough dictionary should give a different solution. Example results for a simple template:</p>
+			<p class="example"> F U G U E<br /> <br /> U   U   R<br /> <br /> D E I G N<br /> <br /> G   D   S<br /> <br /> E J E C T<br /> <br />  <br /> <br /> R E S T S<br /> <br /> I   K   T<br /> <br /> N I E C E<br /> <br /> D   W   E<br /> <br /> S U S A N</p>
+			<p>Bonus 1 (simple). Allow partially pre-filled templates:</p>
+			<p class="example"> # # _ # # # # M<br /> <br /> _ _ _ _ _ _ # A<br /> <br /> # # _ # # _ # T<br /> <br /> R U B Y Q U I Z<br /> <br /> U # _ # # _ # #<br /> <br /> B # _ _ _ _ _ _<br /> <br /> Y # # # # _ # #</p>
+			<p>One of result variants:</p>
+			<p class="example">     U         M<br /> <br /> P A S C A L   A<br /> <br />     A     O   T<br /> <br /> R U B Y Q U I Z<br /> <br /> U   L     N<br /> <br /> B   Y E A G E R<br /> <br /> Y         E</p>
+			<p>Bonus 2: Avoid combinatorial explosion. Fill a big template within reasonable time:</p>
+			<p class="example"> _ _ _ _ # _ _ _ _ _ _ _ _ _ # _ _ _ _<br /> <br /> _ # _ # _ # _ # _ # _ # _ # _ # _ # _<br /> <br /> _ _ _ _ _ _ _ _ _ # _ _ _ _ _ _ _ _ _<br /> <br /> _ # _ # _ # _ # _ _ _ # _ # _ # _ # _<br /> <br /> # _ _ _ _ # _ # _ # _ # _ # _ _ _ _ #<br /> <br /> _ # _ # # # _ _ _ _ _ _ _ # # # _ # _<br /> <br /> _ _ _ _ _ _ # # _ # _ # # _ _ _ _ _ _<br /> <br /> _ # _ # # _ # _ _ _ _ _ # _ # # _ # _<br /> <br /> _ _ _ _ _ _ _ _ # _ # _ _ _ _ _ _ _ _<br /> <br /> _ # # _ # _ # _ _ _ _ _ # _ # _ # # _<br /> <br /> _ _ _ _ _ _ _ _ # _ # _ _ _ _ _ _ _ _<br /> <br /> _ # _ # # _ # _ _ _ _ _ # _ # # _ # _<br /> <br /> _ _ _ _ _ _ # # _ # _ # # _ _ _ _ _ _<br /> <br /> _ # _ # # # _ _ _ _ _ _ _ # # # _ # _<br /> <br /> # _ _ _ _ # _ # _ # _ # _ # _ _ _ _ #<br /> <br /> _ # _ # _ # _ # _ _ _ # _ # _ # _ # _<br /> <br /> _ _ _ _ _ _ _ _ _ # _ _ _ _ _ _ _ _ _<br /> <br /> _ # _ # _ # _ # _ # _ # _ # _ # _ # _<br /> <br /> _ _ _ _ # _ _ _ _ _ _ _ _ _ # _ _ _ _<br /> <br /> <br /> <br /> C H A O   L E N I E N T L Y   C O I L<br /> <br /> Y   V   L   M   D   O   E   O   K   A<br /> <br /> S H A R E A B L E   O E D I P A L L Y<br /> <br /> T   I   A   R   N U N   G   E   A   S<br /> <br />   F L I P   Y   T   T   E   C O H N<br /> <br /> I   A       O L I V I E R       O   I<br /> <br /> R E B U F F     F   M     A S H M A N<br /> <br /> R   L     A   B Y T E S   D     A   T<br /> <br /> I N E R T I A L   Y   I S S U A N C E<br /> <br /> T     U   R   A S P E N   O   D     N<br /> <br /> A L T E R E R S   E   U P R O O T E D<br /> <br /> T   O     S   E A S E S   B     O   I<br /> <br /> E X T A N T     B   N     S U N T A N<br /> <br /> S   T       U T R E C H T       A   G<br /> <br />   W E E P   N   A   L   R   D E L L<br /> <br /> P   R   U   T   M A O   U   A   L   M<br /> <br /> R E I N S E R T S   S O M E W H E R E<br /> <br /> O   N   H   U   O   E   A   N   R   A<br /> <br /> S A G S   B E R N A D I N E   U S E D</p>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>Many of these solutions got pretty sluggish when run on large crosswords.  The reason is simple:  the search space for this problem is quite large.  You have to try a significant number of words in each position before you will find a good fit for the board.</p>
+			<p>The good news is that this summer Google has paid to bring a very powerful search tool to Ruby.  I've been lucky enough to have a ring-side seat for this process and now I want to show you a little about this new tool.</p>
+			<p>You've probably seen Andreas Launila solving a fair number of the recent quizzes using his Gecode/R library.  Gecode/R is a wrapper over the C Gecode library for constraint programming.  Constraint programming is a technique for describing problems in a way that a tool like Gecode can then use to search the solution space and find answers for you.  Gecode is a very smart little searcher though and will heavily prune the search space based on your constraints.  This leads to some mighty quick results, as you can see:</p>
+			<p class="example">$ time ruby solve_crossword.rb /path/to/scowl-6/final/english-words.20<br />                               &lt; /path/to/test_board.txt<br />Reading the dictionary...<br />Please enter the template (end with ^D)<br />Building the model...<br />Searching for a solution...<br />A B I D E<br /><br />N   C   A<br /><br />G H O S T<br /><br />E   N   E<br /><br />L A S E R<br /><br />real    0m0.430s<br />user    0m0.360s<br />sys     0m0.068s</p>
+			<p>Let's have a look at Andreas's code to see how it sets things up for Gecode.  Here's the start of the code:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">'enumerator'</span><br />    require <span class="string">'rubygems'</span><br />    require <span class="string">'gecoder'</span><br /><br />    <span class="comment"># The base we use when converting words to and from numbers.</span><br />    BASE = (<span class="string">'a'</span>..<span class="string">'z'</span>).to_a.size<br />    <span class="comment"># The offset of characters compared to digits in word-numbers.</span><br />    OFFSET = <span class="string">'a'</span>[0]<br />    <span class="comment"># The range of integers that we allow converted words to be in. We are</span><br />    <span class="comment"># only using the unsigned half, we could use both halves, but it would</span><br />    <span class="comment"># complicate things without giving a larger allowed word length.</span><br />    ALLOWED_INT_RANGE = 0..Gecode::Raw::Limits::Int::INT_MAX<br />    <span class="comment"># The maximum length of a word allowed.</span><br />    MAX_WORD_LENGTH = (Math.log(ALLOWED_INT_RANGE.last) /<br />      Math.log(BASE)).floor<br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>You can see that Andreas loads Enumerator and Gecode/R here as well as setting up some constants.  The constants relate to how this code will model words in the database.  The plan here is to represent words as numbers made up of base 26 digits which represent letters of the alphabet.  This will allow Andreas to use Gecode's integer variables to model the problem.  The downside is that word size will be limited by the maximum size of an integer and thus this solution has a weakness in that it can't be used to solve the larger puzzles.</p>
+			<p>You can see this conversion from numbers to words in the Dictionary class:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    <span class="comment"># Describes an immutable dictionary which represents all contained words</span><br />    <span class="comment"># as numbers of base BASE where each digit is the corresponding letter</span><br />    <span class="comment"># itself converted to a number of base BASE.</span><br />    <span class="keyword">class</span> Dictionary<br />      <span class="comment"># Creates a dictionary from the contents of the specified dictionary</span><br />      <span class="comment"># file which is assumed to contain one word per line and be sorted.</span><br />      <span class="keyword">def</span> initialize(dictionary_location)<br />        <span class="variable">@word_arrays</span> = []<br />        File.open(dictionary_location) <span class="keyword">do</span> |dict|<br />          previous_word = <span class="keyword">nil</span><br />          dict.each_line <span class="keyword">do</span> |line|<br />            word = line.chomp.downcase<br />            <span class="comment"># Only allow words that only contain the characters a-z and are</span><br />            <span class="comment"># short enough.</span><br />            <span class="keyword">next</span> <span class="keyword">if</span> previous_word == word <span class="keyword">or</span> word.size &gt; MAX_WORD_LENGTH <span class="keyword">or</span><br />              word =~ <span class="string">/[^a-z]/</span><br />            (<span class="variable">@word_arrays</span>[word.length] ||= []) &lt;&lt; <span class="keyword">self</span>.<span class="keyword">class</span>.s_to_i(word)<br />            previous_word = word<br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Gets an enumeration containing all numbers representing word of the</span><br />      <span class="comment"># specified length.</span><br />      <span class="keyword">def</span> words_of_size(n)<br />        <span class="variable">@word_arrays</span>[n] || []<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Converts a string to a number of base BASE (inverse of #i_to_s ).</span><br />      <span class="keyword">def</span> <span class="keyword">self</span>.s_to_i(string)<br />        string.downcase.unpack(<span class="string">'C*'</span>).map{ |x| x - OFFSET }.to_number(BASE)<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Converts a number of base BASE back to the corresponding string</span><br />      <span class="comment"># (inverse of #s_to_i ).</span><br />      <span class="keyword">def</span> <span class="keyword">self</span>.i_to_s(int)<br />        res = []<br />        loop <span class="keyword">do</span><br />          digit = int % BASE<br />          res &lt;&lt; digit<br />          int /= BASE<br />          <span class="keyword">break</span> <span class="keyword">if</span> int.zero?<br />        <span class="keyword">end</span><br />        res.reverse.map{ |x| x + OFFSET }.pack(<span class="string">'C*'</span>)<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>We've already talked about the number representation which is the majority of the code here.  Do have a look at initialize() and words_of_size() though, to see how words are being stored.  An Array is created where indices represent word lengths and the values at those indices are nested Arrays of words with that length.  This makes getting a list of words that could work in a given slot of the puzzle easy and fast.</p>
+			<p>The s_to_i() method above relies on a helper method added to Array, which is simply this:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Array<br />      <span class="comment"># Computes a number of the specified base using the array's elements</span><br />      <span class="comment"># as digits.</span><br />      <span class="keyword">def</span> to_number(base = 10)<br />        inject{ |result, variable| variable + result * base }<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Again, this is just another piece of the conversion I explained earlier.</p>
+			<p>With a Dictionary created, it's time to model the problem in Gecode constraints:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># Models the solution to a partially completed crossword.</span><br />    <span class="keyword">class</span> Crossword &lt; Gecode::Model<br />      <span class="comment"># The template should take the format described in RubyQuiz #132 . The</span><br />      <span class="comment"># words used are selected from the specified dictionary.</span><br />      <span class="keyword">def</span> initialize(template, dictionary)<br />        <span class="variable">@dictionary</span> = dictionary<br /><br />        <span class="comment"># Break down the template and create a corresponding square  matrix.</span><br />        <span class="comment"># We let each square be represented by integer variable with domain</span><br />        <span class="comment"># -1...BASE where -1 signifies # and the rest signify letters.</span><br />        squares = template.split(<span class="string">/\n\s*\n/</span>).map!{ |line| line.split(<span class="string">' '</span>) }<br />        <span class="variable">@letters</span> = int_var_matrix(squares.size, squares.first.size,<br />          -1...BASE)<br /><br />        <span class="comment"># Do an initial pass, filling in the prefilled squares.</span><br />        squares.each_with_index <span class="keyword">do</span> |row, i|<br />          row.each_with_index <span class="keyword">do</span> |letter, j|<br />            <span class="keyword">unless</span> letter == <span class="string">'_'</span><br />              <span class="comment"># Prefilled letter.</span><br />              <span class="variable">@letters</span>[i,j].must == <span class="keyword">self</span>.<span class="keyword">class</span>.s_to_i(letter)<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        <span class="comment"># Add the constraint that sequences longer than one letter must form</span><br />        <span class="comment"># words. @words will accumulate all word variables created.</span><br />        <span class="variable">@words</span> = []<br />        <span class="comment"># Left to right pass.</span><br />        left_to_right_pass(squares, <span class="variable">@letters</span>)<br />        <span class="comment"># Top to bottom pass.</span><br />        left_to_right_pass(squares.transpose, <span class="variable">@letters</span>.transpose)<br /><br />        branch_on wrap_enum(<span class="variable">@words</span>), :variable =&gt; :largest_degree,<br />          :value =&gt; :min<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Displays the solved crossword in the same format as shown in the</span><br />      <span class="comment"># quiz examples.</span><br />      <span class="keyword">def</span> to_s<br />        output = []<br />        <span class="variable">@letters</span>.values.each_slice(<span class="variable">@letters</span>.column_size) <span class="keyword">do</span> |row|<br />          output &lt;&lt; row.map{ |x| <span class="keyword">self</span>.<span class="keyword">class</span>.i_to_s(x) }.join(<span class="string">' '</span>)<br />        <span class="keyword">end</span><br />        output.join(<span class="string">"\n\n"</span>).upcase.gsub(<span class="string">'#'</span>, <span class="string">' '</span>)<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>After storing the dictionary, this code breaks the crossword template down into an integer matrix created using the Gecode/R helper method int_var_matrix().  This will be our puzzle of words Gecode is expected to fill in.</p>
+			<p>The next two sections of the initialize() method build up the constraints.  These are the rules that must be satisfied when we have found a correct solution.</p>
+			<p>The first of these chunks of code sets rules for any letters that were given to us in the template.  This code tells Gecode that the number in that position of the matrix must equal the value of the provided letter.  Take a good look at this RSpec like syntax because Andreas has spent a considerable effort on making it easy to express your constraints in a natural syntax and I hope you will agree with me that the end result is quite nice.</p>
+			<p>The other chunk of constraints are defined using a helper method we will examine in just a moment.  The result of this code though is to ensure that the numbers selected represent letters that form actual words.</p>
+			<p>The final step in describing the problem to Gecode is to choose a branching strategy.  This tells Gecode which variables it will need to make guesses about in order to find a solution as well as selecting a heuristic to use when guesses must be made.  In this case, words will be selected based on how much of the overall puzzle they affect, hopefully ruling out large sections of the search space quickly.</p>
+			<p>The problem model we just examined is pretty much always how constraint programming goes.  You just need to remember the three steps:  create some variables for Gecode to fill in, define the rules for the values you want Gecode to find, and select a strategy for Gecode to use in solving the problem.</p>
+			<p>The to_s() method above just creates the output used in the quiz examples for display to the user.</p>
+			<p>Let's have a look at the helper methods used in the model definition now:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />      private<br /><br />      <span class="comment"># Parses the template from left to right, line for line, constraining</span><br />      <span class="comment"># sequences of two or more subsequent squares to form a word in the</span><br />      <span class="comment"># dictionary.</span><br />      <span class="keyword">def</span> left_to_right_pass(template, variables)<br />        template.each_with_index <span class="keyword">do</span> |row, i|<br />          letters = []<br />          row.each_with_index <span class="keyword">do</span> |letter, j|<br />            <span class="keyword">if</span> letter == <span class="string">'#'</span><br />              must_form_word(letters) <span class="keyword">if</span> letters.size &gt; 1<br />              letters = []<br />            <span class="keyword">else</span><br />              letters &lt;&lt; variables[i,j]<br />            <span class="keyword">end</span><br />          <span class="keyword">end</span><br />          must_form_word(letters) <span class="keyword">if</span> letters.size &gt; 1<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Converts a word from integer form to string form, including the #.</span><br />      <span class="keyword">def</span> <span class="keyword">self</span>.i_to_s(int)<br />        <span class="keyword">if</span> int == -1<br />          <span class="keyword">return</span> <span class="string">'#'</span><br />        <span class="keyword">else</span><br />          Dictionary.i_to_s(int)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Converts a word from string form to integer form, including the #.</span><br />      <span class="keyword">def</span> <span class="keyword">self</span>.s_to_i(string)<br />        <span class="keyword">if</span> string == <span class="string">'#'</span><br />          <span class="keyword">return</span> -1<br />        <span class="keyword">else</span><br />          Dictionary.s_to_i(string)<br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># Constrains the specified variables to form a word contained in the</span><br />      <span class="comment"># dictionary.</span><br />      <span class="keyword">def</span> must_form_word(letter_vars)<br />        raise <span class="string">'The word is too long.'</span> <span class="keyword">if</span> letter_vars.size &gt; MAX_WORD_LENGTH<br />        <span class="comment"># Create a variable for the word with the dictionary's words as</span><br />        <span class="comment"># domain and add the constraint.</span><br />        word = int_var <span class="variable">@dictionary</span>.words_of_size(letter_vars.size)<br />        letter_vars.to_number(BASE).must == word<br />        <span class="variable">@words</span> &lt;&lt; word<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The i_to_s() and s_to_i() methods here are mostly just wrappers over the Dictionary counterparts we examined earlier.  The real interest is the other two methods that together define the word constraints.</p>
+			<p>First, left_to_right_pass() is used to walk the puzzle looking for runs of two or more letters that will need to become words in the Dictionary.  Each time it finds one, a hand-off is made to must_form_word(), which builds the actual constraint.</p>
+			<p>With the problem modeled, it takes just a touch more code to turn this into a full solution:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    puts <span class="string">'Reading the dictionary...'</span><br />    dictionary = Dictionary.new(ARGV.shift || <span class="string">'/usr/share/dict/words'</span>)<br />    puts <span class="string">'Please enter the template (end with ^D)'</span><br />    template = <span class="string">''</span><br />    loop <span class="keyword">do</span><br />      line = <span class="global">$stdin</span>.gets<br />      <span class="keyword">break</span> <span class="keyword">if</span> line.nil?<br />      template &lt;&lt; line<br />    <span class="keyword">end</span><br />    puts <span class="string">'Building the model...'</span><br />    model = Crossword.new(template, dictionary)<br />    puts <span class="string">'Searching for a solution...'</span><br />    puts((model.solve! || <span class="string">'Failed'</span>).to_s)<br /><br /></div></div>
+			<p>You can see that this application code is just reading in the dictionary and template, then constructing a model and pulling a solution with the solve!() method.  That's all it really takes to get answers after describing your problem to Gecode.</p>
+			<p>If you want to continue exploring Andreas's Gecode/R wrapper, drop by the Web site which has links to many useful resources:</p>
+			<p><a href="/web/20120121223516/http://gecoder.rubyforge.org/">Gecode/R</a></p>
+			<p>My thanks to all who put a good deal of effort into a hard search problem.</p>
+			<p>Tomorrow we will take another peek at our dictionary, this time to see what numbers are hiding in there...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121223516im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262387">Raf Coremans</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262393">Andreas Launila</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262568">Eugene Kalenkovich</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262650">Christian Neukirchen</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262679">James Koppel</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262741">Justin Ethier</a></li>
+				<li><a href="/web/20120121223516/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/262792">Rub&eacute;n Medell&iacute;n</a></li>
+			</ol>
+			<p><a href="/web/20120121223516/http://rubyquiz.com/quiz132_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121223516/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 22:35:16 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:10:55 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

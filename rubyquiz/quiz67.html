@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>Ruby Quiz - metakoans.rb (#67)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120117023141cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120117023141cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz67.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "17";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz67.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120117023141" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110826105823/http://rubyquiz.com/quiz67.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="26 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 2:31:41 Jan 17, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418160928/http://www.rubyquiz.com/quiz67.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120115052649/http://rubyquiz.com/quiz67.html" title="5:26:49 Jan 15, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 2:31:41 Jan 17, 2012">17</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120418160928/http://www.rubyquiz.com/quiz67.html" title="16:09:28 Apr 18, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127173821/http://rubyquiz.com/quiz67.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 2:31:41 Jan 17, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052530/http://rubyquiz.com/quiz67.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120117023141*/http://rubyquiz.com/quiz67.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>37 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">12 Apr 06 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000310000100_2007:-1:000101100000_2008:-1:000020000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000010010000_2012:0:40016010a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">metakoans.rb (#67)</span>
+			<p>by ara.t.howard</p>
+			<p>[ Editors note:  This quiz file can be downloaded:</p>
+			<p><a href="/web/20120117023141/http://rubyquiz.com/metakoans.rb">metakoans.rb</a></p>
+			<p>Partial solutions are welcome.  --JEG2 ]</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#</span><br />    <span class="comment"># metakoans.rb is an arduous set of exercises designed to stretch</span><br />    <span class="comment"># meta-programming muscle.  the focus is on a single method 'attribute' which</span><br />    <span class="comment"># behaves much like the built-in 'attr', but whose properties require delving</span><br />    <span class="comment"># deep into the depths of meta-ruby.  usage of the 'attribute' method follows</span><br />    <span class="comment"># the general form of</span><br />    <span class="comment">#   </span><br />    <span class="comment">#   class C</span><br />    <span class="comment">#     attribute 'a'</span><br />    <span class="comment">#   end</span><br />    <span class="comment">#   </span><br />    <span class="comment">#   o = C::new</span><br />    <span class="comment">#   o.a = 42  # setter - sets @a</span><br />    <span class="comment">#   o.a       # getter - gets @a </span><br />    <span class="comment">#   o.a?      # query  - true if @a</span><br />    <span class="comment">#   </span><br />    <span class="comment"># but reaches much farther than the standard 'attr' method as you will see</span><br />    <span class="comment"># shortly.</span><br />    <span class="comment">#   </span><br />    <span class="comment"># your path, should you choose to follow it, is to write a single file</span><br />    <span class="comment"># 'knowledge.rb' implementing all functionality required by the koans below.</span><br />    <span class="comment"># as a student of meta-programming your course will be guided by a guru whose</span><br />    <span class="comment"># wisdom and pithy sayings will assist you on your journey.</span><br />    <span class="comment">#   </span><br />    <span class="comment"># a successful student will eventually be able to do this   </span><br />    <span class="comment">#   </span><br />    <span class="comment">#   harp:~ &gt; ruby metakoans.rb knowledge.rb</span><br />    <span class="comment">#   koan_1 has expanded your awareness</span><br />    <span class="comment">#   koan_2 has expanded your awareness</span><br />    <span class="comment">#   koan_3 has expanded your awareness</span><br />    <span class="comment">#   koan_4 has expanded your awareness</span><br />    <span class="comment">#   koan_5 has expanded your awareness</span><br />    <span class="comment">#   koan_6 has expanded your awareness</span><br />    <span class="comment">#   koan_7 has expanded your awareness</span><br />    <span class="comment">#   koan_8 has expanded your awareness</span><br />    <span class="comment">#   koan_9 has expanded your awareness</span><br />    <span class="comment">#   mountains are again merely mountains</span><br />    <span class="comment">#   </span><br /><br /><br />    <span class="keyword">module</span> MetaKoans<br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide getter, setter, and query to instances</span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_1<br />        c = Class::new {<br />          attribute <span class="string">'a'</span><br />        }<br /><br />        o = c::new<br /><br />        assert{ <span class="keyword">not</span> o.a? }<br />        assert{ o.a = 42 }<br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide getter, setter, and query to classes </span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_2<br />        c = Class::new {<br />          <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span><br />            attribute <span class="string">'a'</span><br />          <span class="keyword">end</span><br />        }<br /><br />        assert{ <span class="keyword">not</span> c.a? }<br />        assert{ c.a = 42 }<br />        assert{ c.a == 42 }<br />        assert{ c.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide getter, setter, and query to modules at module</span><br />    <span class="comment"># level</span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_3<br />        m = Module::new {<br />          <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span><br />            attribute <span class="string">'a'</span><br />          <span class="keyword">end</span><br />        }<br /><br />        assert{ <span class="keyword">not</span> m.a? }<br />        assert{ m.a = 42 }<br />        assert{ m.a == 42 }<br />        assert{ m.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide getter, setter, and query to modules which operate</span><br />    <span class="comment"># correctly when they are included by or extend objects</span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_4<br />        m = Module::new {<br />          attribute <span class="string">'a'</span><br />        }<br /><br />        c = Class::new {<br />          include m<br />          extend m<br />        }<br /><br />        o = c::new<br /><br />        assert{ <span class="keyword">not</span> o.a? }<br />        assert{ o.a = 42 }<br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br /><br />        assert{ <span class="keyword">not</span> c.a? }<br />        assert{ c.a = 42 }<br />        assert{ c.a == 42 }<br />        assert{ c.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide getter, setter, and query to singleton objects </span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_5<br />        o = Object::new<br /><br />        <span class="keyword">class</span> &lt;&lt; o<br />          attribute <span class="string">'a'</span><br />        <span class="keyword">end</span><br /><br />        assert{ <span class="keyword">not</span> o.a? }<br />        assert{ o.a = 42 }<br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide a method for providing a default value as hash</span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_6<br />        c = Class::new {<br />          attribute <span class="string">'a'</span> =&gt; 42<br />        }<br /><br />        o = c::new<br /><br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />        assert{ (o.a = <span class="keyword">nil</span>) == <span class="keyword">nil</span> }<br />        assert{ <span class="keyword">not</span> o.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide a method for providing a default value as block</span><br />    <span class="comment"># which is evaluated at instance level </span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_7<br />        c = Class::new {<br />          attribute(<span class="string">'a'</span>){ fortytwo }<br />          <span class="keyword">def</span> fortytwo<br />            42<br />          <span class="keyword">end</span><br />        }<br /><br />        o = c::new<br /><br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />        assert{ (o.a = <span class="keyword">nil</span>) == <span class="keyword">nil</span> }<br />        assert{ <span class="keyword">not</span> o.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># 'attribute' must provide inheritance of default values at both class and</span><br />    <span class="comment"># instance levels</span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_8<br />        b = Class::new {<br />          <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span><br />            attribute <span class="string">'a'</span> =&gt; 42<br />            attribute(<span class="string">'b'</span>){ a }<br />          <span class="keyword">end</span><br />          attribute <span class="string">'a'</span> =&gt; 42<br />          attribute(<span class="string">'b'</span>){ a }<br />        }<br /><br />        c = Class::new b<br /><br />        assert{ c.a == 42 }<br />        assert{ c.a? }<br />        assert{ (c.a = <span class="keyword">nil</span>) == <span class="keyword">nil</span> }<br />        assert{ <span class="keyword">not</span> c.a? }<br /><br />        o = c::new<br /><br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />        assert{ (o.a = <span class="keyword">nil</span>) == <span class="keyword">nil</span> }<br />        assert{ <span class="keyword">not</span> o.a? }<br />      <span class="keyword">end</span><br />    <span class="comment">#</span><br />    <span class="comment"># into the void </span><br />    <span class="comment">#</span><br />      <span class="keyword">def</span> koan_9<br />        b = Class::new {<br />          <span class="keyword">class</span> &lt;&lt; <span class="keyword">self</span><br />            attribute <span class="string">'a'</span> =&gt; 42<br />            attribute(<span class="string">'b'</span>){ a }<br />          <span class="keyword">end</span><br />          include Module::new {<br />            attribute <span class="string">'a'</span> =&gt; 42<br />            attribute(<span class="string">'b'</span>){ a }<br />          }<br />        }<br /><br />        c = Class::new b<br /><br />        assert{ c.a == 42 }<br />        assert{ c.a? }<br />        assert{ c.a = <span class="string">'forty-two'</span> }<br />        assert{ c.a == <span class="string">'forty-two'</span> }<br />        assert{ b.a == 42 }<br /><br />        o = c::new<br /><br />        assert{ o.a == 42 }<br />        assert{ o.a? }<br />        assert{ (o.a = <span class="keyword">nil</span>) == <span class="keyword">nil</span> }<br />        assert{ <span class="keyword">not</span> o.a? }<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> assert()<br />        bool = <span class="keyword">yield</span><br />        abort <span class="string">"assert{ #{ caller.first[%r/^.*(?=:)/] } } #=&gt; #{ bool.inspect }"</span> <span class="keyword">unless</span> bool<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /><br />    <span class="keyword">class</span> MetaStudent<br />      <span class="keyword">def</span> initialize knowledge<br />        require knowledge<br />      <span class="keyword">end</span><br />      <span class="keyword">def</span> ponder koan<br />        <span class="keyword">begin</span><br />          send koan<br />          <span class="keyword">true</span><br />        <span class="keyword">rescue</span> =&gt; e<br />          STDERR.puts <span class="string">%Q[#{ e.message } (#{ e.class })\n#{ e.backtrace.join 10.chr }]</span><br />          <span class="keyword">false</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /><br />    <span class="keyword">class</span> MetaGuru<br />      require <span class="string">"singleton"</span><br />      include Singleton<br /><br />      <span class="keyword">def</span> enlighten student<br />        student.extend MetaKoans<br /><br />        koans = student.methods.grep(<span class="string">%r/koan/</span>).sort<br /><br />        attainment = <span class="keyword">nil</span><br /><br />        koans.each <span class="keyword">do</span> |koan|<br />          awakened = student.ponder koan<br />          <span class="keyword">if</span> awakened<br />            puts <span class="string">"#{ koan } has expanded your awareness"</span><br />            attainment = koan<br />          <span class="keyword">else</span><br />            puts <span class="string">"#{ koan } still requires meditation"</span><br />            <span class="keyword">break</span><br />          <span class="keyword">end</span><br />        <span class="keyword">end</span><br /><br />        puts(<br />          <span class="keyword">case</span> attainment<br />            <span class="keyword">when</span> <span class="keyword">nil</span><br />              <span class="string">"mountains are merely mountains"</span><br />            <span class="keyword">when</span> <span class="string">'koan_1'</span>, <span class="string">'koan_2'</span><br />              <span class="string">"learn the rules so you know how to break them properly"</span><br />            <span class="keyword">when</span> <span class="string">'koan_3'</span>, <span class="string">'koan_4'</span><br />              <span class="string">"remember that silence is sometimes the best answer"</span><br />            <span class="keyword">when</span> <span class="string">'koan_5'</span>, <span class="string">'koan_6'</span><br />              <span class="string">"sleep is the best meditation"</span><br />            <span class="keyword">when</span> <span class="string">'koan_7'</span><br />              <span class="string">"when you lose, don't lose the lesson"</span><br />            <span class="keyword">when</span> <span class="string">'koan_8'</span><br />              <span class="string">"things are not what they appear to be: nor are they otherwise"</span><br />            <span class="keyword">else</span><br />              <span class="string">"mountains are again merely mountains"</span><br />          <span class="keyword">end</span><br />        )<br />      <span class="keyword">end</span><br />      <span class="keyword">def</span> <span class="keyword">self</span>::method_missing m, *a, &amp;b<br />        instance.send m, *a, &amp;b<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /><br /><br />    knowledge = ARGV.shift <span class="keyword">or</span> abort <span class="string">"#{ $0 } knowledge.rb"</span><br />    student = MetaStudent::new knowledge<br />    MetaGuru.enlighten student<br /></div></div>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>This was a wildly popular quiz with solutions all over the board.  I will do my best to hit the highlights below...</p>
+			<p class="example">Where to Define</p>
+			<p>Probably the first question that needs answering when meta-programming is, where do I stick this method?  Some defined it at the top-level (creating a private method on Object), others reopened Object to stick it inside, and a third group defined a method in Module.  All three would satisfy the tests.  The real question is, how do we know which one is best?</p>
+			<p>I used the extremely unscientific method of copy Ruby.  The core method attr() is defined in Module, so it seemed like attribute() belonged there too.  Ross Bamford had much more intelligent reasoning.  Here is Ross's response to Adam Shelly's question about why people were using Module when Object works:</p>
+			<p class="example">Well, you're extending Object with a method that relies on methods<br />defined in Module (class_eval), and your method is available in places<br />where it really didn't ought to be. <br /><br />[snip quoted solution]<br /><br />attribute :oops<br /><br />-:7:in `attribute': undefined method `class_eval' for main:Object<br />(NoMethodError)<br />        from -:3:in `attribute'<br />        from -:15<br /><br />By defining an instance method on Module (from which Class inherits) you<br />ensure that a) class_eval is there, and b) attribute can be called only<br />in a module/class definition context.</p>
+			<p>That convinced me.  Now that we know where it goes, let's break down a solution.</p>
+			<p class="example">A Common Approach</p>
+			<p>Here's a solution, similar to many submitted, by Christian Neukirchen:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Module<br />      <span class="keyword">def</span> attribute(a, &amp;block)<br />        <span class="keyword">if</span> a.kind_of? Hash<br />          a, default = a.to_a.first<br />        <span class="keyword">else</span><br />          default = <span class="keyword">nil</span><br />        <span class="keyword">end</span><br /><br />        a = a.to_sym<br />        ivar = <span class="string">"@#{a}"</span><br /><br />        define_method(a) {<br />          <span class="keyword">if</span> instance_variables.include? ivar<br />            instance_variable_get ivar<br />          <span class="keyword">else</span><br />            block ? instance_eval(&amp;block) : default<br />          <span class="keyword">end</span><br />        }<br />        define_method(<span class="string">"#{a}="</span>) { |v| instance_variable_set ivar, v }<br />        define_method(<span class="string">"#{a}?"</span>) { !!__send__(a) }<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>The if statement at the beginning of the method handles the case where a default argument is, or isn't, provided.  If the first argument to attribute() was a Hash, a default was given and it is extracted here.  Note that this solution just pulls a single pair from the Hash.  That's all the tests required, but many chose to support declaring multiple arguments at once as we will see in a bit.  If a default was not provided, it is set to nil.</p>
+			<p>The next two lines place the attribute method and instance variable names in local variables for future use.</p>
+			<p>The last chunk of code defines the three methods attribute() is expected to create.  Note that they are built using define_method(), which takes the name of the method to define and a block of code to execute as the method body.  Now remember, Ruby's blocks are closures and thus have access to the local variables defined in the scope where they are created.  That's the key to this kind of solution, as the code needs to access things like the default argument and/or the provided block.</p>
+			<p>The first method, the attribute getter, checks to see if the instance_variables() of the class include?() our new attribute.  In other words, this is a check to see if the variable has been set yet.  If it has, the stored value is retrieved and returned with a call to instance_variable_get().  If the variable is not set, the code executes a block, if provided, or uses the default (which may have been set to nil earlier).  The tests required that the block have access to the instance though, so the block is instance_eval()ed when invoked.</p>
+			<p>The second method, the setter, is trivial.  Just stuff the new value in the variable with instance_variable_set().</p>
+			<p>The third and final method, for querying, uses a clever trick.  Technically, the tests only required that the query method return the stored value and some implemented it that way.  Here's Florian Gross's implementation (name holds the attribute's name):</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    alias_method(:<span class="string">"#{name}?"</span>, name)<br /><br /></div></div>
+			<p>The real purpose of the method though is to find out if the attribute currently holds a true or false value.  Christian made sure only this true/false answer was returned.  The code works by fetching the value with __send__() (calling the getter) and hitting it with Ruby's ! operator.  That will convert the value to it's opposite, but the key to the conversion is that it will only return true or false.  We really don't want the opposite though, so the ! operator is applied again.  That takes us back to the original truth of the argument, but now in true/false form.</p>
+			<p class="example">Using def Instead of define_method()</p>
+			<p>You can solve this challenge by defining methods normally, but you have to approach it differently.  First, def is a keyword and not a method in Ruby.  This has two effects:  you can't just inline the definitions and the method bodies are not closures.  Neither of these is a deal-breaker, they just require an additional tool.  Here's a solution introducing class_eval(), by Wilson Bilkovich (minus the clever poems that made it exactly 42 lines):</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="keyword">class</span> Module<br />      <span class="keyword">def</span> attribute(name, &amp;block)<br />        <span class="keyword">return</span> name.map {|k,v| attribute(k) {v}} <span class="keyword">if</span> name.is_a?(Hash)<br />        define_method(<span class="string">"__#{name}__"</span>, block || proc{<span class="keyword">nil</span>})<br />        class_eval <span class="string">&lt;&lt;-ZEN<br />          attr_writer :#{name}<br />          def #{name}<br />            defined?(@#{name}) ? @#{name} : @#{name} = __#{name}__<br />          end<br />          def #{name}?<br />            true unless #{name}.nil?<br />          end<br />        ZEN</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>Here you can see support for multiple attributes right off the bat.  Notice that it works just by recursively calling attribute(), passing a block that returns the default argument.  That makes it so you only have one special case, the block.  I like the simplification there.</p>
+			<p>Next you can see that this code uses define_method() to set a __attribute_name__() method, which will return the default value for that attribute.  It uses the block as a method body, if one was provided.  This eliminates the need for instance_eval() we saw in the last solution, since the method body naturally works on the object instance.  In the event we don't have a block for the body, one is manufactured to return a default nil.</p>
+			<p>Now we get to defining the three methods.  Because we are using def here and have lost the closure trick, a new trick is needed to pass down the attribute name.  Wilson wraps the definitions in class_eval(), which just executes the code in the context of the class.  The String argument version of class_eval() is used here (with a heredoc for the String) so that the attribute name can be interpolated as needed.</p>
+			<p>This time the setter is generated with attr_writer(), which should be familiar enough to everyone I hope.</p>
+			<p>The getter uses some new techniques though.  First, it checks for the instance variable using Ruby's defined? keyword.  This should be faster for classes that have a bunch of instance variables because the Array doesn't need to be constructed and traversed.  Just as with the first solution, the variable is returned if set.  If it's not, the default method created earlier is invoked to set the variable (efficient, since it will only happen once) and that value is returned.</p>
+			<p>We will skip the query method this time, since I don't believe it functions as Ara intended.  Some people, including myself, misunderstood the intentions of this method.  No big deal.</p>
+			<p class="example">The Inner Meaning Approach</p>
+			<p>This week I am going to reverse my normal strategy of suggesting everyone read all the solutions and recommend that people spend some time studying the quiz itself.  It's really quite clever if you stop and think about it.</p>
+			<p>Ara couldn't use Test::Unit in this case, because the koans needed to be tried in a set order and the process halted as soon as one failed.  Given that Ara rolled up a linear fail-fast test framework just for the purposes of this quiz.</p>
+			<p>Well that and you simply have to respect a framework with lines like:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    MetaGuru.enlighten student<br /><br /></div></div>
+			<p>Once you have studied the quiz a bit, one of the solutions will take on a whole new meaning for you.  Ilmari Heikkinen sent in a solution that passes quiz tests not by properly implementing the attribute() method, but instead by altering parts of the quiz framework.  When you think about it, this kind of solution is also a form of meta-programming and thus was probably equally enlightening.</p>
+			<p>Ilmari's code is actually eight solutions in one and it randomly selects which one it will bypass the tests with when run.  Even more fun, these solutions come with great sayings in the spirit of the quiz itself.</p>
+			<p>Here are a few of my favorite hacks used by Ilmari:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment"># ...</span><br /><br />    puts <span class="string">"sometimes thinking about a problem makes it worse"</span><br />    <span class="keyword">class</span> MetaStudent; <span class="keyword">def</span> ponder(a) 0 <span class="keyword">end</span> <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br />    puts <span class="string">"don't send a student to do a guru's job"</span><br />    <span class="keyword">class</span> MetaStudent; <span class="keyword">def</span> send(a) 0 <span class="keyword">end</span> <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br />    puts <span class="string">"question what you have been taught"</span><br />    <span class="keyword">module</span> MetaKoans; 9.times{|i| eval(<span class="string">"def koan_#{i+1};0 end"</span>)} <span class="keyword">end</span><br /><br />    <span class="comment"># ...</span><br /><br /></div></div>
+			<p>The first one replaces the method the MetaStudent uses to ponder() each koan with a trivial implementation.  The second works in a similar way replacing send(), which is used to call the koans themselves, with a trivial implementation.  The third redefines the problems themselves with trivial implementations.  Don't miss the other five!</p>
+			<p class="example">Wrap Up</p>
+			<p>See <a href="/web/20120117023141/http://kinderman.net/articles/2007/02/05/problems-with-the-metakoans-rb-ruby-quiz">Ryan Kinderman's write up on this quiz</a> for a description of some problems he encountered.</p>
+			<p>My thanks to the quiz creator and numerous solvers for what turned out to be a fun little diversion.  We must do more problems like this!</p>
+			<p>Tomorrows problem is the first from Caleb Tennis, after I killed two previous suggestions.  (Yes, I'm very, very mean.)  Luckily Caleb didn't give up on me and this problem is a great one...</p>
+		</div>
+		<div id="logo"><img src="/web/20120117023141im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180569">Luke Blanshard</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180570">Wilson Bilkovich</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180571">Christoffer Lern&ouml;</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180572">Florian Gro&szlig;</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180573">Ross Bamford</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180574">Sylvain Joyeux</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180575">George Ogata</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180582">Sander Land</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180586">Eero Saynatkari</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180588">Jim Freeze</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180590">Christian Neukirchen</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180591">Phil Tomson</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180593">Meador Inge</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180594">James Edward Gray II</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180609">MenTaLguY</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180619">Ryan Leavengood</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180621">Ilmari Heikkinen</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180625">Greg Millam</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180626">Adam Shelly</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180630">Hitesh Jasani</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180640">Michael Q. Harris</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180643">aurelianito</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180706">Gustav Munkby</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180732">Greg Millam (2)</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180737">Justin Bailey</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180739">Patrick Hurley</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180757">ToRA</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180766">Timothy Goddard</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180844">Jeremy Hinegardner</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180850">Michael Ulm</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180882">Mike Harris</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180901">Mike Harris (2)</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/180943">Adam Shelly (2)</a></li>
+				<li><a href="/web/20120117023141/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/181138">David Tran</a></li>
+			</ol>
+			<p><a href="/web/20120117023141/http://rubyquiz.com/quiz67_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120117023141/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 2:31:41 Jan 17, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:09:59 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

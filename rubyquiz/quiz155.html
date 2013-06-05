@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<!-- Start Wayback Rewrite JS Include -->
+<script type="text/javascript" src="/static/js/jwplayer/jwplayer.js" ></script>
+<script type="text/javascript" src="/static/js/video-embed-rewriter.js"></script>
+<script type="text/javascript">
+function initYTVideo(id)
+{
+	_wmVideos_.init("/web/", id);
+}
+</script>
+<!-- End Wayback Rewrite JS Include -->
+
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Ruby Quiz - Parsing JSON (#155)</title>
+	<link rel="stylesheet" type="text/css" href="/web/20120121213734cs_/http://rubyquiz.com/quiz.css" />
+	<link rel="stylesheet" type="text/css" href="/web/20120121213734cs_/http://rubyquiz.com/print.css" media="print" />
+</head><body>
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1388534399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/rubyquiz.com\/quiz155.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "21";
+var displayMonth = "Jan";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px; z-index:9000;">
+<div id="wm-ipp-inside" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://rubyquiz.com/quiz155.html" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120121213734" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127171720/http://rubyquiz.com/quiz155.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>NOV</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:37:34 Jan 21, 2012">JAN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120418103201/http://www.rubyquiz.com/quiz155.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="18 Apr 2012"><strong>APR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120103143830/http://www.rubyquiz.com/quiz155.html" title="14:38:30 Jan 3, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:37:34 Jan 21, 2012">21</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120122030316/http://rubyquiz.com/quiz155.html" title="3:03:16 Jan 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101127171720/http://rubyquiz.com/quiz155.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="27 Nov 2010"><strong>2010</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:37:34 Jan 21, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130215052422/http://rubyquiz.com/quiz155.html" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Feb 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20120121213734*/http://rubyquiz.com/quiz155.html" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>24 captures</strong></a>
+           <div style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">27 Nov 10 - 15 Feb 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:450px;height:27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:450px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="450"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=450_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000010_2011:-1:000000000000_2012:0:40016000a100_2013:-1:010000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="page">
+		<div id="header"><span class="ruby">Ruby</span> <span class="quiz">Quiz</span></div>
+		<div id="content">
+			<span class="title">Parsing JSON (#155)</span>
+			<p>There has been a lot of talk recently about parsing with Ruby.  We're seeing some parser generator libraries pop up that make the task that much easier and they've been stirring up interest.</p>
+			<p>In honor of that, this week's Ruby Quiz is to write a parser for JSON.</p>
+			<p>JSON turns out to turns out to be a great little example for writing parsers for two reasons.  First, it's pretty easy stuff.  You can hand-roll a JSON parser in under 100 lines of Ruby.  The second advantage is that the data format is wonderfully documented:</p>
+			<p><a href="/web/20120121213734/http://json.org/">JSON</a></p>
+			<p>Since JSON is just a data format and Ruby supports all of the data types, I vote we just use Ruby itself as the abstract syntax tree produced by the parse.</p>
+			<p>Feel free to show off your favorite parser generator, if you don't want to roll your own.  Anything goes.</p>
+			<p>Here are a few tests to get you started:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    require <span class="string">"test/unit"</span><br /><br />    <span class="keyword">class</span> TestJSONParser &lt; Test::Unit::TestCase<br />      <span class="keyword">def</span> setup<br />        <span class="variable">@parser</span> = JSONParser.new<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_keyword_parsing<br />        assert_equal(<span class="keyword">true</span>,  <span class="variable">@parser</span>.parse(<span class="string">"true"</span>))<br />        assert_equal(<span class="keyword">false</span>, <span class="variable">@parser</span>.parse(<span class="string">"false"</span>))<br />        assert_equal(<span class="keyword">nil</span>,   <span class="variable">@parser</span>.parse(<span class="string">"null"</span>))<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_number_parsing<br />        assert_equal(42,      <span class="variable">@parser</span>.parse(<span class="string">"42"</span>))<br />        assert_equal(-13,     <span class="variable">@parser</span>.parse(<span class="string">"-13"</span>))<br />        assert_equal(3.1415,  <span class="variable">@parser</span>.parse(<span class="string">"3.1415"</span>))<br />        assert_equal(-0.01,   <span class="variable">@parser</span>.parse(<span class="string">"-0.01"</span>))<br /><br />        assert_equal(0.2e1,   <span class="variable">@parser</span>.parse(<span class="string">"0.2e1"</span>))<br />        assert_equal(0.2e+1,  <span class="variable">@parser</span>.parse(<span class="string">"0.2e+1"</span>))<br />        assert_equal(0.2e-1,  <span class="variable">@parser</span>.parse(<span class="string">"0.2e-1"</span>))<br />        assert_equal(0.2E1,   <span class="variable">@parser</span>.parse(<span class="string">"0.2e1"</span>))<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_string_parsing<br />        assert_equal(String.new,          <span class="variable">@parser</span>.parse(<span class="string">%Q{""}</span>))<br />        assert_equal(<span class="string">"JSON"</span>,              <span class="variable">@parser</span>.parse(<span class="string">%Q{"JSON"}</span>))<br /><br />        assert_equal( <span class="string">%Q{nested "quotes"}</span>,<br />                      <span class="variable">@parser</span>.parse(<span class="string">'"nested \"quotes\""'</span>) )<br />        assert_equal(<span class="string">"\n"</span>,                <span class="variable">@parser</span>.parse(<span class="string">%Q{"\\n"}</span>))<br />        assert_equal( <span class="string">"a"</span>,<br />                      <span class="variable">@parser</span>.parse(<span class="string">%Q{"\\u#{"%04X" % ?a}"}</span>) )<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_array_parsing<br />        assert_equal(Array.new, <span class="variable">@parser</span>.parse(<span class="string">%Q{[]}</span>))<br />        assert_equal( [<span class="string">"JSON"</span>, 3.1415, <span class="keyword">true</span>],<br />                      <span class="variable">@parser</span>.parse(<span class="string">%Q{["JSON", 3.1415, true]}</span>) )<br />        assert_equal([1, [2, [3]]], <span class="variable">@parser</span>.parse(<span class="string">%Q{[1, [2, [3]]]}</span>))<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_object_parsing<br />        assert_equal(Hash.new, <span class="variable">@parser</span>.parse(<span class="string">%Q{{}}</span>))<br />        assert_equal( {<span class="string">"JSON"</span> =&gt; 3.1415, <span class="string">"data"</span> =&gt; <span class="keyword">true</span>},<br />                      <span class="variable">@parser</span>.parse(<span class="string">%Q{{"JSON": 3.1415, "data": true}}</span>) )<br />        assert_equal( { <span class="string">"Array"</span>  =&gt; [1, 2, 3],<br />                        <span class="string">"Object"</span> =&gt; {<span class="string">"nested"</span> =&gt; <span class="string">"objects"</span>} },<br />                      <span class="variable">@parser</span>.parse(<span class="string">&lt;&lt;-END_OBJECT) )<br />        {"Array": [1, 2, 3], "Object": {"nested": "objects"}}<br />        END_OBJECT</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> test_parse_errors<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"{"</span>) }<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">%q{{"key": true false}}</span>) }<br /><br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"["</span>) }<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"[1,,2]"</span>) }<br /><br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">%Q{"}</span>) }<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">%Q{"\\i"}</span>) }<br /><br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"$1,000"</span>) }<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"1_000"</span>) }<br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"1K"</span>) }<br /><br />        assert_raise(RuntimeError) { <span class="variable">@parser</span>.parse(<span class="string">"unknown"</span>) }<br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /></div></div>
+			<hr />
+			<p><span class="title">Quiz Summary</span></p>
+			<p>We saw a large variety of solutions for this week's problem.  Many of them used a parser generator to construct their parser.  You do that by defining a grammar that describes the syntax you need to read.  The parser generator then translates your grammar into parsing code that will match the described syntax.  Of the generators used, Treetop was definitely the most popular and is surely worth a look if you want to do some grammar based parsing.</p>
+			<p>I'm not going to show a grammar based solution here, not because I don't like them, but because I want to show a few of the ideas behind simple parsing.  To do that, we will need to examine a hand-rolled solution.  Just to be clear though, using grammar based parsers can often be a more robust choice if you can find an official grammar for the content you need to parse.</p>
+			<p>Eric Mahurin sent in a hand-rolled solution that has quite a few advantages.  First, it is trivial to adapt so that the entire content to be parsed doesn't need to be read into memory.  It's also some very efficient code.  Unfortunately, that makes it a touch less obvious if you aren't already familiar with parsing techniques.</p>
+			<p>Given that, I'm going to show my own hand-rolled recursive descent parser.  It's not as cool as Eric's but it's a little easier to take in.  We will say it's a good introduction to Eric's code, which you should be able to follow after I break this down.</p>
+			<p>Here's the beginning of my parser:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">    <span class="comment">#!/usr/bin/env ruby -wKU</span><br /><br />    require <span class="string">"strscan"</span><br /><br />    <span class="keyword">class</span> JSONParser<br />      AST = Struct.new(:value)<br /><br />      <span class="keyword">def</span> parse(input)<br />        <span class="variable">@input</span> = StringScanner.new(input)<br />        parse_value.value<br />      <span class="keyword">ensure</span><br />        <span class="variable">@input</span>.eos? <span class="keyword">or</span> error(<span class="string">"Unexpected data"</span>)<br />      <span class="keyword">end</span><br /><br />      private<br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>One of the first concerns when parsing is the need to manage where you currently are in the input.  If you treat the input as an IO object, you can read input piece by piece and the IO object itself naturally keeps track of where you are.  For String input though, it's often easier to use Ruby's standard StringScanner class.  It wraps the input and allows you to test regular expression matches against the head of that input.  It will tell you when they match or don't and when they do, your position automatically advances forward beyond that match.  You can see that I set this up in the code above.</p>
+			<p>The only public method for my class is parse().  It prepares the StringScanner as I just described, tries to parse a JSON value out of the input, then makes sure we consumed all of the input.  Note that my use of ensure here isn't very standard.  I'm just using it to run some code at the end of the method without changing the return value of the method.</p>
+			<p>The AST definition also merits a bit of discussion.  It would have been nice to just have each method return the Ruby objects for the JSON it parsed.  However, false and nil (null in JSON) are legal JSON parses in some places.  If I return those, I won't be able to tell if my parse succeeded or failed.  To get around that, all parsed JSON values are wrapped in a trivial abstract syntax tree object.  Returning this object is always true and, after I've verified that the parse worked, it's just one more method call to retrieve the actual value it parsed.</p>
+			<p>It's worth mentioning that this parser is based on the not quite correct definition of JSON I put forth in the quiz tests.  Only objects and arrays are allowed to be top-level JSON values.  An easy fix is to replace this line</p>
+			<div class="code"><span class="type">ruby</span><div class="body">        <span class="comment"># ...</span><br /><br />        parse_value.value<br /><br />        <span class="comment"># ...</span><br /><br /></div></div>
+			<p>with:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">        <span class="comment"># ...</span><br /><br />        <span class="keyword">if</span> top_level = parse_object || parse_array<br />          top_level.value<br />        <span class="keyword">else</span><br />          error(<span class="string">"Illegal top-level JSON object"</span>)<br />        <span class="keyword">end</span><br /><br />        <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Now let's look at the main parser:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> parse_value<br />        trim_space<br />        parse_object  <span class="keyword">or</span><br />        parse_array   <span class="keyword">or</span><br />        parse_string  <span class="keyword">or</span><br />        parse_number  <span class="keyword">or</span><br />        parse_keyword <span class="keyword">or</span><br />        error(<span class="string">"Illegal JSON value"</span>)<br />      <span class="keyword">ensure</span><br />        trim_space<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This method really sums up the basic strategy of recursive descent parsing.  At each point, try to read out one of the legal values that can occur there.  You can do that just by drilling down into more specialized methods that know how to read that one thing.  If at any time you can't read a legal value, you have an error.</p>
+			<p>Let's dig into the specialized parsers a bit more to see how this works:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> parse_object<br />        <span class="keyword">if</span> <span class="variable">@input</span>.scan(<span class="string">/\{\s*/</span>)<br />          object     = Hash.new<br />          more_pairs = <span class="keyword">false</span><br />          <span class="keyword">while</span> key = parse_string<br />            <span class="variable">@input</span>.scan(<span class="string">/\s*:\s*/</span>) <span class="keyword">or</span> error(<span class="string">"Expecting object separator"</span>)<br />            object[key.value] = parse_value.value<br />            more_pairs = <span class="variable">@input</span>.scan(<span class="string">/\s*,\s*/</span>) <span class="keyword">or</span> <span class="keyword">break</span><br />          <span class="keyword">end</span><br />          error(<span class="string">"Missing object pair"</span>) <span class="keyword">if</span> more_pairs<br />          <span class="variable">@input</span>.scan(<span class="string">/\s*\}/</span>) <span class="keyword">or</span> error(<span class="string">"Unclosed object"</span>)<br />          AST.new(object)<br />        <span class="keyword">else</span><br />          <span class="keyword">false</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This code reads JSON objects.  It's pretty linear, so let's digest it in order.  First, we have to have an opening brace or we don't have an object at all.  We can see here that I try a regular expression on the StringScanner to see if that is indeed what's up next.  If it is scan() will return true and @input will advance past that brace for our future matches.  If it's false, we can't read an object and the whole attempt is a bust.</p>
+			<p>When we know we're inside an object, we create the Ruby equivalent (a Hash), fill it with all of the string/value pairs we can read, then make sure we find a closing brace.  Reading the pairs is the trickiest part because we have to match a string, followed by a colon, and finally a value.  Then, if we find a comma, we know another pair is expected.  If not, we've read the whole object.  Note that I verify these assumptions at every step and toss error()s if any of them fail.  For parsing strings and values, we just reuse the parse_string() method we first saw called in parse_value() and parse_value() itself.</p>
+			<p>You can see that I'm constantly trimming space around the JSON syntax.  I could have also done that with repeated calls to the trim_space() helper we saw used in parse_value(), but that fattens up the code a bit and slows things down with more tests.  For these simple cases, I opted for the shortcut.</p>
+			<p>Having deciphered parse_object(), parse_array() is trivial:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> parse_array<br />        <span class="keyword">if</span> <span class="variable">@input</span>.scan(<span class="string">/\[\s*/</span>)<br />          array       = Array.new<br />          more_values = <span class="keyword">false</span><br />          <span class="keyword">while</span> contents = parse_value <span class="keyword">rescue</span> <span class="keyword">nil</span><br />            array &lt;&lt; contents.value<br />            more_values = <span class="variable">@input</span>.scan(<span class="string">/\s*,\s*/</span>) <span class="keyword">or</span> <span class="keyword">break</span><br />          <span class="keyword">end</span><br />          error(<span class="string">"Missing value"</span>) <span class="keyword">if</span> more_values<br />          <span class="variable">@input</span>.scan(<span class="string">/\s*\]/</span>) <span class="keyword">or</span> error(<span class="string">"Unclosed array"</span>)<br />          AST.new(array)<br />        <span class="keyword">else</span><br />          <span class="keyword">false</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>This is identical to the process we just examined save that it's pulling individual values in the middle instead of string/value pairs.  This simplifies the code a bit, as you can see.  We also throw these objects into a Ruby Array instead of a Hash.</p>
+			<p>Now we are ready for parse_string() and it has a couple of helpers:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> parse_string<br />        <span class="keyword">if</span> <span class="variable">@input</span>.scan(<span class="string">/"/</span>)<br />          string = String.new<br />          <span class="keyword">while</span> contents = parse_string_content || parse_string_escape<br />            string &lt;&lt; contents.value<br />          <span class="keyword">end</span><br />          <span class="variable">@input</span>.scan(<span class="string">/"/</span>) <span class="keyword">or</span> error(<span class="string">"Unclosed string"</span>)<br />          AST.new(string)<br />        <span class="keyword">else</span><br />          <span class="keyword">false</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> parse_string_content<br />        <span class="variable">@input</span>.scan(<span class="string">/[^\\"]+/</span>) <span class="keyword">and</span> AST.new(<span class="variable">@input</span>.matched)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> parse_string_escape<br />        <span class="keyword">if</span> <span class="variable">@input</span>.scan(<span class="string">%r{\\["\\/]}</span>)<br />          AST.new(<span class="variable">@input</span>.matched[-1])<br />        <span class="keyword">elsif</span> <span class="variable">@input</span>.scan(<span class="string">/\\[bfnrt]/</span>)<br />          AST.new(eval(<span class="string">%Q{"#{@input.matched}"}</span>))<br />        <span class="keyword">elsif</span> <span class="variable">@input</span>.scan(<span class="string">/\\u[0-9a-fA-F]{4}/</span>)<br />          AST.new([Integer(<span class="string">"0x#{@input.matched[2..-1]}"</span>)].pack(<span class="string">"U"</span>))<br />        <span class="keyword">else</span><br />          <span class="keyword">false</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>Whenever a structure you need to read gets more complicated, you want to break it down into smaller parsers that read more specialized pieces.  Some probably would have broken down the the string/value pairs from object (into a parse_object_pair()), but you don't gain much for that and it was just simple enough that I opted for the easier approach.  Here though we need to handle content and escapes differently and there may be any combination of them in any order inside the string.  Now the gain is worth it.</p>
+			<p>Content is easy enough to handle, since we can pass it through unaltered.  It's already content in a Ruby String object.  Escapes we have to work on a little more.  Some we just unescape, but others need to be converted.  I used pack() to handle Unicode, but you can see that I was lazy and used eval() on the special string escapes.  All of these have the same meaning in Ruby and thanks to the match I know it's safe to eval() the contents without worrying about embedded Ruby nastiness.</p>
+			<p>With those defined, parse_string() is similar to parse_array().  Find the start of a JSON string, pull content and escapes as long as we can, then find the end of the string.</p>
+			<p>The last two parsers are the easiest of all:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> parse_number<br />        <span class="variable">@input</span>.scan(<span class="string">/-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?\b/</span>) <span class="keyword">and</span><br />        AST.new(eval(<span class="variable">@input</span>.matched))<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> parse_keyword<br />        <span class="variable">@input</span>.scan(<span class="string">/\b(?:true|false|null)\b/</span>) <span class="keyword">and</span><br />        AST.new(eval(<span class="variable">@input</span>.matched.sub(<span class="string">"null"</span>, <span class="string">"nil"</span>)))<br />      <span class="keyword">end</span><br /><br />      <span class="comment"># ...</span><br /><br /></div></div>
+			<p>These are just match and eval() as you can plainly see.  Again the evals() are safe because the match ensures we aren't facing any dangerous content.</p>
+			<p>Some feel that using regular expressions like this isn't true parsing.  We certainly could have chopped the number rule down into a bunch of smaller rules.  However, the number definition is squarely in the domain of what regular expressions do well and I'm more of a practical kind of guy.  I have access to regular expressions with this setup, the needed expression isn't really all that complex, and I like easy jobs.  Thus I use them.</p>
+			<p>All that is left are the two helpers I used, though the implementations won't be any surprise:</p>
+			<div class="code"><span class="type">ruby</span><div class="body">      <span class="comment"># ...</span><br /><br />      <span class="keyword">def</span> trim_space<br />        <span class="variable">@input</span>.scan(<span class="string">/\s+/</span>)<br />      <span class="keyword">end</span><br /><br />      <span class="keyword">def</span> error(message)<br />        <span class="keyword">if</span> <span class="variable">@input</span>.eos?<br />          raise <span class="string">"Unexpected end of input."</span><br />        <span class="keyword">else</span><br />          raise <span class="string">"#{message}:  #{@input.peek(@input.string.length)}"</span><br />        <span class="keyword">end</span><br />      <span class="keyword">end</span><br />    <span class="keyword">end</span><br /><br /></div></div>
+			<p>First, trim_space() can just try a match to advance us pass any whitespace.  It may fail, because there wasn't any whitespace to skip, but that doesn't affect us any.  We know that we aren't about to read whitespace after it is called, either way.</p>
+			<p>My error() wrapper just raise()s exceptions.  It adds the content left to parse so you can see where you had trouble or replaces the message altogether to warn you that all of the content was exhausted.</p>
+			<p>That's all it takes to build a simple JSON parser.  Take some time to go look through the other hand-rolled solutions now and I bet you'll be surprised by how similar they work.  Then you can look into grammars and how they simplify the process of defining new grammars.</p>
+			<p>The final Ruby Quiz will take us back into the world of finance...</p>
+		</div>
+		<div id="logo"><img src="/web/20120121213734im_/http://rubyquiz.com/images/ruby_quiz_logo.jpg" alt="" width="157" height="150" /></div>
+		<div id="links">
+			<span class="title">Quiz Solutions</span>
+			<ol>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289495">ara howard</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289675">steve</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289682">Justin Ethier</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289684">Thomas</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289685">Eric Mahurin</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289688">Thomas (2)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289694">Pawe&#x142; Radecki</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289714">Eric Mahurin (2)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289720">Eric Mahurin (3)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289723">Clifford Heath</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289724">Eric I.</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289739">steve (2)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289742">steve (3)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289756">Thomas (3)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289757">Thomas (4)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289758">Thomas (5)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289769">Paolo Bonzini</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289775">Paolo Bonzini (2)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289793">Trans</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289812">Paolo Bonzini (3)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289826">Alexander Stedile</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289855">Eric Mahurin (4)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289868">James Edward Gray II</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289880">James Edward Gray II (2)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289881">James Edward Gray II (3)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289887">Eric Mahurin (5)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289890">Thomas (6)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289956">Thomas (7)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/289968">Eric Mahurin (6)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/290109">James Edward Gray II (4)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/290210">James Koppel</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/290234">Eric Mahurin (7)</a></li>
+				<li><a href="/web/20120121213734/http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/290238">Thomas (8)</a></li>
+			</ol>
+			<p><a href="/web/20120121213734/http://rubyquiz.com/quiz155_sols.zip">Download Solutions</a></p>
+			<p><a href="/web/20120121213734/http://rubyquiz.com/index.html">Back to Quiz Listing</a></p>
+		</div>
+		<div id="footer">&nbsp;</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:37:34 Jan 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:11:17 Jun 5, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
